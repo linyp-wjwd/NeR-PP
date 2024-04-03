@@ -1,0 +1,12 @@
+2024_03_25_23_30_14	 Results for checkpoint: checkpoint/NeR_1.25_80/model_val_best.pth
+PSNR/ms_ssim on validate set for bit -1 with axis 0: 31.13/0.9462
+
+2024_03_25_23_53_20	 Results for checkpoint: checkpoint/NeR_1.25_80/model_val_best.pth
+PSNR/ms_ssim on validate set for bit -1 with axis 0: 31.13/0.9462
+
+2024_04_03_10_27_37	 Results for checkpoint: checkpoint/NeR_1.25_80/model_val_best.pth
+PSNR/ms_ssim on validate set for bit -1 with axis 0: 31.13/0.9462
+
+2024_04_03_10_31_42	 Results for checkpoint: checkpoint/NeR_1.25_80/model_val_best.pth
+PSNR/ms_ssim on validate set for bit -1 with axis 0: 31.13/0.9462
+

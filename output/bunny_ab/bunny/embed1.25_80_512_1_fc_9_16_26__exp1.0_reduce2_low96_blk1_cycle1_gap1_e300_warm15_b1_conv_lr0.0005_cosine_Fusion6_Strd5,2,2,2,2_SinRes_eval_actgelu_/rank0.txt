@@ -1,0 +1,246 @@
+Generator(
+  (stem): Sequential(
+    (0): Linear(in_features=160, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=3744, bias=True)
+    (3): GELU(approximate='none')
+  )
+  (layers): ModuleList(
+    (0): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 650, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=5)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (1): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (2-4): 3 x NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(96, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+  )
+  (head_layers): ModuleList(
+    (0-3): 4 x None
+    (4): Conv2d(96, 3, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+Params: 3.242865M
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 0.24
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 9.09
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 14.34
+Generator(
+  (stem): Sequential(
+    (0): Linear(in_features=160, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=3744, bias=True)
+    (3): GELU(approximate='none')
+  )
+  (layers): ModuleList(
+    (0): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 650, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=5)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (1): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (2-4): 3 x NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(96, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+  )
+  (head_layers): ModuleList(
+    (0-3): 4 x None
+    (4): Conv2d(96, 3, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+Params: 3.242865M
+Generator(
+  (stem): Sequential(
+    (0): Linear(in_features=160, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=3744, bias=True)
+    (3): GELU(approximate='none')
+  )
+  (layers): ModuleList(
+    (0): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 650, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=5)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (1): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (2-4): 3 x NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(96, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+  )
+  (head_layers): ModuleList(
+    (0-3): 4 x None
+    (4): Conv2d(96, 3, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+Params: 3.242865M
+Generator(
+  (stem): Sequential(
+    (0): Linear(in_features=160, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=3744, bias=True)
+    (3): GELU(approximate='none')
+  )
+  (layers): ModuleList(
+    (0): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 650, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=5)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (1): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (2-4): 3 x NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(96, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+  )
+  (head_layers): ModuleList(
+    (0-3): 4 x None
+    (4): Conv2d(96, 3, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+Params: 3.242865M
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 0.47
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 14.26
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 20.16
+Generator(
+  (stem): Sequential(
+    (0): Linear(in_features=160, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=3744, bias=True)
+    (3): GELU(approximate='none')
+  )
+  (layers): ModuleList(
+    (0): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 650, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=5)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (1): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (2-4): 3 x NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(96, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+  )
+  (head_layers): ModuleList(
+    (0-3): 4 x None
+    (4): Conv2d(96, 3, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+Params: 3.242865M
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 0.28
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 10.11
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 15.71
+Generator(
+  (stem): Sequential(
+    (0): Linear(in_features=160, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=3744, bias=True)
+    (3): GELU(approximate='none')
+  )
+  (layers): ModuleList(
+    (0): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 650, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=5)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (1): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (2-4): 3 x NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(96, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+  )
+  (head_layers): ModuleList(
+    (0-3): 4 x None
+    (4): Conv2d(96, 3, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+Params: 3.242865M
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 0.37
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 12.1
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 17.85

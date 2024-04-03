@@ -1,0 +1,1595 @@
+Generator(
+  (stem): Sequential(
+    (0): Linear(in_features=160, out_features=512, bias=True)
+    (1): GELU(approximate='none')
+    (2): Linear(in_features=512, out_features=3744, bias=True)
+    (3): GELU(approximate='none')
+  )
+  (layers): ModuleList(
+    (0): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 650, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=5)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (1): NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(26, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+    (2-4): 3 x NeRVBlock(
+      (conv): CustomConv(
+        (conv): Conv2d(96, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+        (up_scale): PixelShuffle(upscale_factor=2)
+      )
+      (norm): Identity()
+      (act): GELU(approximate='none')
+    )
+  )
+  (head_layers): ModuleList(
+    (0-3): 4 x None
+    (4): Conv2d(96, 3, kernel_size=(1, 1), stride=(1, 1))
+  )
+)
+Params: 3.242865M
+[2024/03/06 22:13:42] Rank:None, Epoch[1/300], Step [1/132], lr:5.00e-05 PSNR: 11.87, MSSSIM: 0.3353
+[2024/03/06 22:13:47] Rank:None, Epoch[1/300], Step [51/132], lr:6.14e-05 PSNR: 12.01, MSSSIM: 0.3369
+[2024/03/06 22:13:52] Rank:None, Epoch[1/300], Step [101/132], lr:7.27e-05 PSNR: 13.15, MSSSIM: 0.3558
+[2024/03/06 22:13:56] Rank:None, Epoch[1/300], Step [132/132], lr:7.98e-05 PSNR: 13.77, MSSSIM: 0.3732
+	720p: current: 13.77	 best: 13.77	 msssim_best: 0.3732	
+[2024/03/06 22:13:58] Rank:None, Epoch[2/300], Step [1/132], lr:8.00e-05 PSNR: 16.13, MSSSIM: 0.4546
+[2024/03/06 22:14:04] Rank:None, Epoch[2/300], Step [51/132], lr:9.14e-05 PSNR: 16.16, MSSSIM: 0.4641
+[2024/03/06 22:14:09] Rank:None, Epoch[2/300], Step [101/132], lr:1.03e-04 PSNR: 16.29, MSSSIM: 0.4791
+[2024/03/06 22:14:12] Rank:None, Epoch[2/300], Step [132/132], lr:1.10e-04 PSNR: 16.39, MSSSIM: 0.4861
+	720p: current: 16.39	 best: 16.39	 msssim_best: 0.4861	
+[2024/03/06 22:14:15] Rank:None, Epoch[3/300], Step [1/132], lr:1.10e-04 PSNR: 17.21, MSSSIM: 0.5362
+[2024/03/06 22:14:21] Rank:None, Epoch[3/300], Step [51/132], lr:1.21e-04 PSNR: 17.29, MSSSIM: 0.5247
+[2024/03/06 22:14:26] Rank:None, Epoch[3/300], Step [101/132], lr:1.33e-04 PSNR: 17.62, MSSSIM: 0.5287
+[2024/03/06 22:14:29] Rank:None, Epoch[3/300], Step [132/132], lr:1.40e-04 PSNR: 17.76, MSSSIM: 0.5304
+	720p: current: 17.76	 best: 17.76	 msssim_best: 0.5304	
+[2024/03/06 22:14:32] Rank:None, Epoch[4/300], Step [1/132], lr:1.40e-04 PSNR: 18.79, MSSSIM: 0.5884
+[2024/03/06 22:14:37] Rank:None, Epoch[4/300], Step [51/132], lr:1.51e-04 PSNR: 18.35, MSSSIM: 0.541
+[2024/03/06 22:14:42] Rank:None, Epoch[4/300], Step [101/132], lr:1.63e-04 PSNR: 18.48, MSSSIM: 0.54
+[2024/03/06 22:14:46] Rank:None, Epoch[4/300], Step [132/132], lr:1.70e-04 PSNR: 18.6, MSSSIM: 0.5414
+	720p: current: 18.60	 best: 18.60	 msssim_best: 0.5414	
+[2024/03/06 22:14:48] Rank:None, Epoch[5/300], Step [1/132], lr:1.70e-04 PSNR: 19.99, MSSSIM: 0.5979
+[2024/03/06 22:14:54] Rank:None, Epoch[5/300], Step [51/132], lr:1.81e-04 PSNR: 20.26, MSSSIM: 0.5745
+[2024/03/06 22:14:59] Rank:None, Epoch[5/300], Step [101/132], lr:1.93e-04 PSNR: 20.42, MSSSIM: 0.5801
+[2024/03/06 22:15:03] Rank:None, Epoch[5/300], Step [132/132], lr:2.00e-04 PSNR: 20.62, MSSSIM: 0.5888
+	720p: current: 20.62	 best: 20.62	 msssim_best: 0.5888	
+[2024/03/06 22:15:05] Rank:None, Epoch[6/300], Step [1/132], lr:2.00e-04 PSNR: 20.7, MSSSIM: 0.5684
+[2024/03/06 22:15:11] Rank:None, Epoch[6/300], Step [51/132], lr:2.11e-04 PSNR: 21.11, MSSSIM: 0.6102
+[2024/03/06 22:15:16] Rank:None, Epoch[6/300], Step [101/132], lr:2.23e-04 PSNR: 21.34, MSSSIM: 0.6206
+[2024/03/06 22:15:20] Rank:None, Epoch[6/300], Step [132/132], lr:2.30e-04 PSNR: 21.41, MSSSIM: 0.625
+	720p: current: 21.41	 best: 21.41	 msssim_best: 0.6250	
+[2024/03/06 22:15:23] Rank:None, Epoch[7/300], Step [1/132], lr:2.30e-04 PSNR: 20.91, MSSSIM: 0.5809
+[2024/03/06 22:15:28] Rank:None, Epoch[7/300], Step [51/132], lr:2.41e-04 PSNR: 21.6, MSSSIM: 0.6374
+[2024/03/06 22:15:34] Rank:None, Epoch[7/300], Step [101/132], lr:2.53e-04 PSNR: 21.69, MSSSIM: 0.6462
+[2024/03/06 22:15:37] Rank:None, Epoch[7/300], Step [132/132], lr:2.60e-04 PSNR: 21.74, MSSSIM: 0.6488
+	720p: current: 21.74	 best: 21.74	 msssim_best: 0.6488	
+[2024/03/06 22:15:40] Rank:None, Epoch[8/300], Step [1/132], lr:2.60e-04 PSNR: 22.35, MSSSIM: 0.695
+[2024/03/06 22:15:45] Rank:None, Epoch[8/300], Step [51/132], lr:2.71e-04 PSNR: 21.97, MSSSIM: 0.6661
+[2024/03/06 22:15:50] Rank:None, Epoch[8/300], Step [101/132], lr:2.83e-04 PSNR: 22.02, MSSSIM: 0.6695
+[2024/03/06 22:15:54] Rank:None, Epoch[8/300], Step [132/132], lr:2.90e-04 PSNR: 21.99, MSSSIM: 0.6675
+	720p: current: 21.99	 best: 21.99	 msssim_best: 0.6675	
+[2024/03/06 22:15:57] Rank:None, Epoch[9/300], Step [1/132], lr:2.90e-04 PSNR: 21.8, MSSSIM: 0.6303
+[2024/03/06 22:16:02] Rank:None, Epoch[9/300], Step [51/132], lr:3.01e-04 PSNR: 22.19, MSSSIM: 0.6831
+[2024/03/06 22:16:07] Rank:None, Epoch[9/300], Step [101/132], lr:3.13e-04 PSNR: 22.15, MSSSIM: 0.6805
+[2024/03/06 22:16:11] Rank:None, Epoch[9/300], Step [132/132], lr:3.20e-04 PSNR: 22.21, MSSSIM: 0.6829
+	720p: current: 22.21	 best: 22.21	 msssim_best: 0.6829	
+[2024/03/06 22:16:14] Rank:None, Epoch[10/300], Step [1/132], lr:3.20e-04 PSNR: 21.48, MSSSIM: 0.6389
+[2024/03/06 22:16:19] Rank:None, Epoch[10/300], Step [51/132], lr:3.31e-04 PSNR: 22.13, MSSSIM: 0.684
+[2024/03/06 22:16:24] Rank:None, Epoch[10/300], Step [101/132], lr:3.43e-04 PSNR: 22.28, MSSSIM: 0.6928
+[2024/03/06 22:16:27] Rank:None, Epoch[10/300], Step [132/132], lr:3.50e-04 PSNR: 22.35, MSSSIM: 0.6964
+	720p: current: 22.35	 best: 22.35	 msssim_best: 0.6964	
+[2024/03/06 22:16:31] Rank:None, Epoch[11/300], Step [1/132], lr:3.50e-04 PSNR: 21.84, MSSSIM: 0.6391
+[2024/03/06 22:16:36] Rank:None, Epoch[11/300], Step [51/132], lr:3.61e-04 PSNR: 22.63, MSSSIM: 0.7086
+[2024/03/06 22:16:41] Rank:None, Epoch[11/300], Step [101/132], lr:3.73e-04 PSNR: 22.56, MSSSIM: 0.7103
+[2024/03/06 22:16:45] Rank:None, Epoch[11/300], Step [132/132], lr:3.80e-04 PSNR: 22.51, MSSSIM: 0.7085
+	720p: current: 22.51	 best: 22.51	 msssim_best: 0.7085	
+[2024/03/06 22:16:48] Rank:None, Epoch[12/300], Step [1/132], lr:3.80e-04 PSNR: 22.6, MSSSIM: 0.7668
+[2024/03/06 22:16:53] Rank:None, Epoch[12/300], Step [51/132], lr:3.91e-04 PSNR: 22.75, MSSSIM: 0.7246
+[2024/03/06 22:16:58] Rank:None, Epoch[12/300], Step [101/132], lr:4.03e-04 PSNR: 22.63, MSSSIM: 0.7179
+[2024/03/06 22:17:01] Rank:None, Epoch[12/300], Step [132/132], lr:4.10e-04 PSNR: 22.64, MSSSIM: 0.7197
+	720p: current: 22.64	 best: 22.64	 msssim_best: 0.7197	
+[2024/03/06 22:17:04] Rank:None, Epoch[13/300], Step [1/132], lr:4.10e-04 PSNR: 23.66, MSSSIM: 0.786
+[2024/03/06 22:17:10] Rank:None, Epoch[13/300], Step [51/132], lr:4.21e-04 PSNR: 22.58, MSSSIM: 0.716
+[2024/03/06 22:17:15] Rank:None, Epoch[13/300], Step [101/132], lr:4.33e-04 PSNR: 22.77, MSSSIM: 0.728
+[2024/03/06 22:17:18] Rank:None, Epoch[13/300], Step [132/132], lr:4.40e-04 PSNR: 22.7, MSSSIM: 0.7297
+	720p: current: 22.70	 best: 22.70	 msssim_best: 0.7297	
+[2024/03/06 22:17:21] Rank:None, Epoch[14/300], Step [1/132], lr:4.40e-04 PSNR: 22.41, MSSSIM: 0.6766
+[2024/03/06 22:17:26] Rank:None, Epoch[14/300], Step [51/132], lr:4.51e-04 PSNR: 22.88, MSSSIM: 0.7434
+[2024/03/06 22:17:32] Rank:None, Epoch[14/300], Step [101/132], lr:4.63e-04 PSNR: 22.84, MSSSIM: 0.7367
+[2024/03/06 22:17:35] Rank:None, Epoch[14/300], Step [132/132], lr:4.70e-04 PSNR: 22.86, MSSSIM: 0.7396
+	720p: current: 22.86	 best: 22.86	 msssim_best: 0.7396	
+[2024/03/06 22:17:38] Rank:None, Epoch[15/300], Step [1/132], lr:4.70e-04 PSNR: 23.09, MSSSIM: 0.7088
+[2024/03/06 22:17:43] Rank:None, Epoch[15/300], Step [51/132], lr:4.81e-04 PSNR: 22.68, MSSSIM: 0.7399
+[2024/03/06 22:17:48] Rank:None, Epoch[15/300], Step [101/132], lr:4.93e-04 PSNR: 22.91, MSSSIM: 0.7488
+[2024/03/06 22:17:52] Rank:None, Epoch[15/300], Step [132/132], lr:5.00e-04 PSNR: 22.95, MSSSIM: 0.7483
+	720p: current: 22.95	 best: 22.95	 msssim_best: 0.7483	
+[2024/03/06 22:17:55] Rank:None, Epoch[16/300], Step [1/132], lr:5.00e-04 PSNR: 21.61, MSSSIM: 0.6637
+[2024/03/06 22:18:00] Rank:None, Epoch[16/300], Step [51/132], lr:5.00e-04 PSNR: 23.29, MSSSIM: 0.769
+[2024/03/06 22:18:05] Rank:None, Epoch[16/300], Step [101/132], lr:5.00e-04 PSNR: 23.33, MSSSIM: 0.7649
+[2024/03/06 22:18:08] Rank:None, Epoch[16/300], Step [132/132], lr:5.00e-04 PSNR: 23.16, MSSSIM: 0.757
+	720p: current: 23.16	 best: 23.16	 msssim_best: 0.7570	
+[2024/03/06 22:18:11] Rank:None, Epoch[17/300], Step [1/132], lr:5.00e-04 PSNR: 20.57, MSSSIM: 0.6323
+[2024/03/06 22:18:17] Rank:None, Epoch[17/300], Step [51/132], lr:5.00e-04 PSNR: 23.22, MSSSIM: 0.7565
+[2024/03/06 22:18:22] Rank:None, Epoch[17/300], Step [101/132], lr:5.00e-04 PSNR: 23.3, MSSSIM: 0.7647
+[2024/03/06 22:18:25] Rank:None, Epoch[17/300], Step [132/132], lr:5.00e-04 PSNR: 23.31, MSSSIM: 0.7646
+	720p: current: 23.31	 best: 23.31	 msssim_best: 0.7646	
+[2024/03/06 22:18:28] Rank:None, Epoch[18/300], Step [1/132], lr:5.00e-04 PSNR: 24.64, MSSSIM: 0.8391
+[2024/03/06 22:18:33] Rank:None, Epoch[18/300], Step [51/132], lr:5.00e-04 PSNR: 23.7, MSSSIM: 0.7838
+[2024/03/06 22:18:39] Rank:None, Epoch[18/300], Step [101/132], lr:5.00e-04 PSNR: 23.54, MSSSIM: 0.7743
+[2024/03/06 22:18:42] Rank:None, Epoch[18/300], Step [132/132], lr:5.00e-04 PSNR: 23.49, MSSSIM: 0.7723
+	720p: current: 23.49	 best: 23.49	 msssim_best: 0.7723	
+[2024/03/06 22:18:45] Rank:None, Epoch[19/300], Step [1/132], lr:5.00e-04 PSNR: 22.11, MSSSIM: 0.6807
+[2024/03/06 22:18:50] Rank:None, Epoch[19/300], Step [51/132], lr:5.00e-04 PSNR: 23.67, MSSSIM: 0.7828
+[2024/03/06 22:18:56] Rank:None, Epoch[19/300], Step [101/132], lr:5.00e-04 PSNR: 23.65, MSSSIM: 0.7803
+[2024/03/06 22:18:59] Rank:None, Epoch[19/300], Step [132/132], lr:5.00e-04 PSNR: 23.61, MSSSIM: 0.7776
+	720p: current: 23.61	 best: 23.61	 msssim_best: 0.7776	
+[2024/03/06 22:19:02] Rank:None, Epoch[20/300], Step [1/132], lr:5.00e-04 PSNR: 25.19, MSSSIM: 0.8664
+[2024/03/06 22:19:08] Rank:None, Epoch[20/300], Step [51/132], lr:5.00e-04 PSNR: 23.87, MSSSIM: 0.7927
+[2024/03/06 22:19:13] Rank:None, Epoch[20/300], Step [101/132], lr:5.00e-04 PSNR: 23.79, MSSSIM: 0.7889
+[2024/03/06 22:19:17] Rank:None, Epoch[20/300], Step [132/132], lr:5.00e-04 PSNR: 23.73, MSSSIM: 0.7831
+	720p: current: 23.73	 best: 23.73	 msssim_best: 0.7831	
+[2024/03/06 22:19:20] Rank:None, Epoch[21/300], Step [1/132], lr:5.00e-04 PSNR: 25.57, MSSSIM: 0.873
+[2024/03/06 22:19:25] Rank:None, Epoch[21/300], Step [51/132], lr:5.00e-04 PSNR: 23.84, MSSSIM: 0.7845
+[2024/03/06 22:19:30] Rank:None, Epoch[21/300], Step [101/132], lr:4.99e-04 PSNR: 23.79, MSSSIM: 0.7875
+[2024/03/06 22:19:33] Rank:None, Epoch[21/300], Step [132/132], lr:4.99e-04 PSNR: 23.83, MSSSIM: 0.788
+	720p: current: 23.83	 best: 23.83	 msssim_best: 0.7880	
+[2024/03/06 22:19:37] Rank:None, Epoch[22/300], Step [1/132], lr:4.99e-04 PSNR: 25.92, MSSSIM: 0.8967
+[2024/03/06 22:19:42] Rank:None, Epoch[22/300], Step [51/132], lr:4.99e-04 PSNR: 24.03, MSSSIM: 0.794
+[2024/03/06 22:19:47] Rank:None, Epoch[22/300], Step [101/132], lr:4.99e-04 PSNR: 23.98, MSSSIM: 0.7971
+[2024/03/06 22:19:50] Rank:None, Epoch[22/300], Step [132/132], lr:4.99e-04 PSNR: 23.86, MSSSIM: 0.7918
+	720p: current: 23.86	 best: 23.86	 msssim_best: 0.7918	
+[2024/03/06 22:19:53] Rank:None, Epoch[23/300], Step [1/132], lr:4.99e-04 PSNR: 26.03, MSSSIM: 0.8884
+[2024/03/06 22:19:58] Rank:None, Epoch[23/300], Step [51/132], lr:4.99e-04 PSNR: 24.32, MSSSIM: 0.8077
+[2024/03/06 22:20:04] Rank:None, Epoch[23/300], Step [101/132], lr:4.99e-04 PSNR: 24.11, MSSSIM: 0.7995
+[2024/03/06 22:20:07] Rank:None, Epoch[23/300], Step [132/132], lr:4.99e-04 PSNR: 23.98, MSSSIM: 0.7956
+	720p: current: 23.98	 best: 23.98	 msssim_best: 0.7956	
+[2024/03/06 22:20:10] Rank:None, Epoch[24/300], Step [1/132], lr:4.99e-04 PSNR: 25.75, MSSSIM: 0.8837
+[2024/03/06 22:20:15] Rank:None, Epoch[24/300], Step [51/132], lr:4.99e-04 PSNR: 24.06, MSSSIM: 0.7983
+[2024/03/06 22:20:21] Rank:None, Epoch[24/300], Step [101/132], lr:4.99e-04 PSNR: 24.08, MSSSIM: 0.7966
+[2024/03/06 22:20:24] Rank:None, Epoch[24/300], Step [132/132], lr:4.99e-04 PSNR: 24.18, MSSSIM: 0.8003
+	720p: current: 24.18	 best: 24.18	 msssim_best: 0.8003	
+[2024/03/06 22:20:27] Rank:None, Epoch[25/300], Step [1/132], lr:4.99e-04 PSNR: 25.67, MSSSIM: 0.8932
+[2024/03/06 22:20:32] Rank:None, Epoch[25/300], Step [51/132], lr:4.99e-04 PSNR: 24.13, MSSSIM: 0.7957
+[2024/03/06 22:20:37] Rank:None, Epoch[25/300], Step [101/132], lr:4.99e-04 PSNR: 24.21, MSSSIM: 0.7997
+[2024/03/06 22:20:41] Rank:None, Epoch[25/300], Step [132/132], lr:4.98e-04 PSNR: 24.28, MSSSIM: 0.8043
+	720p: current: 24.28	 best: 24.28	 msssim_best: 0.8043	
+[2024/03/06 22:20:44] Rank:None, Epoch[26/300], Step [1/132], lr:4.98e-04 PSNR: 21.84, MSSSIM: 0.6667
+[2024/03/06 22:20:49] Rank:None, Epoch[26/300], Step [51/132], lr:4.98e-04 PSNR: 24.3, MSSSIM: 0.8087
+[2024/03/06 22:20:54] Rank:None, Epoch[26/300], Step [101/132], lr:4.98e-04 PSNR: 24.39, MSSSIM: 0.8102
+[2024/03/06 22:20:58] Rank:None, Epoch[26/300], Step [132/132], lr:4.98e-04 PSNR: 24.34, MSSSIM: 0.807
+	720p: current: 24.34	 best: 24.34	 msssim_best: 0.8070	
+[2024/03/06 22:21:01] Rank:None, Epoch[27/300], Step [1/132], lr:4.98e-04 PSNR: 24.83, MSSSIM: 0.8092
+[2024/03/06 22:21:06] Rank:None, Epoch[27/300], Step [51/132], lr:4.98e-04 PSNR: 24.63, MSSSIM: 0.8082
+[2024/03/06 22:21:11] Rank:None, Epoch[27/300], Step [101/132], lr:4.98e-04 PSNR: 24.51, MSSSIM: 0.8076
+[2024/03/06 22:21:15] Rank:None, Epoch[27/300], Step [132/132], lr:4.98e-04 PSNR: 24.54, MSSSIM: 0.8106
+	720p: current: 24.54	 best: 24.54	 msssim_best: 0.8106	
+[2024/03/06 22:21:18] Rank:None, Epoch[28/300], Step [1/132], lr:4.98e-04 PSNR: 26.24, MSSSIM: 0.9019
+[2024/03/06 22:21:23] Rank:None, Epoch[28/300], Step [51/132], lr:4.98e-04 PSNR: 24.8, MSSSIM: 0.8197
+[2024/03/06 22:21:28] Rank:None, Epoch[28/300], Step [101/132], lr:4.98e-04 PSNR: 24.77, MSSSIM: 0.8231
+[2024/03/06 22:21:32] Rank:None, Epoch[28/300], Step [132/132], lr:4.97e-04 PSNR: 24.63, MSSSIM: 0.8137
+	720p: current: 24.63	 best: 24.63	 msssim_best: 0.8137	
+[2024/03/06 22:21:35] Rank:None, Epoch[29/300], Step [1/132], lr:4.97e-04 PSNR: 26.72, MSSSIM: 0.9001
+[2024/03/06 22:21:40] Rank:None, Epoch[29/300], Step [51/132], lr:4.97e-04 PSNR: 24.56, MSSSIM: 0.8125
+[2024/03/06 22:21:45] Rank:None, Epoch[29/300], Step [101/132], lr:4.97e-04 PSNR: 24.56, MSSSIM: 0.8129
+[2024/03/06 22:21:49] Rank:None, Epoch[29/300], Step [132/132], lr:4.97e-04 PSNR: 24.7, MSSSIM: 0.8165
+	720p: current: 24.70	 best: 24.70	 msssim_best: 0.8165	
+[2024/03/06 22:21:52] Rank:None, Epoch[30/300], Step [1/132], lr:4.97e-04 PSNR: 24.0, MSSSIM: 0.7896
+[2024/03/06 22:21:57] Rank:None, Epoch[30/300], Step [51/132], lr:4.97e-04 PSNR: 24.8, MSSSIM: 0.8153
+[2024/03/06 22:22:02] Rank:None, Epoch[30/300], Step [101/132], lr:4.97e-04 PSNR: 24.9, MSSSIM: 0.8226
+[2024/03/06 22:22:05] Rank:None, Epoch[30/300], Step [132/132], lr:4.97e-04 PSNR: 24.85, MSSSIM: 0.8201
+	720p: current: 24.85	 best: 24.85	 msssim_best: 0.8201	
+[2024/03/06 22:22:08] Rank:None, Epoch[31/300], Step [1/132], lr:4.97e-04 PSNR: 22.38, MSSSIM: 0.7061
+[2024/03/06 22:22:14] Rank:None, Epoch[31/300], Step [51/132], lr:4.96e-04 PSNR: 24.78, MSSSIM: 0.8188
+[2024/03/06 22:22:19] Rank:None, Epoch[31/300], Step [101/132], lr:4.96e-04 PSNR: 24.91, MSSSIM: 0.8239
+[2024/03/06 22:22:22] Rank:None, Epoch[31/300], Step [132/132], lr:4.96e-04 PSNR: 24.87, MSSSIM: 0.8216
+	720p: current: 24.87	 best: 24.87	 msssim_best: 0.8216	
+[2024/03/06 22:22:25] Rank:None, Epoch[32/300], Step [1/132], lr:4.96e-04 PSNR: 27.28, MSSSIM: 0.9254
+[2024/03/06 22:22:31] Rank:None, Epoch[32/300], Step [51/132], lr:4.96e-04 PSNR: 25.09, MSSSIM: 0.8285
+[2024/03/06 22:22:36] Rank:None, Epoch[32/300], Step [101/132], lr:4.96e-04 PSNR: 25.09, MSSSIM: 0.8274
+[2024/03/06 22:22:39] Rank:None, Epoch[32/300], Step [132/132], lr:4.96e-04 PSNR: 25.02, MSSSIM: 0.8248
+	720p: current: 25.02	 best: 25.02	 msssim_best: 0.8248	
+[2024/03/06 22:22:42] Rank:None, Epoch[33/300], Step [1/132], lr:4.96e-04 PSNR: 27.51, MSSSIM: 0.92
+[2024/03/06 22:22:47] Rank:None, Epoch[33/300], Step [51/132], lr:4.95e-04 PSNR: 24.79, MSSSIM: 0.815
+[2024/03/06 22:22:53] Rank:None, Epoch[33/300], Step [101/132], lr:4.95e-04 PSNR: 25.05, MSSSIM: 0.8266
+[2024/03/06 22:22:56] Rank:None, Epoch[33/300], Step [132/132], lr:4.95e-04 PSNR: 25.09, MSSSIM: 0.8273
+	720p: current: 25.09	 best: 25.09	 msssim_best: 0.8273	
+[2024/03/06 22:22:59] Rank:None, Epoch[34/300], Step [1/132], lr:4.95e-04 PSNR: 23.61, MSSSIM: 0.7411
+[2024/03/06 22:23:04] Rank:None, Epoch[34/300], Step [51/132], lr:4.95e-04 PSNR: 25.34, MSSSIM: 0.8325
+[2024/03/06 22:23:10] Rank:None, Epoch[34/300], Step [101/132], lr:4.95e-04 PSNR: 25.2, MSSSIM: 0.8284
+[2024/03/06 22:23:13] Rank:None, Epoch[34/300], Step [132/132], lr:4.95e-04 PSNR: 25.19, MSSSIM: 0.8292
+	720p: current: 25.19	 best: 25.19	 msssim_best: 0.8292	
+[2024/03/06 22:23:16] Rank:None, Epoch[35/300], Step [1/132], lr:4.95e-04 PSNR: 27.21, MSSSIM: 0.9152
+[2024/03/06 22:23:22] Rank:None, Epoch[35/300], Step [51/132], lr:4.94e-04 PSNR: 24.9, MSSSIM: 0.8134
+[2024/03/06 22:23:27] Rank:None, Epoch[35/300], Step [101/132], lr:4.94e-04 PSNR: 25.12, MSSSIM: 0.8241
+[2024/03/06 22:23:30] Rank:None, Epoch[35/300], Step [132/132], lr:4.94e-04 PSNR: 25.27, MSSSIM: 0.8314
+	720p: current: 25.27	 best: 25.27	 msssim_best: 0.8314	
+[2024/03/06 22:23:33] Rank:None, Epoch[36/300], Step [1/132], lr:4.94e-04 PSNR: 25.17, MSSSIM: 0.8188
+[2024/03/06 22:23:38] Rank:None, Epoch[36/300], Step [51/132], lr:4.94e-04 PSNR: 25.2, MSSSIM: 0.8261
+[2024/03/06 22:23:44] Rank:None, Epoch[36/300], Step [101/132], lr:4.93e-04 PSNR: 25.36, MSSSIM: 0.8342
+[2024/03/06 22:23:47] Rank:None, Epoch[36/300], Step [132/132], lr:4.93e-04 PSNR: 25.29, MSSSIM: 0.8329
+	720p: current: 25.29	 best: 25.29	 msssim_best: 0.8329	
+[2024/03/06 22:23:50] Rank:None, Epoch[37/300], Step [1/132], lr:4.93e-04 PSNR: 24.43, MSSSIM: 0.7787
+[2024/03/06 22:23:55] Rank:None, Epoch[37/300], Step [51/132], lr:4.93e-04 PSNR: 25.31, MSSSIM: 0.8311
+[2024/03/06 22:24:01] Rank:None, Epoch[37/300], Step [101/132], lr:4.93e-04 PSNR: 25.55, MSSSIM: 0.8415
+[2024/03/06 22:24:04] Rank:None, Epoch[37/300], Step [132/132], lr:4.93e-04 PSNR: 25.37, MSSSIM: 0.8348
+	720p: current: 25.37	 best: 25.37	 msssim_best: 0.8348	
+[2024/03/06 22:24:07] Rank:None, Epoch[38/300], Step [1/132], lr:4.93e-04 PSNR: 23.45, MSSSIM: 0.7294
+[2024/03/06 22:24:12] Rank:None, Epoch[38/300], Step [51/132], lr:4.92e-04 PSNR: 25.47, MSSSIM: 0.8372
+[2024/03/06 22:24:18] Rank:None, Epoch[38/300], Step [101/132], lr:4.92e-04 PSNR: 25.53, MSSSIM: 0.8402
+[2024/03/06 22:24:21] Rank:None, Epoch[38/300], Step [132/132], lr:4.92e-04 PSNR: 25.45, MSSSIM: 0.8372
+	720p: current: 25.45	 best: 25.45	 msssim_best: 0.8372	
+[2024/03/06 22:24:24] Rank:None, Epoch[39/300], Step [1/132], lr:4.92e-04 PSNR: 24.84, MSSSIM: 0.8332
+[2024/03/06 22:24:29] Rank:None, Epoch[39/300], Step [51/132], lr:4.92e-04 PSNR: 25.83, MSSSIM: 0.8651
+[2024/03/06 22:24:35] Rank:None, Epoch[39/300], Step [101/132], lr:4.91e-04 PSNR: 25.6, MSSSIM: 0.8477
+[2024/03/06 22:24:38] Rank:None, Epoch[39/300], Step [132/132], lr:4.91e-04 PSNR: 25.42, MSSSIM: 0.8385
+	720p: current: 25.42	 best: 25.45	 msssim_best: 0.8385	
+[2024/03/06 22:24:41] Rank:None, Epoch[40/300], Step [1/132], lr:4.91e-04 PSNR: 27.67, MSSSIM: 0.9245
+[2024/03/06 22:24:46] Rank:None, Epoch[40/300], Step [51/132], lr:4.91e-04 PSNR: 25.49, MSSSIM: 0.8394
+[2024/03/06 22:24:52] Rank:None, Epoch[40/300], Step [101/132], lr:4.91e-04 PSNR: 25.46, MSSSIM: 0.8382
+[2024/03/06 22:24:55] Rank:None, Epoch[40/300], Step [132/132], lr:4.91e-04 PSNR: 25.54, MSSSIM: 0.8408
+	720p: current: 25.54	 best: 25.54	 msssim_best: 0.8408	
+[2024/03/06 22:24:58] Rank:None, Epoch[41/300], Step [1/132], lr:4.91e-04 PSNR: 26.83, MSSSIM: 0.9098
+[2024/03/06 22:25:03] Rank:None, Epoch[41/300], Step [51/132], lr:4.90e-04 PSNR: 25.56, MSSSIM: 0.8366
+[2024/03/06 22:25:09] Rank:None, Epoch[41/300], Step [101/132], lr:4.90e-04 PSNR: 25.61, MSSSIM: 0.8421
+[2024/03/06 22:25:12] Rank:None, Epoch[41/300], Step [132/132], lr:4.90e-04 PSNR: 25.62, MSSSIM: 0.8425
+	720p: current: 25.62	 best: 25.62	 msssim_best: 0.8425	
+[2024/03/06 22:25:15] Rank:None, Epoch[42/300], Step [1/132], lr:4.90e-04 PSNR: 28.13, MSSSIM: 0.9292
+[2024/03/06 22:25:20] Rank:None, Epoch[42/300], Step [51/132], lr:4.90e-04 PSNR: 25.36, MSSSIM: 0.8353
+[2024/03/06 22:25:25] Rank:None, Epoch[42/300], Step [101/132], lr:4.89e-04 PSNR: 25.36, MSSSIM: 0.8352
+[2024/03/06 22:25:29] Rank:None, Epoch[42/300], Step [132/132], lr:4.89e-04 PSNR: 25.6, MSSSIM: 0.8436
+	720p: current: 25.60	 best: 25.62	 msssim_best: 0.8436	
+[2024/03/06 22:25:32] Rank:None, Epoch[43/300], Step [1/132], lr:4.89e-04 PSNR: 25.33, MSSSIM: 0.912
+[2024/03/06 22:25:37] Rank:None, Epoch[43/300], Step [51/132], lr:4.89e-04 PSNR: 25.74, MSSSIM: 0.8454
+[2024/03/06 22:25:42] Rank:None, Epoch[43/300], Step [101/132], lr:4.88e-04 PSNR: 25.73, MSSSIM: 0.8459
+[2024/03/06 22:25:46] Rank:None, Epoch[43/300], Step [132/132], lr:4.88e-04 PSNR: 25.74, MSSSIM: 0.8455
+	720p: current: 25.74	 best: 25.74	 msssim_best: 0.8455	
+[2024/03/06 22:25:49] Rank:None, Epoch[44/300], Step [1/132], lr:4.88e-04 PSNR: 25.59, MSSSIM: 0.8334
+[2024/03/06 22:25:54] Rank:None, Epoch[44/300], Step [51/132], lr:4.88e-04 PSNR: 26.26, MSSSIM: 0.865
+[2024/03/06 22:25:59] Rank:None, Epoch[44/300], Step [101/132], lr:4.88e-04 PSNR: 25.79, MSSSIM: 0.8472
+[2024/03/06 22:26:02] Rank:None, Epoch[44/300], Step [132/132], lr:4.87e-04 PSNR: 25.79, MSSSIM: 0.8472
+	720p: current: 25.79	 best: 25.79	 msssim_best: 0.8472	
+[2024/03/06 22:26:05] Rank:None, Epoch[45/300], Step [1/132], lr:4.87e-04 PSNR: 25.24, MSSSIM: 0.9079
+[2024/03/06 22:26:11] Rank:None, Epoch[45/300], Step [51/132], lr:4.87e-04 PSNR: 25.68, MSSSIM: 0.8448
+[2024/03/06 22:26:16] Rank:None, Epoch[45/300], Step [101/132], lr:4.87e-04 PSNR: 25.74, MSSSIM: 0.8464
+[2024/03/06 22:26:19] Rank:None, Epoch[45/300], Step [132/132], lr:4.86e-04 PSNR: 25.75, MSSSIM: 0.8481
+	720p: current: 25.75	 best: 25.79	 msssim_best: 0.8481	
+[2024/03/06 22:26:22] Rank:None, Epoch[46/300], Step [1/132], lr:4.86e-04 PSNR: 26.55, MSSSIM: 0.901
+[2024/03/06 22:26:28] Rank:None, Epoch[46/300], Step [51/132], lr:4.86e-04 PSNR: 26.01, MSSSIM: 0.8593
+[2024/03/06 22:26:33] Rank:None, Epoch[46/300], Step [101/132], lr:4.86e-04 PSNR: 26.05, MSSSIM: 0.8573
+[2024/03/06 22:26:36] Rank:None, Epoch[46/300], Step [132/132], lr:4.86e-04 PSNR: 25.85, MSSSIM: 0.8499
+	720p: current: 25.85	 best: 25.85	 msssim_best: 0.8499	
+[2024/03/06 22:26:39] Rank:None, Epoch[47/300], Step [1/132], lr:4.86e-04 PSNR: 23.67, MSSSIM: 0.7518
+[2024/03/06 22:26:44] Rank:None, Epoch[47/300], Step [51/132], lr:4.85e-04 PSNR: 25.46, MSSSIM: 0.8329
+[2024/03/06 22:26:49] Rank:None, Epoch[47/300], Step [101/132], lr:4.85e-04 PSNR: 25.77, MSSSIM: 0.8481
+[2024/03/06 22:26:53] Rank:None, Epoch[47/300], Step [132/132], lr:4.85e-04 PSNR: 25.88, MSSSIM: 0.8508
+	720p: current: 25.88	 best: 25.88	 msssim_best: 0.8508	
+[2024/03/06 22:26:56] Rank:None, Epoch[48/300], Step [1/132], lr:4.85e-04 PSNR: 26.91, MSSSIM: 0.9234
+[2024/03/06 22:27:01] Rank:None, Epoch[48/300], Step [51/132], lr:4.84e-04 PSNR: 25.89, MSSSIM: 0.8558
+[2024/03/06 22:27:06] Rank:None, Epoch[48/300], Step [101/132], lr:4.84e-04 PSNR: 25.77, MSSSIM: 0.847
+[2024/03/06 22:27:09] Rank:None, Epoch[48/300], Step [132/132], lr:4.84e-04 PSNR: 25.94, MSSSIM: 0.8526
+	720p: current: 25.94	 best: 25.94	 msssim_best: 0.8526	
+[2024/03/06 22:27:12] Rank:None, Epoch[49/300], Step [1/132], lr:4.84e-04 PSNR: 29.29, MSSSIM: 0.9466
+[2024/03/06 22:27:18] Rank:None, Epoch[49/300], Step [51/132], lr:4.83e-04 PSNR: 25.88, MSSSIM: 0.852
+[2024/03/06 22:27:23] Rank:None, Epoch[49/300], Step [101/132], lr:4.83e-04 PSNR: 26.03, MSSSIM: 0.8549
+[2024/03/06 22:27:26] Rank:None, Epoch[49/300], Step [132/132], lr:4.83e-04 PSNR: 26.02, MSSSIM: 0.8543
+	720p: current: 26.02	 best: 26.02	 msssim_best: 0.8543	
+[2024/03/06 22:27:29] Rank:None, Epoch[50/300], Step [1/132], lr:4.83e-04 PSNR: 29.58, MSSSIM: 0.9486
+[2024/03/06 22:27:35] Rank:None, Epoch[50/300], Step [51/132], lr:4.82e-04 PSNR: 26.26, MSSSIM: 0.8647
+[2024/03/06 22:27:40] Rank:None, Epoch[50/300], Step [101/132], lr:4.82e-04 PSNR: 26.17, MSSSIM: 0.8581
+[2024/03/06 22:27:43] Rank:None, Epoch[50/300], Step [132/132], lr:4.82e-04 PSNR: 26.04, MSSSIM: 0.8554
+	720p: current: 26.04	 best: 26.04	 msssim_best: 0.8554	
+Rank:None, Step [1/132], PSNR: 25.09, MSSSIM: 0.8329 FPS: 7.97
+Rank:None, Step [51/132], PSNR: 24.18, MSSSIM: 0.7861 FPS: 31.02
+Rank:None, Step [101/132], PSNR: 25.2, MSSSIM: 0.834 FPS: 32.41
+Eval best_PSNR at epoch50:	720p: current: 25.25	best: 25.25 	best_msssim: 0.8539	 Time/epoch: 8.06
+[2024/03/06 22:27:54] Rank:None, Epoch[51/300], Step [1/132], lr:4.82e-04 PSNR: 26.96, MSSSIM: 0.9337
+[2024/03/06 22:28:00] Rank:None, Epoch[51/300], Step [51/132], lr:4.81e-04 PSNR: 26.12, MSSSIM: 0.8563
+[2024/03/06 22:28:05] Rank:None, Epoch[51/300], Step [101/132], lr:4.81e-04 PSNR: 26.15, MSSSIM: 0.8547
+[2024/03/06 22:28:08] Rank:None, Epoch[51/300], Step [132/132], lr:4.81e-04 PSNR: 26.17, MSSSIM: 0.858
+	720p: current: 26.17	 best: 26.17	 msssim_best: 0.8580	
+[2024/03/06 22:28:11] Rank:None, Epoch[52/300], Step [1/132], lr:4.81e-04 PSNR: 28.14, MSSSIM: 0.9382
+[2024/03/06 22:28:17] Rank:None, Epoch[52/300], Step [51/132], lr:4.80e-04 PSNR: 26.07, MSSSIM: 0.856
+[2024/03/06 22:28:22] Rank:None, Epoch[52/300], Step [101/132], lr:4.80e-04 PSNR: 26.32, MSSSIM: 0.8635
+[2024/03/06 22:28:25] Rank:None, Epoch[52/300], Step [132/132], lr:4.80e-04 PSNR: 26.21, MSSSIM: 0.859
+	720p: current: 26.21	 best: 26.21	 msssim_best: 0.8590	
+[2024/03/06 22:28:28] Rank:None, Epoch[53/300], Step [1/132], lr:4.79e-04 PSNR: 24.12, MSSSIM: 0.7672
+[2024/03/06 22:28:33] Rank:None, Epoch[53/300], Step [51/132], lr:4.79e-04 PSNR: 25.69, MSSSIM: 0.8422
+[2024/03/06 22:28:38] Rank:None, Epoch[53/300], Step [101/132], lr:4.79e-04 PSNR: 26.18, MSSSIM: 0.8576
+[2024/03/06 22:28:42] Rank:None, Epoch[53/300], Step [132/132], lr:4.78e-04 PSNR: 26.17, MSSSIM: 0.8597
+	720p: current: 26.17	 best: 26.21	 msssim_best: 0.8597	
+[2024/03/06 22:28:45] Rank:None, Epoch[54/300], Step [1/132], lr:4.78e-04 PSNR: 24.25, MSSSIM: 0.7718
+[2024/03/06 22:28:50] Rank:None, Epoch[54/300], Step [51/132], lr:4.78e-04 PSNR: 26.47, MSSSIM: 0.873
+[2024/03/06 22:28:55] Rank:None, Epoch[54/300], Step [101/132], lr:4.78e-04 PSNR: 26.25, MSSSIM: 0.861
+[2024/03/06 22:28:58] Rank:None, Epoch[54/300], Step [132/132], lr:4.77e-04 PSNR: 26.29, MSSSIM: 0.8614
+	720p: current: 26.29	 best: 26.29	 msssim_best: 0.8614	
+[2024/03/06 22:29:01] Rank:None, Epoch[55/300], Step [1/132], lr:4.77e-04 PSNR: 25.17, MSSSIM: 0.8147
+[2024/03/06 22:29:07] Rank:None, Epoch[55/300], Step [51/132], lr:4.77e-04 PSNR: 26.6, MSSSIM: 0.8704
+[2024/03/06 22:29:12] Rank:None, Epoch[55/300], Step [101/132], lr:4.76e-04 PSNR: 26.32, MSSSIM: 0.8651
+[2024/03/06 22:29:15] Rank:None, Epoch[55/300], Step [132/132], lr:4.76e-04 PSNR: 26.26, MSSSIM: 0.8621
+	720p: current: 26.26	 best: 26.29	 msssim_best: 0.8621	
+[2024/03/06 22:29:18] Rank:None, Epoch[56/300], Step [1/132], lr:4.76e-04 PSNR: 26.35, MSSSIM: 0.92
+[2024/03/06 22:29:24] Rank:None, Epoch[56/300], Step [51/132], lr:4.76e-04 PSNR: 26.5, MSSSIM: 0.8695
+[2024/03/06 22:29:29] Rank:None, Epoch[56/300], Step [101/132], lr:4.75e-04 PSNR: 26.47, MSSSIM: 0.8677
+[2024/03/06 22:29:32] Rank:None, Epoch[56/300], Step [132/132], lr:4.75e-04 PSNR: 26.39, MSSSIM: 0.8639
+	720p: current: 26.39	 best: 26.39	 msssim_best: 0.8639	
+[2024/03/06 22:29:35] Rank:None, Epoch[57/300], Step [1/132], lr:4.75e-04 PSNR: 26.21, MSSSIM: 0.8638
+[2024/03/06 22:29:40] Rank:None, Epoch[57/300], Step [51/132], lr:4.74e-04 PSNR: 26.26, MSSSIM: 0.8579
+[2024/03/06 22:29:46] Rank:None, Epoch[57/300], Step [101/132], lr:4.74e-04 PSNR: 26.5, MSSSIM: 0.8676
+[2024/03/06 22:29:49] Rank:None, Epoch[57/300], Step [132/132], lr:4.74e-04 PSNR: 26.41, MSSSIM: 0.8651
+	720p: current: 26.41	 best: 26.41	 msssim_best: 0.8651	
+[2024/03/06 22:29:52] Rank:None, Epoch[58/300], Step [1/132], lr:4.74e-04 PSNR: 26.34, MSSSIM: 0.9214
+[2024/03/06 22:29:57] Rank:None, Epoch[58/300], Step [51/132], lr:4.73e-04 PSNR: 26.88, MSSSIM: 0.8807
+[2024/03/06 22:30:02] Rank:None, Epoch[58/300], Step [101/132], lr:4.73e-04 PSNR: 26.7, MSSSIM: 0.8748
+[2024/03/06 22:30:06] Rank:None, Epoch[58/300], Step [132/132], lr:4.72e-04 PSNR: 26.46, MSSSIM: 0.8664
+	720p: current: 26.46	 best: 26.46	 msssim_best: 0.8664	
+[2024/03/06 22:30:09] Rank:None, Epoch[59/300], Step [1/132], lr:4.72e-04 PSNR: 25.0, MSSSIM: 0.8135
+[2024/03/06 22:30:14] Rank:None, Epoch[59/300], Step [51/132], lr:4.72e-04 PSNR: 26.77, MSSSIM: 0.8749
+[2024/03/06 22:30:19] Rank:None, Epoch[59/300], Step [101/132], lr:4.71e-04 PSNR: 26.52, MSSSIM: 0.8695
+[2024/03/06 22:30:22] Rank:None, Epoch[59/300], Step [132/132], lr:4.71e-04 PSNR: 26.46, MSSSIM: 0.8674
+	720p: current: 26.46	 best: 26.46	 msssim_best: 0.8674	
+[2024/03/06 22:30:26] Rank:None, Epoch[60/300], Step [1/132], lr:4.71e-04 PSNR: 24.35, MSSSIM: 0.782
+[2024/03/06 22:30:31] Rank:None, Epoch[60/300], Step [51/132], lr:4.71e-04 PSNR: 27.3, MSSSIM: 0.8858
+[2024/03/06 22:30:36] Rank:None, Epoch[60/300], Step [101/132], lr:4.70e-04 PSNR: 26.74, MSSSIM: 0.8732
+[2024/03/06 22:30:40] Rank:None, Epoch[60/300], Step [132/132], lr:4.70e-04 PSNR: 26.63, MSSSIM: 0.8692
+	720p: current: 26.63	 best: 26.63	 msssim_best: 0.8692	
+[2024/03/06 22:30:43] Rank:None, Epoch[61/300], Step [1/132], lr:4.70e-04 PSNR: 30.81, MSSSIM: 0.9596
+[2024/03/06 22:30:48] Rank:None, Epoch[61/300], Step [51/132], lr:4.69e-04 PSNR: 26.67, MSSSIM: 0.8696
+[2024/03/06 22:30:53] Rank:None, Epoch[61/300], Step [101/132], lr:4.69e-04 PSNR: 26.52, MSSSIM: 0.8679
+[2024/03/06 22:30:56] Rank:None, Epoch[61/300], Step [132/132], lr:4.69e-04 PSNR: 26.52, MSSSIM: 0.8694
+	720p: current: 26.52	 best: 26.63	 msssim_best: 0.8694	
+[2024/03/06 22:30:59] Rank:None, Epoch[62/300], Step [1/132], lr:4.69e-04 PSNR: 23.73, MSSSIM: 0.7717
+[2024/03/06 22:31:05] Rank:None, Epoch[62/300], Step [51/132], lr:4.68e-04 PSNR: 26.64, MSSSIM: 0.8694
+[2024/03/06 22:31:10] Rank:None, Epoch[62/300], Step [101/132], lr:4.68e-04 PSNR: 26.7, MSSSIM: 0.8721
+[2024/03/06 22:31:13] Rank:None, Epoch[62/300], Step [132/132], lr:4.67e-04 PSNR: 26.65, MSSSIM: 0.8714
+	720p: current: 26.65	 best: 26.65	 msssim_best: 0.8714	
+[2024/03/06 22:31:16] Rank:None, Epoch[63/300], Step [1/132], lr:4.67e-04 PSNR: 25.8, MSSSIM: 0.8594
+[2024/03/06 22:31:22] Rank:None, Epoch[63/300], Step [51/132], lr:4.67e-04 PSNR: 26.64, MSSSIM: 0.8736
+[2024/03/06 22:31:27] Rank:None, Epoch[63/300], Step [101/132], lr:4.66e-04 PSNR: 26.74, MSSSIM: 0.874
+[2024/03/06 22:31:30] Rank:None, Epoch[63/300], Step [132/132], lr:4.66e-04 PSNR: 26.65, MSSSIM: 0.8723
+	720p: current: 26.65	 best: 26.65	 msssim_best: 0.8723	
+[2024/03/06 22:31:33] Rank:None, Epoch[64/300], Step [1/132], lr:4.66e-04 PSNR: 24.06, MSSSIM: 0.7788
+[2024/03/06 22:31:38] Rank:None, Epoch[64/300], Step [51/132], lr:4.65e-04 PSNR: 26.8, MSSSIM: 0.88
+[2024/03/06 22:31:44] Rank:None, Epoch[64/300], Step [101/132], lr:4.65e-04 PSNR: 26.82, MSSSIM: 0.8751
+[2024/03/06 22:31:47] Rank:None, Epoch[64/300], Step [132/132], lr:4.64e-04 PSNR: 26.79, MSSSIM: 0.8739
+	720p: current: 26.79	 best: 26.79	 msssim_best: 0.8739	
+[2024/03/06 22:31:50] Rank:None, Epoch[65/300], Step [1/132], lr:4.64e-04 PSNR: 29.83, MSSSIM: 0.9555
+[2024/03/06 22:31:55] Rank:None, Epoch[65/300], Step [51/132], lr:4.64e-04 PSNR: 27.3, MSSSIM: 0.8872
+[2024/03/06 22:32:01] Rank:None, Epoch[65/300], Step [101/132], lr:4.63e-04 PSNR: 26.78, MSSSIM: 0.8719
+[2024/03/06 22:32:04] Rank:None, Epoch[65/300], Step [132/132], lr:4.63e-04 PSNR: 26.81, MSSSIM: 0.8747
+	720p: current: 26.81	 best: 26.81	 msssim_best: 0.8747	
+[2024/03/06 22:32:07] Rank:None, Epoch[66/300], Step [1/132], lr:4.63e-04 PSNR: 29.47, MSSSIM: 0.9466
+[2024/03/06 22:32:12] Rank:None, Epoch[66/300], Step [51/132], lr:4.62e-04 PSNR: 26.41, MSSSIM: 0.8664
+[2024/03/06 22:32:17] Rank:None, Epoch[66/300], Step [101/132], lr:4.62e-04 PSNR: 26.92, MSSSIM: 0.877
+[2024/03/06 22:32:21] Rank:None, Epoch[66/300], Step [132/132], lr:4.62e-04 PSNR: 26.83, MSSSIM: 0.8756
+	720p: current: 26.83	 best: 26.83	 msssim_best: 0.8756	
+[2024/03/06 22:32:24] Rank:None, Epoch[67/300], Step [1/132], lr:4.62e-04 PSNR: 25.43, MSSSIM: 0.8607
+[2024/03/06 22:32:29] Rank:None, Epoch[67/300], Step [51/132], lr:4.61e-04 PSNR: 26.94, MSSSIM: 0.8766
+[2024/03/06 22:32:34] Rank:None, Epoch[67/300], Step [101/132], lr:4.60e-04 PSNR: 26.8, MSSSIM: 0.8735
+[2024/03/06 22:32:37] Rank:None, Epoch[67/300], Step [132/132], lr:4.60e-04 PSNR: 26.83, MSSSIM: 0.8762
+	720p: current: 26.83	 best: 26.83	 msssim_best: 0.8762	
+[2024/03/06 22:32:40] Rank:None, Epoch[68/300], Step [1/132], lr:4.60e-04 PSNR: 25.48, MSSSIM: 0.8325
+[2024/03/06 22:32:46] Rank:None, Epoch[68/300], Step [51/132], lr:4.59e-04 PSNR: 27.02, MSSSIM: 0.881
+[2024/03/06 22:32:51] Rank:None, Epoch[68/300], Step [101/132], lr:4.59e-04 PSNR: 26.95, MSSSIM: 0.8795
+[2024/03/06 22:32:54] Rank:None, Epoch[68/300], Step [132/132], lr:4.59e-04 PSNR: 26.95, MSSSIM: 0.8777
+	720p: current: 26.95	 best: 26.95	 msssim_best: 0.8777	
+[2024/03/06 22:32:57] Rank:None, Epoch[69/300], Step [1/132], lr:4.59e-04 PSNR: 29.57, MSSSIM: 0.9458
+[2024/03/06 22:33:03] Rank:None, Epoch[69/300], Step [51/132], lr:4.58e-04 PSNR: 26.85, MSSSIM: 0.8769
+[2024/03/06 22:33:08] Rank:None, Epoch[69/300], Step [101/132], lr:4.57e-04 PSNR: 26.95, MSSSIM: 0.879
+[2024/03/06 22:33:11] Rank:None, Epoch[69/300], Step [132/132], lr:4.57e-04 PSNR: 26.94, MSSSIM: 0.8789
+	720p: current: 26.94	 best: 26.95	 msssim_best: 0.8789	
+[2024/03/06 22:33:14] Rank:None, Epoch[70/300], Step [1/132], lr:4.57e-04 PSNR: 31.09, MSSSIM: 0.9629
+[2024/03/06 22:33:20] Rank:None, Epoch[70/300], Step [51/132], lr:4.56e-04 PSNR: 27.37, MSSSIM: 0.8901
+[2024/03/06 22:33:25] Rank:None, Epoch[70/300], Step [101/132], lr:4.56e-04 PSNR: 26.95, MSSSIM: 0.8799
+[2024/03/06 22:33:28] Rank:None, Epoch[70/300], Step [132/132], lr:4.55e-04 PSNR: 26.94, MSSSIM: 0.879
+	720p: current: 26.94	 best: 26.95	 msssim_best: 0.8790	
+[2024/03/06 22:33:31] Rank:None, Epoch[71/300], Step [1/132], lr:4.55e-04 PSNR: 24.95, MSSSIM: 0.8224
+[2024/03/06 22:33:36] Rank:None, Epoch[71/300], Step [51/132], lr:4.55e-04 PSNR: 26.9, MSSSIM: 0.8766
+[2024/03/06 22:33:42] Rank:None, Epoch[71/300], Step [101/132], lr:4.54e-04 PSNR: 26.98, MSSSIM: 0.8798
+[2024/03/06 22:33:45] Rank:None, Epoch[71/300], Step [132/132], lr:4.54e-04 PSNR: 27.0, MSSSIM: 0.8803
+	720p: current: 27.00	 best: 27.00	 msssim_best: 0.8803	
+[2024/03/06 22:33:48] Rank:None, Epoch[72/300], Step [1/132], lr:4.54e-04 PSNR: 28.12, MSSSIM: 0.9378
+[2024/03/06 22:33:53] Rank:None, Epoch[72/300], Step [51/132], lr:4.53e-04 PSNR: 27.1, MSSSIM: 0.8797
+[2024/03/06 22:33:59] Rank:None, Epoch[72/300], Step [101/132], lr:4.53e-04 PSNR: 26.95, MSSSIM: 0.8769
+[2024/03/06 22:34:02] Rank:None, Epoch[72/300], Step [132/132], lr:4.52e-04 PSNR: 27.09, MSSSIM: 0.8819
+	720p: current: 27.09	 best: 27.09	 msssim_best: 0.8819	
+[2024/03/06 22:34:05] Rank:None, Epoch[73/300], Step [1/132], lr:4.52e-04 PSNR: 29.23, MSSSIM: 0.9408
+[2024/03/06 22:34:10] Rank:None, Epoch[73/300], Step [51/132], lr:4.52e-04 PSNR: 27.42, MSSSIM: 0.8825
+[2024/03/06 22:34:15] Rank:None, Epoch[73/300], Step [101/132], lr:4.51e-04 PSNR: 27.08, MSSSIM: 0.8763
+[2024/03/06 22:34:19] Rank:None, Epoch[73/300], Step [132/132], lr:4.51e-04 PSNR: 27.2, MSSSIM: 0.8829
+	720p: current: 27.20	 best: 27.20	 msssim_best: 0.8829	
+[2024/03/06 22:34:22] Rank:None, Epoch[74/300], Step [1/132], lr:4.51e-04 PSNR: 27.07, MSSSIM: 0.9392
+[2024/03/06 22:34:27] Rank:None, Epoch[74/300], Step [51/132], lr:4.50e-04 PSNR: 27.42, MSSSIM: 0.8887
+[2024/03/06 22:34:32] Rank:None, Epoch[74/300], Step [101/132], lr:4.49e-04 PSNR: 27.27, MSSSIM: 0.8862
+[2024/03/06 22:34:35] Rank:None, Epoch[74/300], Step [132/132], lr:4.49e-04 PSNR: 27.18, MSSSIM: 0.8834
+	720p: current: 27.18	 best: 27.20	 msssim_best: 0.8834	
+[2024/03/06 22:34:39] Rank:None, Epoch[75/300], Step [1/132], lr:4.49e-04 PSNR: 23.18, MSSSIM: 0.7667
+[2024/03/06 22:34:44] Rank:None, Epoch[75/300], Step [51/132], lr:4.48e-04 PSNR: 27.49, MSSSIM: 0.8967
+[2024/03/06 22:34:50] Rank:None, Epoch[75/300], Step [101/132], lr:4.48e-04 PSNR: 27.31, MSSSIM: 0.8891
+[2024/03/06 22:34:53] Rank:None, Epoch[75/300], Step [132/132], lr:4.47e-04 PSNR: 27.14, MSSSIM: 0.8841
+	720p: current: 27.14	 best: 27.20	 msssim_best: 0.8841	
+[2024/03/06 22:34:56] Rank:None, Epoch[76/300], Step [1/132], lr:4.47e-04 PSNR: 27.2, MSSSIM: 0.8972
+[2024/03/06 22:35:01] Rank:None, Epoch[76/300], Step [51/132], lr:4.47e-04 PSNR: 27.56, MSSSIM: 0.8922
+[2024/03/06 22:35:06] Rank:None, Epoch[76/300], Step [101/132], lr:4.46e-04 PSNR: 27.24, MSSSIM: 0.8827
+[2024/03/06 22:35:10] Rank:None, Epoch[76/300], Step [132/132], lr:4.46e-04 PSNR: 27.25, MSSSIM: 0.8857
+	720p: current: 27.25	 best: 27.25	 msssim_best: 0.8857	
+[2024/03/06 22:35:12] Rank:None, Epoch[77/300], Step [1/132], lr:4.46e-04 PSNR: 31.36, MSSSIM: 0.9658
+[2024/03/06 22:35:18] Rank:None, Epoch[77/300], Step [51/132], lr:4.45e-04 PSNR: 27.69, MSSSIM: 0.8971
+[2024/03/06 22:35:23] Rank:None, Epoch[77/300], Step [101/132], lr:4.44e-04 PSNR: 27.38, MSSSIM: 0.8893
+[2024/03/06 22:35:26] Rank:None, Epoch[77/300], Step [132/132], lr:4.44e-04 PSNR: 27.29, MSSSIM: 0.8864
+	720p: current: 27.29	 best: 27.29	 msssim_best: 0.8864	
+[2024/03/06 22:35:29] Rank:None, Epoch[78/300], Step [1/132], lr:4.44e-04 PSNR: 31.72, MSSSIM: 0.9682
+[2024/03/06 22:35:34] Rank:None, Epoch[78/300], Step [51/132], lr:4.43e-04 PSNR: 27.72, MSSSIM: 0.8956
+[2024/03/06 22:35:40] Rank:None, Epoch[78/300], Step [101/132], lr:4.43e-04 PSNR: 27.3, MSSSIM: 0.8857
+[2024/03/06 22:35:43] Rank:None, Epoch[78/300], Step [132/132], lr:4.42e-04 PSNR: 27.3, MSSSIM: 0.8869
+	720p: current: 27.30	 best: 27.30	 msssim_best: 0.8869	
+[2024/03/06 22:35:46] Rank:None, Epoch[79/300], Step [1/132], lr:4.42e-04 PSNR: 29.87, MSSSIM: 0.9506
+[2024/03/06 22:35:51] Rank:None, Epoch[79/300], Step [51/132], lr:4.41e-04 PSNR: 27.51, MSSSIM: 0.8891
+[2024/03/06 22:35:57] Rank:None, Epoch[79/300], Step [101/132], lr:4.41e-04 PSNR: 27.23, MSSSIM: 0.8858
+[2024/03/06 22:36:00] Rank:None, Epoch[79/300], Step [132/132], lr:4.40e-04 PSNR: 27.41, MSSSIM: 0.8883
+	720p: current: 27.41	 best: 27.41	 msssim_best: 0.8883	
+[2024/03/06 22:36:03] Rank:None, Epoch[80/300], Step [1/132], lr:4.40e-04 PSNR: 24.34, MSSSIM: 0.7774
+[2024/03/06 22:36:09] Rank:None, Epoch[80/300], Step [51/132], lr:4.40e-04 PSNR: 27.74, MSSSIM: 0.8944
+[2024/03/06 22:36:14] Rank:None, Epoch[80/300], Step [101/132], lr:4.39e-04 PSNR: 27.25, MSSSIM: 0.8836
+[2024/03/06 22:36:17] Rank:None, Epoch[80/300], Step [132/132], lr:4.39e-04 PSNR: 27.47, MSSSIM: 0.8895
+	720p: current: 27.47	 best: 27.47	 msssim_best: 0.8895	
+[2024/03/06 22:36:20] Rank:None, Epoch[81/300], Step [1/132], lr:4.39e-04 PSNR: 29.6, MSSSIM: 0.9544
+[2024/03/06 22:36:25] Rank:None, Epoch[81/300], Step [51/132], lr:4.38e-04 PSNR: 27.63, MSSSIM: 0.8957
+[2024/03/06 22:36:31] Rank:None, Epoch[81/300], Step [101/132], lr:4.37e-04 PSNR: 27.17, MSSSIM: 0.8831
+[2024/03/06 22:36:34] Rank:None, Epoch[81/300], Step [132/132], lr:4.37e-04 PSNR: 27.43, MSSSIM: 0.8897
+	720p: current: 27.43	 best: 27.47	 msssim_best: 0.8897	
+[2024/03/06 22:36:37] Rank:None, Epoch[82/300], Step [1/132], lr:4.37e-04 PSNR: 29.82, MSSSIM: 0.9535
+[2024/03/06 22:36:42] Rank:None, Epoch[82/300], Step [51/132], lr:4.36e-04 PSNR: 27.3, MSSSIM: 0.886
+[2024/03/06 22:36:47] Rank:None, Epoch[82/300], Step [101/132], lr:4.35e-04 PSNR: 27.37, MSSSIM: 0.8889
+[2024/03/06 22:36:51] Rank:None, Epoch[82/300], Step [132/132], lr:4.35e-04 PSNR: 27.4, MSSSIM: 0.8901
+	720p: current: 27.40	 best: 27.47	 msssim_best: 0.8901	
+[2024/03/06 22:36:54] Rank:None, Epoch[83/300], Step [1/132], lr:4.35e-04 PSNR: 26.91, MSSSIM: 0.8961
+[2024/03/06 22:36:59] Rank:None, Epoch[83/300], Step [51/132], lr:4.34e-04 PSNR: 27.37, MSSSIM: 0.8905
+[2024/03/06 22:37:04] Rank:None, Epoch[83/300], Step [101/132], lr:4.33e-04 PSNR: 27.4, MSSSIM: 0.8886
+[2024/03/06 22:37:08] Rank:None, Epoch[83/300], Step [132/132], lr:4.33e-04 PSNR: 27.49, MSSSIM: 0.8912
+	720p: current: 27.49	 best: 27.49	 msssim_best: 0.8912	
+[2024/03/06 22:37:11] Rank:None, Epoch[84/300], Step [1/132], lr:4.33e-04 PSNR: 26.67, MSSSIM: 0.9418
+[2024/03/06 22:37:16] Rank:None, Epoch[84/300], Step [51/132], lr:4.32e-04 PSNR: 28.47, MSSSIM: 0.9112
+[2024/03/06 22:37:21] Rank:None, Epoch[84/300], Step [101/132], lr:4.32e-04 PSNR: 27.88, MSSSIM: 0.9004
+[2024/03/06 22:37:24] Rank:None, Epoch[84/300], Step [132/132], lr:4.31e-04 PSNR: 27.64, MSSSIM: 0.8923
+	720p: current: 27.64	 best: 27.64	 msssim_best: 0.8923	
+[2024/03/06 22:37:27] Rank:None, Epoch[85/300], Step [1/132], lr:4.31e-04 PSNR: 31.29, MSSSIM: 0.9668
+[2024/03/06 22:37:33] Rank:None, Epoch[85/300], Step [51/132], lr:4.30e-04 PSNR: 27.61, MSSSIM: 0.894
+[2024/03/06 22:37:38] Rank:None, Epoch[85/300], Step [101/132], lr:4.30e-04 PSNR: 27.71, MSSSIM: 0.8958
+[2024/03/06 22:37:41] Rank:None, Epoch[85/300], Step [132/132], lr:4.29e-04 PSNR: 27.62, MSSSIM: 0.8933
+	720p: current: 27.62	 best: 27.64	 msssim_best: 0.8933	
+[2024/03/06 22:37:45] Rank:None, Epoch[86/300], Step [1/132], lr:4.29e-04 PSNR: 31.68, MSSSIM: 0.9679
+[2024/03/06 22:37:50] Rank:None, Epoch[86/300], Step [51/132], lr:4.28e-04 PSNR: 27.45, MSSSIM: 0.8891
+[2024/03/06 22:37:55] Rank:None, Epoch[86/300], Step [101/132], lr:4.28e-04 PSNR: 27.55, MSSSIM: 0.892
+[2024/03/06 22:37:58] Rank:None, Epoch[86/300], Step [132/132], lr:4.27e-04 PSNR: 27.63, MSSSIM: 0.8933
+	720p: current: 27.63	 best: 27.64	 msssim_best: 0.8933	
+[2024/03/06 22:38:01] Rank:None, Epoch[87/300], Step [1/132], lr:4.27e-04 PSNR: 29.66, MSSSIM: 0.9464
+[2024/03/06 22:38:07] Rank:None, Epoch[87/300], Step [51/132], lr:4.27e-04 PSNR: 27.36, MSSSIM: 0.8839
+[2024/03/06 22:38:12] Rank:None, Epoch[87/300], Step [101/132], lr:4.26e-04 PSNR: 27.62, MSSSIM: 0.8934
+[2024/03/06 22:38:15] Rank:None, Epoch[87/300], Step [132/132], lr:4.25e-04 PSNR: 27.63, MSSSIM: 0.8941
+	720p: current: 27.63	 best: 27.64	 msssim_best: 0.8941	
+[2024/03/06 22:38:18] Rank:None, Epoch[88/300], Step [1/132], lr:4.25e-04 PSNR: 24.18, MSSSIM: 0.7947
+[2024/03/06 22:38:23] Rank:None, Epoch[88/300], Step [51/132], lr:4.25e-04 PSNR: 27.42, MSSSIM: 0.8876
+[2024/03/06 22:38:28] Rank:None, Epoch[88/300], Step [101/132], lr:4.24e-04 PSNR: 27.64, MSSSIM: 0.8929
+[2024/03/06 22:38:32] Rank:None, Epoch[88/300], Step [132/132], lr:4.23e-04 PSNR: 27.72, MSSSIM: 0.8949
+	720p: current: 27.72	 best: 27.72	 msssim_best: 0.8949	
+[2024/03/06 22:38:35] Rank:None, Epoch[89/300], Step [1/132], lr:4.23e-04 PSNR: 31.94, MSSSIM: 0.9725
+[2024/03/06 22:38:40] Rank:None, Epoch[89/300], Step [51/132], lr:4.23e-04 PSNR: 27.19, MSSSIM: 0.8834
+[2024/03/06 22:38:45] Rank:None, Epoch[89/300], Step [101/132], lr:4.22e-04 PSNR: 27.53, MSSSIM: 0.8913
+[2024/03/06 22:38:49] Rank:None, Epoch[89/300], Step [132/132], lr:4.21e-04 PSNR: 27.74, MSSSIM: 0.896
+	720p: current: 27.74	 best: 27.74	 msssim_best: 0.8960	
+[2024/03/06 22:38:52] Rank:None, Epoch[90/300], Step [1/132], lr:4.21e-04 PSNR: 29.77, MSSSIM: 0.9591
+[2024/03/06 22:38:57] Rank:None, Epoch[90/300], Step [51/132], lr:4.21e-04 PSNR: 27.92, MSSSIM: 0.8975
+[2024/03/06 22:39:03] Rank:None, Epoch[90/300], Step [101/132], lr:4.20e-04 PSNR: 27.83, MSSSIM: 0.8985
+[2024/03/06 22:39:06] Rank:None, Epoch[90/300], Step [132/132], lr:4.19e-04 PSNR: 27.78, MSSSIM: 0.8962
+	720p: current: 27.78	 best: 27.78	 msssim_best: 0.8962	
+[2024/03/06 22:39:09] Rank:None, Epoch[91/300], Step [1/132], lr:4.19e-04 PSNR: 28.64, MSSSIM: 0.9433
+[2024/03/06 22:39:14] Rank:None, Epoch[91/300], Step [51/132], lr:4.19e-04 PSNR: 27.78, MSSSIM: 0.9039
+[2024/03/06 22:39:20] Rank:None, Epoch[91/300], Step [101/132], lr:4.18e-04 PSNR: 27.71, MSSSIM: 0.9001
+[2024/03/06 22:39:23] Rank:None, Epoch[91/300], Step [132/132], lr:4.17e-04 PSNR: 27.72, MSSSIM: 0.8974
+	720p: current: 27.72	 best: 27.78	 msssim_best: 0.8974	
+[2024/03/06 22:39:26] Rank:None, Epoch[92/300], Step [1/132], lr:4.17e-04 PSNR: 32.6, MSSSIM: 0.9742
+[2024/03/06 22:39:31] Rank:None, Epoch[92/300], Step [51/132], lr:4.17e-04 PSNR: 27.81, MSSSIM: 0.895
+[2024/03/06 22:39:36] Rank:None, Epoch[92/300], Step [101/132], lr:4.16e-04 PSNR: 28.12, MSSSIM: 0.9017
+[2024/03/06 22:39:40] Rank:None, Epoch[92/300], Step [132/132], lr:4.15e-04 PSNR: 27.9, MSSSIM: 0.8982
+	720p: current: 27.90	 best: 27.90	 msssim_best: 0.8982	
+[2024/03/06 22:39:43] Rank:None, Epoch[93/300], Step [1/132], lr:4.15e-04 PSNR: 30.31, MSSSIM: 0.9617
+[2024/03/06 22:39:49] Rank:None, Epoch[93/300], Step [51/132], lr:4.14e-04 PSNR: 27.37, MSSSIM: 0.8906
+[2024/03/06 22:39:54] Rank:None, Epoch[93/300], Step [101/132], lr:4.14e-04 PSNR: 27.78, MSSSIM: 0.8982
+[2024/03/06 22:39:57] Rank:None, Epoch[93/300], Step [132/132], lr:4.13e-04 PSNR: 27.83, MSSSIM: 0.8985
+	720p: current: 27.83	 best: 27.90	 msssim_best: 0.8985	
+[2024/03/06 22:40:00] Rank:None, Epoch[94/300], Step [1/132], lr:4.13e-04 PSNR: 29.69, MSSSIM: 0.9459
+[2024/03/06 22:40:05] Rank:None, Epoch[94/300], Step [51/132], lr:4.12e-04 PSNR: 27.64, MSSSIM: 0.8945
+[2024/03/06 22:40:11] Rank:None, Epoch[94/300], Step [101/132], lr:4.12e-04 PSNR: 27.87, MSSSIM: 0.8982
+[2024/03/06 22:40:14] Rank:None, Epoch[94/300], Step [132/132], lr:4.11e-04 PSNR: 27.99, MSSSIM: 0.8997
+	720p: current: 27.99	 best: 27.99	 msssim_best: 0.8997	
+[2024/03/06 22:40:17] Rank:None, Epoch[95/300], Step [1/132], lr:4.11e-04 PSNR: 28.75, MSSSIM: 0.9404
+[2024/03/06 22:40:22] Rank:None, Epoch[95/300], Step [51/132], lr:4.10e-04 PSNR: 27.97, MSSSIM: 0.8984
+[2024/03/06 22:40:27] Rank:None, Epoch[95/300], Step [101/132], lr:4.09e-04 PSNR: 27.92, MSSSIM: 0.9
+[2024/03/06 22:40:31] Rank:None, Epoch[95/300], Step [132/132], lr:4.09e-04 PSNR: 27.99, MSSSIM: 0.9006
+	720p: current: 27.99	 best: 27.99	 msssim_best: 0.9006	
+[2024/03/06 22:40:34] Rank:None, Epoch[96/300], Step [1/132], lr:4.09e-04 PSNR: 26.54, MSSSIM: 0.8714
+[2024/03/06 22:40:39] Rank:None, Epoch[96/300], Step [51/132], lr:4.08e-04 PSNR: 28.24, MSSSIM: 0.9041
+[2024/03/06 22:40:44] Rank:None, Epoch[96/300], Step [101/132], lr:4.07e-04 PSNR: 28.11, MSSSIM: 0.9033
+[2024/03/06 22:40:47] Rank:None, Epoch[96/300], Step [132/132], lr:4.07e-04 PSNR: 28.06, MSSSIM: 0.9012
+	720p: current: 28.06	 best: 28.06	 msssim_best: 0.9012	
+[2024/03/06 22:40:50] Rank:None, Epoch[97/300], Step [1/132], lr:4.07e-04 PSNR: 25.26, MSSSIM: 0.8253
+[2024/03/06 22:40:56] Rank:None, Epoch[97/300], Step [51/132], lr:4.06e-04 PSNR: 27.35, MSSSIM: 0.8906
+[2024/03/06 22:41:01] Rank:None, Epoch[97/300], Step [101/132], lr:4.05e-04 PSNR: 27.92, MSSSIM: 0.8993
+[2024/03/06 22:41:04] Rank:None, Epoch[97/300], Step [132/132], lr:4.05e-04 PSNR: 28.02, MSSSIM: 0.9016
+	720p: current: 28.02	 best: 28.06	 msssim_best: 0.9016	
+[2024/03/06 22:41:07] Rank:None, Epoch[98/300], Step [1/132], lr:4.05e-04 PSNR: 29.74, MSSSIM: 0.9559
+[2024/03/06 22:41:12] Rank:None, Epoch[98/300], Step [51/132], lr:4.04e-04 PSNR: 27.85, MSSSIM: 0.9036
+[2024/03/06 22:41:18] Rank:None, Epoch[98/300], Step [101/132], lr:4.03e-04 PSNR: 28.01, MSSSIM: 0.9027
+[2024/03/06 22:41:21] Rank:None, Epoch[98/300], Step [132/132], lr:4.02e-04 PSNR: 28.01, MSSSIM: 0.9016
+	720p: current: 28.01	 best: 28.06	 msssim_best: 0.9016	
+[2024/03/06 22:41:24] Rank:None, Epoch[99/300], Step [1/132], lr:4.02e-04 PSNR: 27.4, MSSSIM: 0.9033
+[2024/03/06 22:41:30] Rank:None, Epoch[99/300], Step [51/132], lr:4.02e-04 PSNR: 28.42, MSSSIM: 0.907
+[2024/03/06 22:41:35] Rank:None, Epoch[99/300], Step [101/132], lr:4.01e-04 PSNR: 28.24, MSSSIM: 0.9029
+[2024/03/06 22:41:38] Rank:None, Epoch[99/300], Step [132/132], lr:4.00e-04 PSNR: 28.12, MSSSIM: 0.9029
+	720p: current: 28.12	 best: 28.12	 msssim_best: 0.9029	
+[2024/03/06 22:41:41] Rank:None, Epoch[100/300], Step [1/132], lr:4.00e-04 PSNR: 23.99, MSSSIM: 0.791
+[2024/03/06 22:41:46] Rank:None, Epoch[100/300], Step [51/132], lr:3.99e-04 PSNR: 28.32, MSSSIM: 0.9089
+[2024/03/06 22:41:51] Rank:None, Epoch[100/300], Step [101/132], lr:3.99e-04 PSNR: 28.16, MSSSIM: 0.906
+[2024/03/06 22:41:55] Rank:None, Epoch[100/300], Step [132/132], lr:3.98e-04 PSNR: 28.09, MSSSIM: 0.9035
+	720p: current: 28.09	 best: 28.12	 msssim_best: 0.9035	
+Rank:None, Step [1/132], PSNR: 27.42, MSSSIM: 0.8978 FPS: 9.86
+Rank:None, Step [51/132], PSNR: 25.8, MSSSIM: 0.8442 FPS: 29.55
+Rank:None, Step [101/132], PSNR: 28.0, MSSSIM: 0.8896 FPS: 31.02
+Eval best_PSNR at epoch100:	720p: current: 28.47	best: 28.47 	best_msssim: 0.9059	 Time/epoch: 8.41
+[2024/03/06 22:42:06] Rank:None, Epoch[101/300], Step [1/132], lr:3.98e-04 PSNR: 25.33, MSSSIM: 0.8225
+[2024/03/06 22:42:11] Rank:None, Epoch[101/300], Step [51/132], lr:3.97e-04 PSNR: 28.2, MSSSIM: 0.8993
+[2024/03/06 22:42:17] Rank:None, Epoch[101/300], Step [101/132], lr:3.96e-04 PSNR: 27.97, MSSSIM: 0.8999
+[2024/03/06 22:42:20] Rank:None, Epoch[101/300], Step [132/132], lr:3.96e-04 PSNR: 28.15, MSSSIM: 0.9037
+	720p: current: 28.15	 best: 28.15	 msssim_best: 0.9037	
+[2024/03/06 22:42:23] Rank:None, Epoch[102/300], Step [1/132], lr:3.96e-04 PSNR: 33.21, MSSSIM: 0.9759
+[2024/03/06 22:42:28] Rank:None, Epoch[102/300], Step [51/132], lr:3.95e-04 PSNR: 28.61, MSSSIM: 0.9123
+[2024/03/06 22:42:34] Rank:None, Epoch[102/300], Step [101/132], lr:3.94e-04 PSNR: 28.31, MSSSIM: 0.9065
+[2024/03/06 22:42:37] Rank:None, Epoch[102/300], Step [132/132], lr:3.94e-04 PSNR: 28.22, MSSSIM: 0.9043
+	720p: current: 28.22	 best: 28.22	 msssim_best: 0.9043	
+[2024/03/06 22:42:40] Rank:None, Epoch[103/300], Step [1/132], lr:3.94e-04 PSNR: 30.87, MSSSIM: 0.9644
+[2024/03/06 22:42:45] Rank:None, Epoch[103/300], Step [51/132], lr:3.93e-04 PSNR: 28.86, MSSSIM: 0.9165
+[2024/03/06 22:42:50] Rank:None, Epoch[103/300], Step [101/132], lr:3.92e-04 PSNR: 28.34, MSSSIM: 0.9072
+[2024/03/06 22:42:54] Rank:None, Epoch[103/300], Step [132/132], lr:3.91e-04 PSNR: 28.2, MSSSIM: 0.9049
+	720p: current: 28.20	 best: 28.22	 msssim_best: 0.9049	
+[2024/03/06 22:42:57] Rank:None, Epoch[104/300], Step [1/132], lr:3.91e-04 PSNR: 27.72, MSSSIM: 0.9477
+[2024/03/06 22:43:02] Rank:None, Epoch[104/300], Step [51/132], lr:3.90e-04 PSNR: 28.9, MSSSIM: 0.9211
+[2024/03/06 22:43:07] Rank:None, Epoch[104/300], Step [101/132], lr:3.90e-04 PSNR: 28.48, MSSSIM: 0.91
+[2024/03/06 22:43:10] Rank:None, Epoch[104/300], Step [132/132], lr:3.89e-04 PSNR: 28.36, MSSSIM: 0.9066
+	720p: current: 28.36	 best: 28.36	 msssim_best: 0.9066	
+[2024/03/06 22:43:13] Rank:None, Epoch[105/300], Step [1/132], lr:3.89e-04 PSNR: 29.49, MSSSIM: 0.9557
+[2024/03/06 22:43:19] Rank:None, Epoch[105/300], Step [51/132], lr:3.88e-04 PSNR: 28.2, MSSSIM: 0.9024
+[2024/03/06 22:43:24] Rank:None, Epoch[105/300], Step [101/132], lr:3.87e-04 PSNR: 28.12, MSSSIM: 0.9029
+[2024/03/06 22:43:27] Rank:None, Epoch[105/300], Step [132/132], lr:3.87e-04 PSNR: 28.22, MSSSIM: 0.906
+	720p: current: 28.22	 best: 28.36	 msssim_best: 0.9066	
+[2024/03/06 22:43:30] Rank:None, Epoch[106/300], Step [1/132], lr:3.87e-04 PSNR: 26.45, MSSSIM: 0.8687
+[2024/03/06 22:43:36] Rank:None, Epoch[106/300], Step [51/132], lr:3.86e-04 PSNR: 28.4, MSSSIM: 0.9094
+[2024/03/06 22:43:41] Rank:None, Epoch[106/300], Step [101/132], lr:3.85e-04 PSNR: 28.27, MSSSIM: 0.9074
+[2024/03/06 22:43:44] Rank:None, Epoch[106/300], Step [132/132], lr:3.84e-04 PSNR: 28.22, MSSSIM: 0.9058
+	720p: current: 28.22	 best: 28.36	 msssim_best: 0.9066	
+[2024/03/06 22:43:47] Rank:None, Epoch[107/300], Step [1/132], lr:3.84e-04 PSNR: 27.87, MSSSIM: 0.9102
+[2024/03/06 22:43:52] Rank:None, Epoch[107/300], Step [51/132], lr:3.84e-04 PSNR: 28.3, MSSSIM: 0.9087
+[2024/03/06 22:43:58] Rank:None, Epoch[107/300], Step [101/132], lr:3.83e-04 PSNR: 28.48, MSSSIM: 0.9109
+[2024/03/06 22:44:01] Rank:None, Epoch[107/300], Step [132/132], lr:3.82e-04 PSNR: 28.41, MSSSIM: 0.9079
+	720p: current: 28.41	 best: 28.41	 msssim_best: 0.9079	
+[2024/03/06 22:44:04] Rank:None, Epoch[108/300], Step [1/132], lr:3.82e-04 PSNR: 27.47, MSSSIM: 0.9048
+[2024/03/06 22:44:09] Rank:None, Epoch[108/300], Step [51/132], lr:3.81e-04 PSNR: 28.54, MSSSIM: 0.9143
+[2024/03/06 22:44:15] Rank:None, Epoch[108/300], Step [101/132], lr:3.80e-04 PSNR: 28.63, MSSSIM: 0.9146
+[2024/03/06 22:44:18] Rank:None, Epoch[108/300], Step [132/132], lr:3.80e-04 PSNR: 28.39, MSSSIM: 0.9089
+	720p: current: 28.39	 best: 28.41	 msssim_best: 0.9089	
+[2024/03/06 22:44:21] Rank:None, Epoch[109/300], Step [1/132], lr:3.80e-04 PSNR: 31.51, MSSSIM: 0.9655
+[2024/03/06 22:44:26] Rank:None, Epoch[109/300], Step [51/132], lr:3.79e-04 PSNR: 28.13, MSSSIM: 0.904
+[2024/03/06 22:44:31] Rank:None, Epoch[109/300], Step [101/132], lr:3.78e-04 PSNR: 28.43, MSSSIM: 0.9101
+[2024/03/06 22:44:35] Rank:None, Epoch[109/300], Step [132/132], lr:3.77e-04 PSNR: 28.36, MSSSIM: 0.9082
+	720p: current: 28.36	 best: 28.41	 msssim_best: 0.9089	
+[2024/03/06 22:44:38] Rank:None, Epoch[110/300], Step [1/132], lr:3.77e-04 PSNR: 29.71, MSSSIM: 0.954
+[2024/03/06 22:44:43] Rank:None, Epoch[110/300], Step [51/132], lr:3.76e-04 PSNR: 28.79, MSSSIM: 0.9115
+[2024/03/06 22:44:49] Rank:None, Epoch[110/300], Step [101/132], lr:3.76e-04 PSNR: 28.69, MSSSIM: 0.9114
+[2024/03/06 22:44:52] Rank:None, Epoch[110/300], Step [132/132], lr:3.75e-04 PSNR: 28.54, MSSSIM: 0.9095
+	720p: current: 28.54	 best: 28.54	 msssim_best: 0.9095	
+[2024/03/06 22:44:55] Rank:None, Epoch[111/300], Step [1/132], lr:3.75e-04 PSNR: 32.81, MSSSIM: 0.9761
+[2024/03/06 22:45:00] Rank:None, Epoch[111/300], Step [51/132], lr:3.74e-04 PSNR: 28.41, MSSSIM: 0.9088
+[2024/03/06 22:45:05] Rank:None, Epoch[111/300], Step [101/132], lr:3.73e-04 PSNR: 28.42, MSSSIM: 0.9073
+[2024/03/06 22:45:09] Rank:None, Epoch[111/300], Step [132/132], lr:3.73e-04 PSNR: 28.53, MSSSIM: 0.91
+	720p: current: 28.53	 best: 28.54	 msssim_best: 0.9100	
+[2024/03/06 22:45:12] Rank:None, Epoch[112/300], Step [1/132], lr:3.73e-04 PSNR: 26.58, MSSSIM: 0.8822
+[2024/03/06 22:45:17] Rank:None, Epoch[112/300], Step [51/132], lr:3.72e-04 PSNR: 28.85, MSSSIM: 0.9169
+[2024/03/06 22:45:22] Rank:None, Epoch[112/300], Step [101/132], lr:3.71e-04 PSNR: 28.53, MSSSIM: 0.9095
+[2024/03/06 22:45:26] Rank:None, Epoch[112/300], Step [132/132], lr:3.70e-04 PSNR: 28.59, MSSSIM: 0.9109
+	720p: current: 28.59	 best: 28.59	 msssim_best: 0.9109	
+[2024/03/06 22:45:28] Rank:None, Epoch[113/300], Step [1/132], lr:3.70e-04 PSNR: 29.0, MSSSIM: 0.9362
+[2024/03/06 22:45:34] Rank:None, Epoch[113/300], Step [51/132], lr:3.69e-04 PSNR: 28.35, MSSSIM: 0.9057
+[2024/03/06 22:45:39] Rank:None, Epoch[113/300], Step [101/132], lr:3.68e-04 PSNR: 28.5, MSSSIM: 0.9084
+[2024/03/06 22:45:42] Rank:None, Epoch[113/300], Step [132/132], lr:3.68e-04 PSNR: 28.63, MSSSIM: 0.9113
+	720p: current: 28.63	 best: 28.63	 msssim_best: 0.9113	
+[2024/03/06 22:45:45] Rank:None, Epoch[114/300], Step [1/132], lr:3.68e-04 PSNR: 26.87, MSSSIM: 0.8813
+[2024/03/06 22:45:51] Rank:None, Epoch[114/300], Step [51/132], lr:3.67e-04 PSNR: 28.47, MSSSIM: 0.9099
+[2024/03/06 22:45:56] Rank:None, Epoch[114/300], Step [101/132], lr:3.66e-04 PSNR: 28.44, MSSSIM: 0.909
+[2024/03/06 22:45:59] Rank:None, Epoch[114/300], Step [132/132], lr:3.65e-04 PSNR: 28.56, MSSSIM: 0.9114
+	720p: current: 28.56	 best: 28.63	 msssim_best: 0.9114	
+[2024/03/06 22:46:02] Rank:None, Epoch[115/300], Step [1/132], lr:3.65e-04 PSNR: 30.48, MSSSIM: 0.9637
+[2024/03/06 22:46:07] Rank:None, Epoch[115/300], Step [51/132], lr:3.64e-04 PSNR: 28.65, MSSSIM: 0.9185
+[2024/03/06 22:46:12] Rank:None, Epoch[115/300], Step [101/132], lr:3.63e-04 PSNR: 28.57, MSSSIM: 0.9124
+[2024/03/06 22:46:16] Rank:None, Epoch[115/300], Step [132/132], lr:3.63e-04 PSNR: 28.62, MSSSIM: 0.9119
+	720p: current: 28.62	 best: 28.63	 msssim_best: 0.9119	
+[2024/03/06 22:46:19] Rank:None, Epoch[116/300], Step [1/132], lr:3.63e-04 PSNR: 27.97, MSSSIM: 0.9517
+[2024/03/06 22:46:24] Rank:None, Epoch[116/300], Step [51/132], lr:3.62e-04 PSNR: 29.16, MSSSIM: 0.924
+[2024/03/06 22:46:29] Rank:None, Epoch[116/300], Step [101/132], lr:3.61e-04 PSNR: 28.79, MSSSIM: 0.9152
+[2024/03/06 22:46:33] Rank:None, Epoch[116/300], Step [132/132], lr:3.60e-04 PSNR: 28.65, MSSSIM: 0.9121
+	720p: current: 28.65	 best: 28.65	 msssim_best: 0.9121	
+[2024/03/06 22:46:35] Rank:None, Epoch[117/300], Step [1/132], lr:3.60e-04 PSNR: 31.39, MSSSIM: 0.97
+[2024/03/06 22:46:41] Rank:None, Epoch[117/300], Step [51/132], lr:3.59e-04 PSNR: 29.06, MSSSIM: 0.9212
+[2024/03/06 22:46:46] Rank:None, Epoch[117/300], Step [101/132], lr:3.59e-04 PSNR: 28.83, MSSSIM: 0.9141
+[2024/03/06 22:46:49] Rank:None, Epoch[117/300], Step [132/132], lr:3.58e-04 PSNR: 28.72, MSSSIM: 0.9132
+	720p: current: 28.72	 best: 28.72	 msssim_best: 0.9132	
+[2024/03/06 22:46:52] Rank:None, Epoch[118/300], Step [1/132], lr:3.58e-04 PSNR: 28.39, MSSSIM: 0.9266
+[2024/03/06 22:46:58] Rank:None, Epoch[118/300], Step [51/132], lr:3.57e-04 PSNR: 28.54, MSSSIM: 0.9146
+[2024/03/06 22:47:03] Rank:None, Epoch[118/300], Step [101/132], lr:3.56e-04 PSNR: 28.77, MSSSIM: 0.9171
+[2024/03/06 22:47:07] Rank:None, Epoch[118/300], Step [132/132], lr:3.55e-04 PSNR: 28.59, MSSSIM: 0.9132
+	720p: current: 28.59	 best: 28.72	 msssim_best: 0.9132	
+[2024/03/06 22:47:10] Rank:None, Epoch[119/300], Step [1/132], lr:3.55e-04 PSNR: 25.46, MSSSIM: 0.8342
+[2024/03/06 22:47:15] Rank:None, Epoch[119/300], Step [51/132], lr:3.54e-04 PSNR: 28.93, MSSSIM: 0.9182
+[2024/03/06 22:47:20] Rank:None, Epoch[119/300], Step [101/132], lr:3.54e-04 PSNR: 28.69, MSSSIM: 0.912
+[2024/03/06 22:47:24] Rank:None, Epoch[119/300], Step [132/132], lr:3.53e-04 PSNR: 28.73, MSSSIM: 0.9143
+	720p: current: 28.73	 best: 28.73	 msssim_best: 0.9143	
+[2024/03/06 22:47:27] Rank:None, Epoch[120/300], Step [1/132], lr:3.53e-04 PSNR: 33.12, MSSSIM: 0.9759
+[2024/03/06 22:47:32] Rank:None, Epoch[120/300], Step [51/132], lr:3.52e-04 PSNR: 28.62, MSSSIM: 0.9115
+[2024/03/06 22:47:38] Rank:None, Epoch[120/300], Step [101/132], lr:3.51e-04 PSNR: 28.78, MSSSIM: 0.9158
+[2024/03/06 22:47:41] Rank:None, Epoch[120/300], Step [132/132], lr:3.50e-04 PSNR: 28.79, MSSSIM: 0.9146
+	720p: current: 28.79	 best: 28.79	 msssim_best: 0.9146	
+[2024/03/06 22:47:44] Rank:None, Epoch[121/300], Step [1/132], lr:3.50e-04 PSNR: 29.37, MSSSIM: 0.9498
+[2024/03/06 22:47:49] Rank:None, Epoch[121/300], Step [51/132], lr:3.49e-04 PSNR: 28.4, MSSSIM: 0.9093
+[2024/03/06 22:47:55] Rank:None, Epoch[121/300], Step [101/132], lr:3.49e-04 PSNR: 28.75, MSSSIM: 0.9153
+[2024/03/06 22:47:58] Rank:None, Epoch[121/300], Step [132/132], lr:3.48e-04 PSNR: 28.74, MSSSIM: 0.9148
+	720p: current: 28.74	 best: 28.79	 msssim_best: 0.9148	
+[2024/03/06 22:48:01] Rank:None, Epoch[122/300], Step [1/132], lr:3.48e-04 PSNR: 27.01, MSSSIM: 0.8851
+[2024/03/06 22:48:06] Rank:None, Epoch[122/300], Step [51/132], lr:3.47e-04 PSNR: 28.59, MSSSIM: 0.9135
+[2024/03/06 22:48:12] Rank:None, Epoch[122/300], Step [101/132], lr:3.46e-04 PSNR: 29.02, MSSSIM: 0.9184
+[2024/03/06 22:48:15] Rank:None, Epoch[122/300], Step [132/132], lr:3.45e-04 PSNR: 28.78, MSSSIM: 0.9152
+	720p: current: 28.78	 best: 28.79	 msssim_best: 0.9152	
+[2024/03/06 22:48:18] Rank:None, Epoch[123/300], Step [1/132], lr:3.45e-04 PSNR: 31.06, MSSSIM: 0.9685
+[2024/03/06 22:48:23] Rank:None, Epoch[123/300], Step [51/132], lr:3.44e-04 PSNR: 29.24, MSSSIM: 0.9236
+[2024/03/06 22:48:29] Rank:None, Epoch[123/300], Step [101/132], lr:3.43e-04 PSNR: 29.06, MSSSIM: 0.9199
+[2024/03/06 22:48:32] Rank:None, Epoch[123/300], Step [132/132], lr:3.43e-04 PSNR: 28.85, MSSSIM: 0.9164
+	720p: current: 28.85	 best: 28.85	 msssim_best: 0.9164	
+[2024/03/06 22:48:35] Rank:None, Epoch[124/300], Step [1/132], lr:3.43e-04 PSNR: 26.98, MSSSIM: 0.8875
+[2024/03/06 22:48:41] Rank:None, Epoch[124/300], Step [51/132], lr:3.42e-04 PSNR: 28.38, MSSSIM: 0.9033
+[2024/03/06 22:48:46] Rank:None, Epoch[124/300], Step [101/132], lr:3.41e-04 PSNR: 28.92, MSSSIM: 0.916
+[2024/03/06 22:48:49] Rank:None, Epoch[124/300], Step [132/132], lr:3.40e-04 PSNR: 28.9, MSSSIM: 0.917
+	720p: current: 28.90	 best: 28.90	 msssim_best: 0.9170	
+[2024/03/06 22:48:52] Rank:None, Epoch[125/300], Step [1/132], lr:3.40e-04 PSNR: 32.13, MSSSIM: 0.9757
+[2024/03/06 22:48:58] Rank:None, Epoch[125/300], Step [51/132], lr:3.39e-04 PSNR: 29.8, MSSSIM: 0.9364
+[2024/03/06 22:49:03] Rank:None, Epoch[125/300], Step [101/132], lr:3.38e-04 PSNR: 29.11, MSSSIM: 0.922
+[2024/03/06 22:49:06] Rank:None, Epoch[125/300], Step [132/132], lr:3.38e-04 PSNR: 28.89, MSSSIM: 0.9172
+	720p: current: 28.89	 best: 28.90	 msssim_best: 0.9172	
+[2024/03/06 22:49:10] Rank:None, Epoch[126/300], Step [1/132], lr:3.38e-04 PSNR: 30.73, MSSSIM: 0.9656
+[2024/03/06 22:49:15] Rank:None, Epoch[126/300], Step [51/132], lr:3.37e-04 PSNR: 29.04, MSSSIM: 0.9213
+[2024/03/06 22:49:20] Rank:None, Epoch[126/300], Step [101/132], lr:3.36e-04 PSNR: 29.04, MSSSIM: 0.922
+[2024/03/06 22:49:24] Rank:None, Epoch[126/300], Step [132/132], lr:3.35e-04 PSNR: 28.89, MSSSIM: 0.9173
+	720p: current: 28.89	 best: 28.90	 msssim_best: 0.9173	
+[2024/03/06 22:49:27] Rank:None, Epoch[127/300], Step [1/132], lr:3.35e-04 PSNR: 26.01, MSSSIM: 0.8503
+[2024/03/06 22:49:32] Rank:None, Epoch[127/300], Step [51/132], lr:3.34e-04 PSNR: 28.28, MSSSIM: 0.9054
+[2024/03/06 22:49:38] Rank:None, Epoch[127/300], Step [101/132], lr:3.33e-04 PSNR: 28.75, MSSSIM: 0.913
+[2024/03/06 22:49:41] Rank:None, Epoch[127/300], Step [132/132], lr:3.32e-04 PSNR: 28.91, MSSSIM: 0.9177
+	720p: current: 28.91	 best: 28.91	 msssim_best: 0.9177	
+[2024/03/06 22:49:44] Rank:None, Epoch[128/300], Step [1/132], lr:3.32e-04 PSNR: 28.12, MSSSIM: 0.9203
+[2024/03/06 22:49:49] Rank:None, Epoch[128/300], Step [51/132], lr:3.31e-04 PSNR: 29.1, MSSSIM: 0.9272
+[2024/03/06 22:49:55] Rank:None, Epoch[128/300], Step [101/132], lr:3.31e-04 PSNR: 28.94, MSSSIM: 0.919
+[2024/03/06 22:49:58] Rank:None, Epoch[128/300], Step [132/132], lr:3.30e-04 PSNR: 28.99, MSSSIM: 0.9184
+	720p: current: 28.99	 best: 28.99	 msssim_best: 0.9184	
+[2024/03/06 22:50:02] Rank:None, Epoch[129/300], Step [1/132], lr:3.30e-04 PSNR: 31.97, MSSSIM: 0.9724
+[2024/03/06 22:50:07] Rank:None, Epoch[129/300], Step [51/132], lr:3.29e-04 PSNR: 28.73, MSSSIM: 0.9183
+[2024/03/06 22:50:12] Rank:None, Epoch[129/300], Step [101/132], lr:3.28e-04 PSNR: 28.77, MSSSIM: 0.9153
+[2024/03/06 22:50:16] Rank:None, Epoch[129/300], Step [132/132], lr:3.27e-04 PSNR: 28.92, MSSSIM: 0.9177
+	720p: current: 28.92	 best: 28.99	 msssim_best: 0.9184	
+[2024/03/06 22:50:19] Rank:None, Epoch[130/300], Step [1/132], lr:3.27e-04 PSNR: 25.89, MSSSIM: 0.8443
+[2024/03/06 22:50:24] Rank:None, Epoch[130/300], Step [51/132], lr:3.26e-04 PSNR: 28.5, MSSSIM: 0.9141
+[2024/03/06 22:50:29] Rank:None, Epoch[130/300], Step [101/132], lr:3.25e-04 PSNR: 28.99, MSSSIM: 0.9195
+[2024/03/06 22:50:32] Rank:None, Epoch[130/300], Step [132/132], lr:3.25e-04 PSNR: 29.05, MSSSIM: 0.9194
+	720p: current: 29.05	 best: 29.05	 msssim_best: 0.9194	
+[2024/03/06 22:50:35] Rank:None, Epoch[131/300], Step [1/132], lr:3.25e-04 PSNR: 30.62, MSSSIM: 0.9669
+[2024/03/06 22:50:41] Rank:None, Epoch[131/300], Step [51/132], lr:3.24e-04 PSNR: 29.1, MSSSIM: 0.9143
+[2024/03/06 22:50:46] Rank:None, Epoch[131/300], Step [101/132], lr:3.23e-04 PSNR: 29.07, MSSSIM: 0.9176
+[2024/03/06 22:50:49] Rank:None, Epoch[131/300], Step [132/132], lr:3.22e-04 PSNR: 29.11, MSSSIM: 0.9196
+	720p: current: 29.11	 best: 29.11	 msssim_best: 0.9196	
+[2024/03/06 22:50:52] Rank:None, Epoch[132/300], Step [1/132], lr:3.22e-04 PSNR: 33.65, MSSSIM: 0.9795
+[2024/03/06 22:50:58] Rank:None, Epoch[132/300], Step [51/132], lr:3.21e-04 PSNR: 29.32, MSSSIM: 0.9244
+[2024/03/06 22:51:03] Rank:None, Epoch[132/300], Step [101/132], lr:3.20e-04 PSNR: 29.14, MSSSIM: 0.922
+[2024/03/06 22:51:06] Rank:None, Epoch[132/300], Step [132/132], lr:3.19e-04 PSNR: 29.13, MSSSIM: 0.9204
+	720p: current: 29.13	 best: 29.13	 msssim_best: 0.9204	
+[2024/03/06 22:51:10] Rank:None, Epoch[133/300], Step [1/132], lr:3.19e-04 PSNR: 28.62, MSSSIM: 0.9264
+[2024/03/06 22:51:15] Rank:None, Epoch[133/300], Step [51/132], lr:3.18e-04 PSNR: 29.14, MSSSIM: 0.9213
+[2024/03/06 22:51:20] Rank:None, Epoch[133/300], Step [101/132], lr:3.17e-04 PSNR: 29.27, MSSSIM: 0.9245
+[2024/03/06 22:51:23] Rank:None, Epoch[133/300], Step [132/132], lr:3.17e-04 PSNR: 29.14, MSSSIM: 0.9207
+	720p: current: 29.14	 best: 29.14	 msssim_best: 0.9207	
+[2024/03/06 22:51:26] Rank:None, Epoch[134/300], Step [1/132], lr:3.17e-04 PSNR: 33.34, MSSSIM: 0.9783
+[2024/03/06 22:51:31] Rank:None, Epoch[134/300], Step [51/132], lr:3.16e-04 PSNR: 29.12, MSSSIM: 0.9182
+[2024/03/06 22:51:37] Rank:None, Epoch[134/300], Step [101/132], lr:3.15e-04 PSNR: 29.05, MSSSIM: 0.9171
+[2024/03/06 22:51:40] Rank:None, Epoch[134/300], Step [132/132], lr:3.14e-04 PSNR: 29.13, MSSSIM: 0.9207
+	720p: current: 29.13	 best: 29.14	 msssim_best: 0.9207	
+[2024/03/06 22:51:43] Rank:None, Epoch[135/300], Step [1/132], lr:3.14e-04 PSNR: 34.56, MSSSIM: 0.9824
+[2024/03/06 22:51:48] Rank:None, Epoch[135/300], Step [51/132], lr:3.13e-04 PSNR: 29.44, MSSSIM: 0.9268
+[2024/03/06 22:51:53] Rank:None, Epoch[135/300], Step [101/132], lr:3.12e-04 PSNR: 29.29, MSSSIM: 0.9245
+[2024/03/06 22:51:57] Rank:None, Epoch[135/300], Step [132/132], lr:3.11e-04 PSNR: 29.16, MSSSIM: 0.9212
+	720p: current: 29.16	 best: 29.16	 msssim_best: 0.9212	
+[2024/03/06 22:52:00] Rank:None, Epoch[136/300], Step [1/132], lr:3.11e-04 PSNR: 25.88, MSSSIM: 0.8458
+[2024/03/06 22:52:05] Rank:None, Epoch[136/300], Step [51/132], lr:3.10e-04 PSNR: 29.2, MSSSIM: 0.926
+[2024/03/06 22:52:10] Rank:None, Epoch[136/300], Step [101/132], lr:3.09e-04 PSNR: 29.35, MSSSIM: 0.9248
+[2024/03/06 22:52:14] Rank:None, Epoch[136/300], Step [132/132], lr:3.09e-04 PSNR: 29.16, MSSSIM: 0.9216
+	720p: current: 29.16	 best: 29.16	 msssim_best: 0.9216	
+[2024/03/06 22:52:17] Rank:None, Epoch[137/300], Step [1/132], lr:3.09e-04 PSNR: 31.69, MSSSIM: 0.9728
+[2024/03/06 22:52:22] Rank:None, Epoch[137/300], Step [51/132], lr:3.08e-04 PSNR: 29.95, MSSSIM: 0.9358
+[2024/03/06 22:52:27] Rank:None, Epoch[137/300], Step [101/132], lr:3.07e-04 PSNR: 29.44, MSSSIM: 0.9263
+[2024/03/06 22:52:31] Rank:None, Epoch[137/300], Step [132/132], lr:3.06e-04 PSNR: 29.27, MSSSIM: 0.9228
+	720p: current: 29.27	 best: 29.27	 msssim_best: 0.9228	
+[2024/03/06 22:52:34] Rank:None, Epoch[138/300], Step [1/132], lr:3.06e-04 PSNR: 28.04, MSSSIM: 0.9198
+[2024/03/06 22:52:39] Rank:None, Epoch[138/300], Step [51/132], lr:3.05e-04 PSNR: 29.17, MSSSIM: 0.9202
+[2024/03/06 22:52:44] Rank:None, Epoch[138/300], Step [101/132], lr:3.04e-04 PSNR: 29.15, MSSSIM: 0.9223
+[2024/03/06 22:52:48] Rank:None, Epoch[138/300], Step [132/132], lr:3.03e-04 PSNR: 29.17, MSSSIM: 0.922
+	720p: current: 29.17	 best: 29.27	 msssim_best: 0.9228	
+[2024/03/06 22:52:51] Rank:None, Epoch[139/300], Step [1/132], lr:3.03e-04 PSNR: 25.26, MSSSIM: 0.8202
+[2024/03/06 22:52:56] Rank:None, Epoch[139/300], Step [51/132], lr:3.02e-04 PSNR: 29.34, MSSSIM: 0.9247
+[2024/03/06 22:53:01] Rank:None, Epoch[139/300], Step [101/132], lr:3.01e-04 PSNR: 29.27, MSSSIM: 0.9227
+[2024/03/06 22:53:05] Rank:None, Epoch[139/300], Step [132/132], lr:3.01e-04 PSNR: 29.32, MSSSIM: 0.923
+	720p: current: 29.32	 best: 29.32	 msssim_best: 0.9230	
+[2024/03/06 22:53:08] Rank:None, Epoch[140/300], Step [1/132], lr:3.01e-04 PSNR: 25.16, MSSSIM: 0.8195
+[2024/03/06 22:53:13] Rank:None, Epoch[140/300], Step [51/132], lr:3.00e-04 PSNR: 29.63, MSSSIM: 0.9304
+[2024/03/06 22:53:18] Rank:None, Epoch[140/300], Step [101/132], lr:2.99e-04 PSNR: 29.58, MSSSIM: 0.9273
+[2024/03/06 22:53:22] Rank:None, Epoch[140/300], Step [132/132], lr:2.98e-04 PSNR: 29.33, MSSSIM: 0.9235
+	720p: current: 29.33	 best: 29.33	 msssim_best: 0.9235	
+[2024/03/06 22:53:25] Rank:None, Epoch[141/300], Step [1/132], lr:2.98e-04 PSNR: 33.96, MSSSIM: 0.9816
+[2024/03/06 22:53:30] Rank:None, Epoch[141/300], Step [51/132], lr:2.97e-04 PSNR: 30.06, MSSSIM: 0.9376
+[2024/03/06 22:53:35] Rank:None, Epoch[141/300], Step [101/132], lr:2.96e-04 PSNR: 29.56, MSSSIM: 0.9267
+[2024/03/06 22:53:38] Rank:None, Epoch[141/300], Step [132/132], lr:2.95e-04 PSNR: 29.32, MSSSIM: 0.9232
+	720p: current: 29.32	 best: 29.33	 msssim_best: 0.9235	
+[2024/03/06 22:53:41] Rank:None, Epoch[142/300], Step [1/132], lr:2.95e-04 PSNR: 30.17, MSSSIM: 0.9532
+[2024/03/06 22:53:47] Rank:None, Epoch[142/300], Step [51/132], lr:2.94e-04 PSNR: 29.54, MSSSIM: 0.9278
+[2024/03/06 22:53:52] Rank:None, Epoch[142/300], Step [101/132], lr:2.93e-04 PSNR: 29.48, MSSSIM: 0.9273
+[2024/03/06 22:53:55] Rank:None, Epoch[142/300], Step [132/132], lr:2.93e-04 PSNR: 29.29, MSSSIM: 0.9237
+	720p: current: 29.29	 best: 29.33	 msssim_best: 0.9237	
+[2024/03/06 22:53:58] Rank:None, Epoch[143/300], Step [1/132], lr:2.93e-04 PSNR: 29.41, MSSSIM: 0.9441
+[2024/03/06 22:54:04] Rank:None, Epoch[143/300], Step [51/132], lr:2.91e-04 PSNR: 29.41, MSSSIM: 0.9267
+[2024/03/06 22:54:09] Rank:None, Epoch[143/300], Step [101/132], lr:2.90e-04 PSNR: 28.93, MSSSIM: 0.9201
+[2024/03/06 22:54:12] Rank:None, Epoch[143/300], Step [132/132], lr:2.90e-04 PSNR: 29.19, MSSSIM: 0.9239
+	720p: current: 29.19	 best: 29.33	 msssim_best: 0.9239	
+[2024/03/06 22:54:15] Rank:None, Epoch[144/300], Step [1/132], lr:2.90e-04 PSNR: 25.91, MSSSIM: 0.844
+[2024/03/06 22:54:20] Rank:None, Epoch[144/300], Step [51/132], lr:2.89e-04 PSNR: 29.61, MSSSIM: 0.9243
+[2024/03/06 22:54:26] Rank:None, Epoch[144/300], Step [101/132], lr:2.88e-04 PSNR: 29.43, MSSSIM: 0.9249
+[2024/03/06 22:54:29] Rank:None, Epoch[144/300], Step [132/132], lr:2.87e-04 PSNR: 29.35, MSSSIM: 0.9243
+	720p: current: 29.35	 best: 29.35	 msssim_best: 0.9243	
+[2024/03/06 22:54:32] Rank:None, Epoch[145/300], Step [1/132], lr:2.87e-04 PSNR: 26.89, MSSSIM: 0.886
+[2024/03/06 22:54:37] Rank:None, Epoch[145/300], Step [51/132], lr:2.86e-04 PSNR: 29.73, MSSSIM: 0.9332
+[2024/03/06 22:54:42] Rank:None, Epoch[145/300], Step [101/132], lr:2.85e-04 PSNR: 29.62, MSSSIM: 0.93
+[2024/03/06 22:54:46] Rank:None, Epoch[145/300], Step [132/132], lr:2.84e-04 PSNR: 29.39, MSSSIM: 0.9246
+	720p: current: 29.39	 best: 29.39	 msssim_best: 0.9246	
+[2024/03/06 22:54:49] Rank:None, Epoch[146/300], Step [1/132], lr:2.84e-04 PSNR: 31.15, MSSSIM: 0.9619
+[2024/03/06 22:54:54] Rank:None, Epoch[146/300], Step [51/132], lr:2.83e-04 PSNR: 29.48, MSSSIM: 0.9235
+[2024/03/06 22:55:00] Rank:None, Epoch[146/300], Step [101/132], lr:2.82e-04 PSNR: 29.18, MSSSIM: 0.9207
+[2024/03/06 22:55:03] Rank:None, Epoch[146/300], Step [132/132], lr:2.82e-04 PSNR: 29.44, MSSSIM: 0.925
+	720p: current: 29.44	 best: 29.44	 msssim_best: 0.9250	
+[2024/03/06 22:55:06] Rank:None, Epoch[147/300], Step [1/132], lr:2.82e-04 PSNR: 30.26, MSSSIM: 0.9537
+[2024/03/06 22:55:11] Rank:None, Epoch[147/300], Step [51/132], lr:2.81e-04 PSNR: 29.49, MSSSIM: 0.9283
+[2024/03/06 22:55:16] Rank:None, Epoch[147/300], Step [101/132], lr:2.80e-04 PSNR: 29.76, MSSSIM: 0.9328
+[2024/03/06 22:55:20] Rank:None, Epoch[147/300], Step [132/132], lr:2.79e-04 PSNR: 29.45, MSSSIM: 0.9259
+	720p: current: 29.45	 best: 29.45	 msssim_best: 0.9259	
+[2024/03/06 22:55:23] Rank:None, Epoch[148/300], Step [1/132], lr:2.79e-04 PSNR: 31.29, MSSSIM: 0.9648
+[2024/03/06 22:55:28] Rank:None, Epoch[148/300], Step [51/132], lr:2.78e-04 PSNR: 28.98, MSSSIM: 0.9191
+[2024/03/06 22:55:33] Rank:None, Epoch[148/300], Step [101/132], lr:2.77e-04 PSNR: 29.43, MSSSIM: 0.9254
+[2024/03/06 22:55:37] Rank:None, Epoch[148/300], Step [132/132], lr:2.76e-04 PSNR: 29.54, MSSSIM: 0.9266
+	720p: current: 29.54	 best: 29.54	 msssim_best: 0.9266	
+[2024/03/06 22:55:40] Rank:None, Epoch[149/300], Step [1/132], lr:2.76e-04 PSNR: 32.55, MSSSIM: 0.9769
+[2024/03/06 22:55:45] Rank:None, Epoch[149/300], Step [51/132], lr:2.75e-04 PSNR: 29.97, MSSSIM: 0.9389
+[2024/03/06 22:55:50] Rank:None, Epoch[149/300], Step [101/132], lr:2.74e-04 PSNR: 29.54, MSSSIM: 0.9285
+[2024/03/06 22:55:53] Rank:None, Epoch[149/300], Step [132/132], lr:2.73e-04 PSNR: 29.55, MSSSIM: 0.927
+	720p: current: 29.55	 best: 29.55	 msssim_best: 0.9270	
+[2024/03/06 22:55:57] Rank:None, Epoch[150/300], Step [1/132], lr:2.73e-04 PSNR: 26.09, MSSSIM: 0.8524
+[2024/03/06 22:56:02] Rank:None, Epoch[150/300], Step [51/132], lr:2.72e-04 PSNR: 29.88, MSSSIM: 0.933
+[2024/03/06 22:56:07] Rank:None, Epoch[150/300], Step [101/132], lr:2.71e-04 PSNR: 29.8, MSSSIM: 0.9319
+[2024/03/06 22:56:11] Rank:None, Epoch[150/300], Step [132/132], lr:2.71e-04 PSNR: 29.57, MSSSIM: 0.9271
+	720p: current: 29.57	 best: 29.57	 msssim_best: 0.9271	
+Rank:None, Step [1/132], PSNR: 28.97, MSSSIM: 0.9292 FPS: 10.39
+Rank:None, Step [51/132], PSNR: 27.02, MSSSIM: 0.8793 FPS: 30.01
+Rank:None, Step [101/132], PSNR: 29.32, MSSSIM: 0.9161 FPS: 32.05
+Eval best_PSNR at epoch150:	720p: current: 29.80	best: 29.80 	best_msssim: 0.9286	 Time/epoch: 8.30
+[2024/03/06 22:56:22] Rank:None, Epoch[151/300], Step [1/132], lr:2.71e-04 PSNR: 29.34, MSSSIM: 0.9389
+[2024/03/06 22:56:27] Rank:None, Epoch[151/300], Step [51/132], lr:2.70e-04 PSNR: 29.54, MSSSIM: 0.9228
+[2024/03/06 22:56:32] Rank:None, Epoch[151/300], Step [101/132], lr:2.69e-04 PSNR: 29.6, MSSSIM: 0.9271
+[2024/03/06 22:56:36] Rank:None, Epoch[151/300], Step [132/132], lr:2.68e-04 PSNR: 29.58, MSSSIM: 0.9274
+	720p: current: 29.58	 best: 29.58	 msssim_best: 0.9274	
+[2024/03/06 22:56:39] Rank:None, Epoch[152/300], Step [1/132], lr:2.68e-04 PSNR: 26.26, MSSSIM: 0.866
+[2024/03/06 22:56:44] Rank:None, Epoch[152/300], Step [51/132], lr:2.67e-04 PSNR: 29.4, MSSSIM: 0.9281
+[2024/03/06 22:56:49] Rank:None, Epoch[152/300], Step [101/132], lr:2.66e-04 PSNR: 29.34, MSSSIM: 0.9247
+[2024/03/06 22:56:53] Rank:None, Epoch[152/300], Step [132/132], lr:2.65e-04 PSNR: 29.47, MSSSIM: 0.9269
+	720p: current: 29.47	 best: 29.58	 msssim_best: 0.9274	
+[2024/03/06 22:56:56] Rank:None, Epoch[153/300], Step [1/132], lr:2.65e-04 PSNR: 28.66, MSSSIM: 0.9374
+[2024/03/06 22:57:01] Rank:None, Epoch[153/300], Step [51/132], lr:2.64e-04 PSNR: 29.65, MSSSIM: 0.9313
+[2024/03/06 22:57:06] Rank:None, Epoch[153/300], Step [101/132], lr:2.63e-04 PSNR: 29.55, MSSSIM: 0.9289
+[2024/03/06 22:57:10] Rank:None, Epoch[153/300], Step [132/132], lr:2.62e-04 PSNR: 29.61, MSSSIM: 0.9279
+	720p: current: 29.61	 best: 29.61	 msssim_best: 0.9279	
+[2024/03/06 22:57:13] Rank:None, Epoch[154/300], Step [1/132], lr:2.62e-04 PSNR: 26.57, MSSSIM: 0.8691
+[2024/03/06 22:57:18] Rank:None, Epoch[154/300], Step [51/132], lr:2.61e-04 PSNR: 30.11, MSSSIM: 0.9399
+[2024/03/06 22:57:23] Rank:None, Epoch[154/300], Step [101/132], lr:2.60e-04 PSNR: 29.65, MSSSIM: 0.9304
+[2024/03/06 22:57:26] Rank:None, Epoch[154/300], Step [132/132], lr:2.60e-04 PSNR: 29.56, MSSSIM: 0.9273
+	720p: current: 29.56	 best: 29.61	 msssim_best: 0.9279	
+[2024/03/06 22:57:29] Rank:None, Epoch[155/300], Step [1/132], lr:2.60e-04 PSNR: 25.77, MSSSIM: 0.8475
+[2024/03/06 22:57:35] Rank:None, Epoch[155/300], Step [51/132], lr:2.59e-04 PSNR: 30.22, MSSSIM: 0.9361
+[2024/03/06 22:57:40] Rank:None, Epoch[155/300], Step [101/132], lr:2.58e-04 PSNR: 29.86, MSSSIM: 0.9297
+[2024/03/06 22:57:43] Rank:None, Epoch[155/300], Step [132/132], lr:2.57e-04 PSNR: 29.64, MSSSIM: 0.9283
+	720p: current: 29.64	 best: 29.64	 msssim_best: 0.9283	
+[2024/03/06 22:57:47] Rank:None, Epoch[156/300], Step [1/132], lr:2.57e-04 PSNR: 31.31, MSSSIM: 0.9656
+[2024/03/06 22:57:52] Rank:None, Epoch[156/300], Step [51/132], lr:2.56e-04 PSNR: 29.29, MSSSIM: 0.9219
+[2024/03/06 22:57:57] Rank:None, Epoch[156/300], Step [101/132], lr:2.55e-04 PSNR: 29.48, MSSSIM: 0.9242
+[2024/03/06 22:58:01] Rank:None, Epoch[156/300], Step [132/132], lr:2.54e-04 PSNR: 29.7, MSSSIM: 0.9287
+	720p: current: 29.70	 best: 29.70	 msssim_best: 0.9287	
+[2024/03/06 22:58:04] Rank:None, Epoch[157/300], Step [1/132], lr:2.54e-04 PSNR: 34.26, MSSSIM: 0.982
+[2024/03/06 22:58:09] Rank:None, Epoch[157/300], Step [51/132], lr:2.53e-04 PSNR: 29.68, MSSSIM: 0.9251
+[2024/03/06 22:58:14] Rank:None, Epoch[157/300], Step [101/132], lr:2.52e-04 PSNR: 29.64, MSSSIM: 0.9268
+[2024/03/06 22:58:17] Rank:None, Epoch[157/300], Step [132/132], lr:2.51e-04 PSNR: 29.74, MSSSIM: 0.9296
+	720p: current: 29.74	 best: 29.74	 msssim_best: 0.9296	
+[2024/03/06 22:58:20] Rank:None, Epoch[158/300], Step [1/132], lr:2.51e-04 PSNR: 31.67, MSSSIM: 0.9722
+[2024/03/06 22:58:26] Rank:None, Epoch[158/300], Step [51/132], lr:2.50e-04 PSNR: 30.05, MSSSIM: 0.9322
+[2024/03/06 22:58:31] Rank:None, Epoch[158/300], Step [101/132], lr:2.49e-04 PSNR: 29.92, MSSSIM: 0.9297
+[2024/03/06 22:58:34] Rank:None, Epoch[158/300], Step [132/132], lr:2.49e-04 PSNR: 29.75, MSSSIM: 0.9295
+	720p: current: 29.75	 best: 29.75	 msssim_best: 0.9296	
+[2024/03/06 22:58:38] Rank:None, Epoch[159/300], Step [1/132], lr:2.49e-04 PSNR: 25.63, MSSSIM: 0.8323
+[2024/03/06 22:58:43] Rank:None, Epoch[159/300], Step [51/132], lr:2.48e-04 PSNR: 29.69, MSSSIM: 0.9296
+[2024/03/06 22:58:48] Rank:None, Epoch[159/300], Step [101/132], lr:2.47e-04 PSNR: 29.78, MSSSIM: 0.9296
+[2024/03/06 22:58:52] Rank:None, Epoch[159/300], Step [132/132], lr:2.46e-04 PSNR: 29.74, MSSSIM: 0.9298
+	720p: current: 29.74	 best: 29.75	 msssim_best: 0.9298	
+[2024/03/06 22:58:54] Rank:None, Epoch[160/300], Step [1/132], lr:2.46e-04 PSNR: 26.37, MSSSIM: 0.8572
+[2024/03/06 22:59:00] Rank:None, Epoch[160/300], Step [51/132], lr:2.45e-04 PSNR: 29.41, MSSSIM: 0.9274
+[2024/03/06 22:59:05] Rank:None, Epoch[160/300], Step [101/132], lr:2.44e-04 PSNR: 29.45, MSSSIM: 0.9278
+[2024/03/06 22:59:08] Rank:None, Epoch[160/300], Step [132/132], lr:2.43e-04 PSNR: 29.71, MSSSIM: 0.9299
+	720p: current: 29.71	 best: 29.75	 msssim_best: 0.9299	
+[2024/03/06 22:59:11] Rank:None, Epoch[161/300], Step [1/132], lr:2.43e-04 PSNR: 29.62, MSSSIM: 0.9391
+[2024/03/06 22:59:17] Rank:None, Epoch[161/300], Step [51/132], lr:2.42e-04 PSNR: 29.97, MSSSIM: 0.9346
+[2024/03/06 22:59:22] Rank:None, Epoch[161/300], Step [101/132], lr:2.41e-04 PSNR: 29.98, MSSSIM: 0.9329
+[2024/03/06 22:59:25] Rank:None, Epoch[161/300], Step [132/132], lr:2.40e-04 PSNR: 29.81, MSSSIM: 0.9306
+	720p: current: 29.81	 best: 29.81	 msssim_best: 0.9306	
+[2024/03/06 22:59:28] Rank:None, Epoch[162/300], Step [1/132], lr:2.40e-04 PSNR: 34.3, MSSSIM: 0.9808
+[2024/03/06 22:59:33] Rank:None, Epoch[162/300], Step [51/132], lr:2.39e-04 PSNR: 29.75, MSSSIM: 0.9303
+[2024/03/06 22:59:39] Rank:None, Epoch[162/300], Step [101/132], lr:2.38e-04 PSNR: 29.56, MSSSIM: 0.9272
+[2024/03/06 22:59:42] Rank:None, Epoch[162/300], Step [132/132], lr:2.38e-04 PSNR: 29.8, MSSSIM: 0.9306
+	720p: current: 29.80	 best: 29.81	 msssim_best: 0.9306	
+[2024/03/06 22:59:45] Rank:None, Epoch[163/300], Step [1/132], lr:2.38e-04 PSNR: 32.46, MSSSIM: 0.9764
+[2024/03/06 22:59:50] Rank:None, Epoch[163/300], Step [51/132], lr:2.37e-04 PSNR: 29.7, MSSSIM: 0.9309
+[2024/03/06 22:59:56] Rank:None, Epoch[163/300], Step [101/132], lr:2.36e-04 PSNR: 29.43, MSSSIM: 0.9247
+[2024/03/06 22:59:59] Rank:None, Epoch[163/300], Step [132/132], lr:2.35e-04 PSNR: 29.8, MSSSIM: 0.9308
+	720p: current: 29.80	 best: 29.81	 msssim_best: 0.9308	
+[2024/03/06 23:00:02] Rank:None, Epoch[164/300], Step [1/132], lr:2.35e-04 PSNR: 25.73, MSSSIM: 0.8579
+[2024/03/06 23:00:07] Rank:None, Epoch[164/300], Step [51/132], lr:2.34e-04 PSNR: 30.18, MSSSIM: 0.9371
+[2024/03/06 23:00:12] Rank:None, Epoch[164/300], Step [101/132], lr:2.33e-04 PSNR: 29.86, MSSSIM: 0.9318
+[2024/03/06 23:00:16] Rank:None, Epoch[164/300], Step [132/132], lr:2.32e-04 PSNR: 29.86, MSSSIM: 0.9312
+	720p: current: 29.86	 best: 29.86	 msssim_best: 0.9312	
+[2024/03/06 23:00:19] Rank:None, Epoch[165/300], Step [1/132], lr:2.32e-04 PSNR: 25.77, MSSSIM: 0.8371
+[2024/03/06 23:00:24] Rank:None, Epoch[165/300], Step [51/132], lr:2.31e-04 PSNR: 29.86, MSSSIM: 0.9327
+[2024/03/06 23:00:30] Rank:None, Epoch[165/300], Step [101/132], lr:2.30e-04 PSNR: 29.74, MSSSIM: 0.9311
+[2024/03/06 23:00:33] Rank:None, Epoch[165/300], Step [132/132], lr:2.29e-04 PSNR: 29.82, MSSSIM: 0.9309
+	720p: current: 29.82	 best: 29.86	 msssim_best: 0.9312	
+[2024/03/06 23:00:36] Rank:None, Epoch[166/300], Step [1/132], lr:2.29e-04 PSNR: 25.73, MSSSIM: 0.8358
+[2024/03/06 23:00:41] Rank:None, Epoch[166/300], Step [51/132], lr:2.28e-04 PSNR: 29.63, MSSSIM: 0.9325
+[2024/03/06 23:00:46] Rank:None, Epoch[166/300], Step [101/132], lr:2.27e-04 PSNR: 29.83, MSSSIM: 0.9326
+[2024/03/06 23:00:49] Rank:None, Epoch[166/300], Step [132/132], lr:2.27e-04 PSNR: 29.83, MSSSIM: 0.9313
+	720p: current: 29.83	 best: 29.86	 msssim_best: 0.9313	
+[2024/03/06 23:00:52] Rank:None, Epoch[167/300], Step [1/132], lr:2.27e-04 PSNR: 29.93, MSSSIM: 0.9441
+[2024/03/06 23:00:58] Rank:None, Epoch[167/300], Step [51/132], lr:2.26e-04 PSNR: 30.27, MSSSIM: 0.9357
+[2024/03/06 23:01:03] Rank:None, Epoch[167/300], Step [101/132], lr:2.25e-04 PSNR: 30.04, MSSSIM: 0.9329
+[2024/03/06 23:01:06] Rank:None, Epoch[167/300], Step [132/132], lr:2.24e-04 PSNR: 29.9, MSSSIM: 0.9317
+	720p: current: 29.90	 best: 29.90	 msssim_best: 0.9317	
+[2024/03/06 23:01:09] Rank:None, Epoch[168/300], Step [1/132], lr:2.24e-04 PSNR: 26.44, MSSSIM: 0.864
+[2024/03/06 23:01:15] Rank:None, Epoch[168/300], Step [51/132], lr:2.23e-04 PSNR: 29.82, MSSSIM: 0.9288
+[2024/03/06 23:01:20] Rank:None, Epoch[168/300], Step [101/132], lr:2.22e-04 PSNR: 29.83, MSSSIM: 0.9303
+[2024/03/06 23:01:23] Rank:None, Epoch[168/300], Step [132/132], lr:2.21e-04 PSNR: 29.92, MSSSIM: 0.9319
+	720p: current: 29.92	 best: 29.92	 msssim_best: 0.9319	
+[2024/03/06 23:01:26] Rank:None, Epoch[169/300], Step [1/132], lr:2.21e-04 PSNR: 29.16, MSSSIM: 0.9422
+[2024/03/06 23:01:31] Rank:None, Epoch[169/300], Step [51/132], lr:2.20e-04 PSNR: 29.87, MSSSIM: 0.9283
+[2024/03/06 23:01:37] Rank:None, Epoch[169/300], Step [101/132], lr:2.19e-04 PSNR: 29.81, MSSSIM: 0.9309
+[2024/03/06 23:01:40] Rank:None, Epoch[169/300], Step [132/132], lr:2.18e-04 PSNR: 29.9, MSSSIM: 0.9323
+	720p: current: 29.90	 best: 29.92	 msssim_best: 0.9323	
+[2024/03/06 23:01:43] Rank:None, Epoch[170/300], Step [1/132], lr:2.18e-04 PSNR: 34.32, MSSSIM: 0.9808
+[2024/03/06 23:01:48] Rank:None, Epoch[170/300], Step [51/132], lr:2.17e-04 PSNR: 29.63, MSSSIM: 0.9274
+[2024/03/06 23:01:54] Rank:None, Epoch[170/300], Step [101/132], lr:2.16e-04 PSNR: 29.85, MSSSIM: 0.9313
+[2024/03/06 23:01:57] Rank:None, Epoch[170/300], Step [132/132], lr:2.16e-04 PSNR: 30.01, MSSSIM: 0.933
+	720p: current: 30.01	 best: 30.01	 msssim_best: 0.9330	
+[2024/03/06 23:02:00] Rank:None, Epoch[171/300], Step [1/132], lr:2.16e-04 PSNR: 28.9, MSSSIM: 0.9381
+[2024/03/06 23:02:05] Rank:None, Epoch[171/300], Step [51/132], lr:2.15e-04 PSNR: 29.68, MSSSIM: 0.9333
+[2024/03/06 23:02:10] Rank:None, Epoch[171/300], Step [101/132], lr:2.14e-04 PSNR: 29.74, MSSSIM: 0.9301
+[2024/03/06 23:02:13] Rank:None, Epoch[171/300], Step [132/132], lr:2.13e-04 PSNR: 30.0, MSSSIM: 0.9332
+	720p: current: 30.00	 best: 30.01	 msssim_best: 0.9332	
+[2024/03/06 23:02:16] Rank:None, Epoch[172/300], Step [1/132], lr:2.13e-04 PSNR: 26.24, MSSSIM: 0.8568
+[2024/03/06 23:02:22] Rank:None, Epoch[172/300], Step [51/132], lr:2.12e-04 PSNR: 29.89, MSSSIM: 0.9299
+[2024/03/06 23:02:27] Rank:None, Epoch[172/300], Step [101/132], lr:2.11e-04 PSNR: 30.15, MSSSIM: 0.9336
+[2024/03/06 23:02:30] Rank:None, Epoch[172/300], Step [132/132], lr:2.10e-04 PSNR: 30.05, MSSSIM: 0.9336
+	720p: current: 30.05	 best: 30.05	 msssim_best: 0.9336	
+[2024/03/06 23:02:33] Rank:None, Epoch[173/300], Step [1/132], lr:2.10e-04 PSNR: 28.7, MSSSIM: 0.9346
+[2024/03/06 23:02:38] Rank:None, Epoch[173/300], Step [51/132], lr:2.09e-04 PSNR: 30.71, MSSSIM: 0.9452
+[2024/03/06 23:02:44] Rank:None, Epoch[173/300], Step [101/132], lr:2.08e-04 PSNR: 29.94, MSSSIM: 0.9338
+[2024/03/06 23:02:47] Rank:None, Epoch[173/300], Step [132/132], lr:2.08e-04 PSNR: 30.02, MSSSIM: 0.9335
+	720p: current: 30.02	 best: 30.05	 msssim_best: 0.9336	
+[2024/03/06 23:02:50] Rank:None, Epoch[174/300], Step [1/132], lr:2.07e-04 PSNR: 29.22, MSSSIM: 0.9368
+[2024/03/06 23:02:55] Rank:None, Epoch[174/300], Step [51/132], lr:2.06e-04 PSNR: 30.21, MSSSIM: 0.9332
+[2024/03/06 23:03:00] Rank:None, Epoch[174/300], Step [101/132], lr:2.05e-04 PSNR: 30.11, MSSSIM: 0.9345
+[2024/03/06 23:03:04] Rank:None, Epoch[174/300], Step [132/132], lr:2.05e-04 PSNR: 30.01, MSSSIM: 0.9336
+	720p: current: 30.01	 best: 30.05	 msssim_best: 0.9336	
+[2024/03/06 23:03:07] Rank:None, Epoch[175/300], Step [1/132], lr:2.05e-04 PSNR: 26.32, MSSSIM: 0.8575
+[2024/03/06 23:03:12] Rank:None, Epoch[175/300], Step [51/132], lr:2.04e-04 PSNR: 29.92, MSSSIM: 0.9282
+[2024/03/06 23:03:17] Rank:None, Epoch[175/300], Step [101/132], lr:2.03e-04 PSNR: 30.28, MSSSIM: 0.9353
+[2024/03/06 23:03:20] Rank:None, Epoch[175/300], Step [132/132], lr:2.02e-04 PSNR: 30.07, MSSSIM: 0.9339
+	720p: current: 30.07	 best: 30.07	 msssim_best: 0.9339	
+[2024/03/06 23:03:23] Rank:None, Epoch[176/300], Step [1/132], lr:2.02e-04 PSNR: 25.91, MSSSIM: 0.8404
+[2024/03/06 23:03:29] Rank:None, Epoch[176/300], Step [51/132], lr:2.01e-04 PSNR: 30.12, MSSSIM: 0.9367
+[2024/03/06 23:03:34] Rank:None, Epoch[176/300], Step [101/132], lr:2.00e-04 PSNR: 30.22, MSSSIM: 0.9353
+[2024/03/06 23:03:37] Rank:None, Epoch[176/300], Step [132/132], lr:1.99e-04 PSNR: 30.09, MSSSIM: 0.9344
+	720p: current: 30.09	 best: 30.09	 msssim_best: 0.9344	
+[2024/03/06 23:03:40] Rank:None, Epoch[177/300], Step [1/132], lr:1.99e-04 PSNR: 26.14, MSSSIM: 0.8643
+[2024/03/06 23:03:46] Rank:None, Epoch[177/300], Step [51/132], lr:1.98e-04 PSNR: 30.22, MSSSIM: 0.9355
+[2024/03/06 23:03:51] Rank:None, Epoch[177/300], Step [101/132], lr:1.97e-04 PSNR: 30.22, MSSSIM: 0.9351
+[2024/03/06 23:03:54] Rank:None, Epoch[177/300], Step [132/132], lr:1.97e-04 PSNR: 30.11, MSSSIM: 0.9347
+	720p: current: 30.11	 best: 30.11	 msssim_best: 0.9347	
+[2024/03/06 23:03:57] Rank:None, Epoch[178/300], Step [1/132], lr:1.97e-04 PSNR: 32.59, MSSSIM: 0.976
+[2024/03/06 23:04:03] Rank:None, Epoch[178/300], Step [51/132], lr:1.96e-04 PSNR: 30.31, MSSSIM: 0.9369
+[2024/03/06 23:04:08] Rank:None, Epoch[178/300], Step [101/132], lr:1.95e-04 PSNR: 30.16, MSSSIM: 0.9348
+[2024/03/06 23:04:11] Rank:None, Epoch[178/300], Step [132/132], lr:1.94e-04 PSNR: 30.11, MSSSIM: 0.9347
+	720p: current: 30.11	 best: 30.11	 msssim_best: 0.9347	
+[2024/03/06 23:04:14] Rank:None, Epoch[179/300], Step [1/132], lr:1.94e-04 PSNR: 34.94, MSSSIM: 0.9831
+[2024/03/06 23:04:19] Rank:None, Epoch[179/300], Step [51/132], lr:1.93e-04 PSNR: 29.97, MSSSIM: 0.9339
+[2024/03/06 23:04:25] Rank:None, Epoch[179/300], Step [101/132], lr:1.92e-04 PSNR: 30.1, MSSSIM: 0.9355
+[2024/03/06 23:04:28] Rank:None, Epoch[179/300], Step [132/132], lr:1.91e-04 PSNR: 30.15, MSSSIM: 0.935
+	720p: current: 30.15	 best: 30.15	 msssim_best: 0.9350	
+[2024/03/06 23:04:31] Rank:None, Epoch[180/300], Step [1/132], lr:1.91e-04 PSNR: 29.65, MSSSIM: 0.9445
+[2024/03/06 23:04:36] Rank:None, Epoch[180/300], Step [51/132], lr:1.90e-04 PSNR: 30.1, MSSSIM: 0.9317
+[2024/03/06 23:04:41] Rank:None, Epoch[180/300], Step [101/132], lr:1.89e-04 PSNR: 30.02, MSSSIM: 0.9331
+[2024/03/06 23:04:45] Rank:None, Epoch[180/300], Step [132/132], lr:1.89e-04 PSNR: 30.19, MSSSIM: 0.9354
+	720p: current: 30.19	 best: 30.19	 msssim_best: 0.9354	
+[2024/03/06 23:04:48] Rank:None, Epoch[181/300], Step [1/132], lr:1.89e-04 PSNR: 30.35, MSSSIM: 0.9695
+[2024/03/06 23:04:53] Rank:None, Epoch[181/300], Step [51/132], lr:1.88e-04 PSNR: 30.6, MSSSIM: 0.945
+[2024/03/06 23:04:59] Rank:None, Epoch[181/300], Step [101/132], lr:1.87e-04 PSNR: 30.34, MSSSIM: 0.9357
+[2024/03/06 23:05:02] Rank:None, Epoch[181/300], Step [132/132], lr:1.86e-04 PSNR: 30.18, MSSSIM: 0.9354
+	720p: current: 30.18	 best: 30.19	 msssim_best: 0.9354	
+[2024/03/06 23:05:05] Rank:None, Epoch[182/300], Step [1/132], lr:1.86e-04 PSNR: 32.3, MSSSIM: 0.9753
+[2024/03/06 23:05:10] Rank:None, Epoch[182/300], Step [51/132], lr:1.85e-04 PSNR: 30.2, MSSSIM: 0.9367
+[2024/03/06 23:05:16] Rank:None, Epoch[182/300], Step [101/132], lr:1.84e-04 PSNR: 30.15, MSSSIM: 0.9353
+[2024/03/06 23:05:19] Rank:None, Epoch[182/300], Step [132/132], lr:1.83e-04 PSNR: 30.2, MSSSIM: 0.9357
+	720p: current: 30.20	 best: 30.20	 msssim_best: 0.9357	
+[2024/03/06 23:05:22] Rank:None, Epoch[183/300], Step [1/132], lr:1.83e-04 PSNR: 29.29, MSSSIM: 0.9396
+[2024/03/06 23:05:27] Rank:None, Epoch[183/300], Step [51/132], lr:1.82e-04 PSNR: 30.37, MSSSIM: 0.9412
+[2024/03/06 23:05:33] Rank:None, Epoch[183/300], Step [101/132], lr:1.81e-04 PSNR: 30.22, MSSSIM: 0.9357
+[2024/03/06 23:05:36] Rank:None, Epoch[183/300], Step [132/132], lr:1.81e-04 PSNR: 30.19, MSSSIM: 0.9358
+	720p: current: 30.19	 best: 30.20	 msssim_best: 0.9358	
+[2024/03/06 23:05:39] Rank:None, Epoch[184/300], Step [1/132], lr:1.81e-04 PSNR: 28.19, MSSSIM: 0.916
+[2024/03/06 23:05:44] Rank:None, Epoch[184/300], Step [51/132], lr:1.80e-04 PSNR: 30.27, MSSSIM: 0.9374
+[2024/03/06 23:05:50] Rank:None, Epoch[184/300], Step [101/132], lr:1.79e-04 PSNR: 30.23, MSSSIM: 0.9371
+[2024/03/06 23:05:53] Rank:None, Epoch[184/300], Step [132/132], lr:1.78e-04 PSNR: 30.23, MSSSIM: 0.936
+	720p: current: 30.23	 best: 30.23	 msssim_best: 0.9360	
+[2024/03/06 23:05:56] Rank:None, Epoch[185/300], Step [1/132], lr:1.78e-04 PSNR: 29.58, MSSSIM: 0.9474
+[2024/03/06 23:06:01] Rank:None, Epoch[185/300], Step [51/132], lr:1.77e-04 PSNR: 30.62, MSSSIM: 0.9414
+[2024/03/06 23:06:07] Rank:None, Epoch[185/300], Step [101/132], lr:1.76e-04 PSNR: 30.32, MSSSIM: 0.9378
+[2024/03/06 23:06:10] Rank:None, Epoch[185/300], Step [132/132], lr:1.75e-04 PSNR: 30.12, MSSSIM: 0.9356
+	720p: current: 30.12	 best: 30.23	 msssim_best: 0.9360	
+[2024/03/06 23:06:13] Rank:None, Epoch[186/300], Step [1/132], lr:1.75e-04 PSNR: 31.95, MSSSIM: 0.9742
+[2024/03/06 23:06:18] Rank:None, Epoch[186/300], Step [51/132], lr:1.74e-04 PSNR: 30.28, MSSSIM: 0.9338
+[2024/03/06 23:06:23] Rank:None, Epoch[186/300], Step [101/132], lr:1.73e-04 PSNR: 30.16, MSSSIM: 0.9348
+[2024/03/06 23:06:27] Rank:None, Epoch[186/300], Step [132/132], lr:1.73e-04 PSNR: 30.27, MSSSIM: 0.9366
+	720p: current: 30.27	 best: 30.27	 msssim_best: 0.9366	
+[2024/03/06 23:06:30] Rank:None, Epoch[187/300], Step [1/132], lr:1.73e-04 PSNR: 30.82, MSSSIM: 0.9584
+[2024/03/06 23:06:35] Rank:None, Epoch[187/300], Step [51/132], lr:1.72e-04 PSNR: 30.59, MSSSIM: 0.9445
+[2024/03/06 23:06:41] Rank:None, Epoch[187/300], Step [101/132], lr:1.71e-04 PSNR: 30.47, MSSSIM: 0.9387
+[2024/03/06 23:06:44] Rank:None, Epoch[187/300], Step [132/132], lr:1.70e-04 PSNR: 30.25, MSSSIM: 0.9366
+	720p: current: 30.25	 best: 30.27	 msssim_best: 0.9366	
+[2024/03/06 23:06:47] Rank:None, Epoch[188/300], Step [1/132], lr:1.70e-04 PSNR: 27.91, MSSSIM: 0.9154
+[2024/03/06 23:06:52] Rank:None, Epoch[188/300], Step [51/132], lr:1.69e-04 PSNR: 30.13, MSSSIM: 0.9342
+[2024/03/06 23:06:58] Rank:None, Epoch[188/300], Step [101/132], lr:1.68e-04 PSNR: 30.31, MSSSIM: 0.9381
+[2024/03/06 23:07:01] Rank:None, Epoch[188/300], Step [132/132], lr:1.68e-04 PSNR: 30.21, MSSSIM: 0.9365
+	720p: current: 30.21	 best: 30.27	 msssim_best: 0.9366	
+[2024/03/06 23:07:04] Rank:None, Epoch[189/300], Step [1/132], lr:1.68e-04 PSNR: 26.23, MSSSIM: 0.8562
+[2024/03/06 23:07:10] Rank:None, Epoch[189/300], Step [51/132], lr:1.67e-04 PSNR: 30.19, MSSSIM: 0.9367
+[2024/03/06 23:07:17] Rank:None, Epoch[189/300], Step [101/132], lr:1.66e-04 PSNR: 30.56, MSSSIM: 0.9409
+[2024/03/06 23:07:20] Rank:None, Epoch[189/300], Step [132/132], lr:1.65e-04 PSNR: 30.34, MSSSIM: 0.9372
+	720p: current: 30.34	 best: 30.34	 msssim_best: 0.9372	
+[2024/03/06 23:07:23] Rank:None, Epoch[190/300], Step [1/132], lr:1.65e-04 PSNR: 29.6, MSSSIM: 0.9646
+[2024/03/06 23:07:29] Rank:None, Epoch[190/300], Step [51/132], lr:1.64e-04 PSNR: 30.04, MSSSIM: 0.933
+[2024/03/06 23:07:35] Rank:None, Epoch[190/300], Step [101/132], lr:1.63e-04 PSNR: 30.34, MSSSIM: 0.9371
+[2024/03/06 23:07:38] Rank:None, Epoch[190/300], Step [132/132], lr:1.62e-04 PSNR: 30.33, MSSSIM: 0.9372
+	720p: current: 30.33	 best: 30.34	 msssim_best: 0.9372	
+[2024/03/06 23:07:41] Rank:None, Epoch[191/300], Step [1/132], lr:1.62e-04 PSNR: 28.8, MSSSIM: 0.9323
+[2024/03/06 23:07:47] Rank:None, Epoch[191/300], Step [51/132], lr:1.61e-04 PSNR: 30.59, MSSSIM: 0.943
+[2024/03/06 23:07:52] Rank:None, Epoch[191/300], Step [101/132], lr:1.60e-04 PSNR: 30.5, MSSSIM: 0.9402
+[2024/03/06 23:07:55] Rank:None, Epoch[191/300], Step [132/132], lr:1.60e-04 PSNR: 30.34, MSSSIM: 0.9375
+	720p: current: 30.34	 best: 30.34	 msssim_best: 0.9375	
+[2024/03/06 23:07:58] Rank:None, Epoch[192/300], Step [1/132], lr:1.60e-04 PSNR: 26.52, MSSSIM: 0.8647
+[2024/03/06 23:08:03] Rank:None, Epoch[192/300], Step [51/132], lr:1.59e-04 PSNR: 30.49, MSSSIM: 0.9387
+[2024/03/06 23:08:09] Rank:None, Epoch[192/300], Step [101/132], lr:1.58e-04 PSNR: 30.16, MSSSIM: 0.9346
+[2024/03/06 23:08:12] Rank:None, Epoch[192/300], Step [132/132], lr:1.57e-04 PSNR: 30.41, MSSSIM: 0.9379
+	720p: current: 30.41	 best: 30.41	 msssim_best: 0.9379	
+[2024/03/06 23:08:15] Rank:None, Epoch[193/300], Step [1/132], lr:1.57e-04 PSNR: 29.45, MSSSIM: 0.9465
+[2024/03/06 23:08:20] Rank:None, Epoch[193/300], Step [51/132], lr:1.56e-04 PSNR: 30.51, MSSSIM: 0.9376
+[2024/03/06 23:08:25] Rank:None, Epoch[193/300], Step [101/132], lr:1.55e-04 PSNR: 30.52, MSSSIM: 0.9379
+[2024/03/06 23:08:29] Rank:None, Epoch[193/300], Step [132/132], lr:1.55e-04 PSNR: 30.45, MSSSIM: 0.9382
+	720p: current: 30.45	 best: 30.45	 msssim_best: 0.9382	
+[2024/03/06 23:08:32] Rank:None, Epoch[194/300], Step [1/132], lr:1.55e-04 PSNR: 32.21, MSSSIM: 0.9749
+[2024/03/06 23:08:37] Rank:None, Epoch[194/300], Step [51/132], lr:1.54e-04 PSNR: 29.72, MSSSIM: 0.9264
+[2024/03/06 23:08:42] Rank:None, Epoch[194/300], Step [101/132], lr:1.53e-04 PSNR: 30.16, MSSSIM: 0.9346
+[2024/03/06 23:08:45] Rank:None, Epoch[194/300], Step [132/132], lr:1.52e-04 PSNR: 30.37, MSSSIM: 0.9381
+	720p: current: 30.37	 best: 30.45	 msssim_best: 0.9382	
+[2024/03/06 23:08:48] Rank:None, Epoch[195/300], Step [1/132], lr:1.52e-04 PSNR: 28.58, MSSSIM: 0.9615
+[2024/03/06 23:08:53] Rank:None, Epoch[195/300], Step [51/132], lr:1.51e-04 PSNR: 30.61, MSSSIM: 0.9403
+[2024/03/06 23:08:59] Rank:None, Epoch[195/300], Step [101/132], lr:1.50e-04 PSNR: 30.57, MSSSIM: 0.9404
+[2024/03/06 23:09:02] Rank:None, Epoch[195/300], Step [132/132], lr:1.50e-04 PSNR: 30.43, MSSSIM: 0.9383
+	720p: current: 30.43	 best: 30.45	 msssim_best: 0.9383	
+[2024/03/06 23:09:05] Rank:None, Epoch[196/300], Step [1/132], lr:1.50e-04 PSNR: 32.07, MSSSIM: 0.9734
+[2024/03/06 23:09:10] Rank:None, Epoch[196/300], Step [51/132], lr:1.49e-04 PSNR: 29.89, MSSSIM: 0.9328
+[2024/03/06 23:09:15] Rank:None, Epoch[196/300], Step [101/132], lr:1.48e-04 PSNR: 30.3, MSSSIM: 0.938
+[2024/03/06 23:09:19] Rank:None, Epoch[196/300], Step [132/132], lr:1.47e-04 PSNR: 30.43, MSSSIM: 0.9384
+	720p: current: 30.43	 best: 30.45	 msssim_best: 0.9384	
+[2024/03/06 23:09:21] Rank:None, Epoch[197/300], Step [1/132], lr:1.47e-04 PSNR: 28.72, MSSSIM: 0.9623
+[2024/03/06 23:09:27] Rank:None, Epoch[197/300], Step [51/132], lr:1.46e-04 PSNR: 30.86, MSSSIM: 0.9465
+[2024/03/06 23:09:32] Rank:None, Epoch[197/300], Step [101/132], lr:1.45e-04 PSNR: 30.44, MSSSIM: 0.939
+[2024/03/06 23:09:35] Rank:None, Epoch[197/300], Step [132/132], lr:1.45e-04 PSNR: 30.45, MSSSIM: 0.9386
+	720p: current: 30.45	 best: 30.45	 msssim_best: 0.9386	
+[2024/03/06 23:09:38] Rank:None, Epoch[198/300], Step [1/132], lr:1.45e-04 PSNR: 26.33, MSSSIM: 0.8715
+[2024/03/06 23:09:43] Rank:None, Epoch[198/300], Step [51/132], lr:1.44e-04 PSNR: 30.68, MSSSIM: 0.9384
+[2024/03/06 23:09:49] Rank:None, Epoch[198/300], Step [101/132], lr:1.43e-04 PSNR: 30.58, MSSSIM: 0.9414
+[2024/03/06 23:09:52] Rank:None, Epoch[198/300], Step [132/132], lr:1.42e-04 PSNR: 30.43, MSSSIM: 0.9387
+	720p: current: 30.43	 best: 30.45	 msssim_best: 0.9387	
+[2024/03/06 23:09:55] Rank:None, Epoch[199/300], Step [1/132], lr:1.42e-04 PSNR: 26.93, MSSSIM: 0.8775
+[2024/03/06 23:10:00] Rank:None, Epoch[199/300], Step [51/132], lr:1.41e-04 PSNR: 31.53, MSSSIM: 0.952
+[2024/03/06 23:10:05] Rank:None, Epoch[199/300], Step [101/132], lr:1.40e-04 PSNR: 30.8, MSSSIM: 0.9425
+[2024/03/06 23:10:08] Rank:None, Epoch[199/300], Step [132/132], lr:1.40e-04 PSNR: 30.5, MSSSIM: 0.9391
+	720p: current: 30.50	 best: 30.50	 msssim_best: 0.9391	
+[2024/03/06 23:10:11] Rank:None, Epoch[200/300], Step [1/132], lr:1.40e-04 PSNR: 32.92, MSSSIM: 0.9789
+[2024/03/06 23:10:16] Rank:None, Epoch[200/300], Step [51/132], lr:1.39e-04 PSNR: 30.65, MSSSIM: 0.9396
+[2024/03/06 23:10:22] Rank:None, Epoch[200/300], Step [101/132], lr:1.38e-04 PSNR: 30.5, MSSSIM: 0.9381
+[2024/03/06 23:10:25] Rank:None, Epoch[200/300], Step [132/132], lr:1.37e-04 PSNR: 30.49, MSSSIM: 0.9392
+	720p: current: 30.49	 best: 30.50	 msssim_best: 0.9392	
+Rank:None, Step [1/132], PSNR: 29.99, MSSSIM: 0.9453 FPS: 8.7
+Rank:None, Step [51/132], PSNR: 27.82, MSSSIM: 0.8983 FPS: 29.94
+Rank:None, Step [101/132], PSNR: 30.12, MSSSIM: 0.9296 FPS: 31.97
+Eval best_PSNR at epoch200:	720p: current: 30.54	best: 30.54 	best_msssim: 0.9398	 Time/epoch: 8.23
+[2024/03/06 23:10:36] Rank:None, Epoch[201/300], Step [1/132], lr:1.37e-04 PSNR: 31.13, MSSSIM: 0.9614
+[2024/03/06 23:10:41] Rank:None, Epoch[201/300], Step [51/132], lr:1.36e-04 PSNR: 30.07, MSSSIM: 0.9363
+[2024/03/06 23:10:46] Rank:None, Epoch[201/300], Step [101/132], lr:1.35e-04 PSNR: 30.53, MSSSIM: 0.9412
+[2024/03/06 23:10:50] Rank:None, Epoch[201/300], Step [132/132], lr:1.35e-04 PSNR: 30.52, MSSSIM: 0.9394
+	720p: current: 30.52	 best: 30.52	 msssim_best: 0.9394	
+[2024/03/06 23:10:53] Rank:None, Epoch[202/300], Step [1/132], lr:1.35e-04 PSNR: 30.38, MSSSIM: 0.9535
+[2024/03/06 23:10:58] Rank:None, Epoch[202/300], Step [51/132], lr:1.34e-04 PSNR: 30.58, MSSSIM: 0.9448
+[2024/03/06 23:11:03] Rank:None, Epoch[202/300], Step [101/132], lr:1.33e-04 PSNR: 30.43, MSSSIM: 0.9392
+[2024/03/06 23:11:06] Rank:None, Epoch[202/300], Step [132/132], lr:1.32e-04 PSNR: 30.48, MSSSIM: 0.9395
+	720p: current: 30.48	 best: 30.52	 msssim_best: 0.9395	
+[2024/03/06 23:11:09] Rank:None, Epoch[203/300], Step [1/132], lr:1.32e-04 PSNR: 29.87, MSSSIM: 0.9511
+[2024/03/06 23:11:14] Rank:None, Epoch[203/300], Step [51/132], lr:1.31e-04 PSNR: 30.65, MSSSIM: 0.9432
+[2024/03/06 23:11:19] Rank:None, Epoch[203/300], Step [101/132], lr:1.30e-04 PSNR: 30.69, MSSSIM: 0.942
+[2024/03/06 23:11:23] Rank:None, Epoch[203/300], Step [132/132], lr:1.30e-04 PSNR: 30.54, MSSSIM: 0.9397
+	720p: current: 30.54	 best: 30.54	 msssim_best: 0.9397	
+[2024/03/06 23:11:26] Rank:None, Epoch[204/300], Step [1/132], lr:1.30e-04 PSNR: 31.02, MSSSIM: 0.9553
+[2024/03/06 23:11:31] Rank:None, Epoch[204/300], Step [51/132], lr:1.29e-04 PSNR: 30.95, MSSSIM: 0.9477
+[2024/03/06 23:11:36] Rank:None, Epoch[204/300], Step [101/132], lr:1.28e-04 PSNR: 30.65, MSSSIM: 0.9427
+[2024/03/06 23:11:39] Rank:None, Epoch[204/300], Step [132/132], lr:1.27e-04 PSNR: 30.52, MSSSIM: 0.9398
+	720p: current: 30.52	 best: 30.54	 msssim_best: 0.9398	
+[2024/03/06 23:11:42] Rank:None, Epoch[205/300], Step [1/132], lr:1.27e-04 PSNR: 26.72, MSSSIM: 0.8726
+[2024/03/06 23:11:48] Rank:None, Epoch[205/300], Step [51/132], lr:1.26e-04 PSNR: 30.53, MSSSIM: 0.9381
+[2024/03/06 23:11:53] Rank:None, Epoch[205/300], Step [101/132], lr:1.26e-04 PSNR: 30.4, MSSSIM: 0.9381
+[2024/03/06 23:11:56] Rank:None, Epoch[205/300], Step [132/132], lr:1.25e-04 PSNR: 30.55, MSSSIM: 0.94
+	720p: current: 30.55	 best: 30.55	 msssim_best: 0.9400	
+[2024/03/06 23:11:59] Rank:None, Epoch[206/300], Step [1/132], lr:1.25e-04 PSNR: 27.35, MSSSIM: 0.8914
+[2024/03/06 23:12:04] Rank:None, Epoch[206/300], Step [51/132], lr:1.24e-04 PSNR: 30.06, MSSSIM: 0.9297
+[2024/03/06 23:12:09] Rank:None, Epoch[206/300], Step [101/132], lr:1.23e-04 PSNR: 30.19, MSSSIM: 0.9337
+[2024/03/06 23:12:13] Rank:None, Epoch[206/300], Step [132/132], lr:1.23e-04 PSNR: 30.56, MSSSIM: 0.9402
+	720p: current: 30.56	 best: 30.56	 msssim_best: 0.9402	
+[2024/03/06 23:12:16] Rank:None, Epoch[207/300], Step [1/132], lr:1.23e-04 PSNR: 31.65, MSSSIM: 0.9654
+[2024/03/06 23:12:21] Rank:None, Epoch[207/300], Step [51/132], lr:1.22e-04 PSNR: 30.93, MSSSIM: 0.946
+[2024/03/06 23:12:26] Rank:None, Epoch[207/300], Step [101/132], lr:1.21e-04 PSNR: 30.31, MSSSIM: 0.9372
+[2024/03/06 23:12:29] Rank:None, Epoch[207/300], Step [132/132], lr:1.20e-04 PSNR: 30.58, MSSSIM: 0.9404
+	720p: current: 30.58	 best: 30.58	 msssim_best: 0.9404	
+[2024/03/06 23:12:32] Rank:None, Epoch[208/300], Step [1/132], lr:1.20e-04 PSNR: 32.27, MSSSIM: 0.9702
+[2024/03/06 23:12:38] Rank:None, Epoch[208/300], Step [51/132], lr:1.19e-04 PSNR: 30.67, MSSSIM: 0.9392
+[2024/03/06 23:12:43] Rank:None, Epoch[208/300], Step [101/132], lr:1.18e-04 PSNR: 30.66, MSSSIM: 0.9401
+[2024/03/06 23:12:46] Rank:None, Epoch[208/300], Step [132/132], lr:1.18e-04 PSNR: 30.6, MSSSIM: 0.9405
+	720p: current: 30.60	 best: 30.60	 msssim_best: 0.9405	
+[2024/03/06 23:12:49] Rank:None, Epoch[209/300], Step [1/132], lr:1.18e-04 PSNR: 27.66, MSSSIM: 0.8968
+[2024/03/06 23:12:54] Rank:None, Epoch[209/300], Step [51/132], lr:1.17e-04 PSNR: 30.04, MSSSIM: 0.9335
+[2024/03/06 23:12:59] Rank:None, Epoch[209/300], Step [101/132], lr:1.16e-04 PSNR: 30.63, MSSSIM: 0.941
+[2024/03/06 23:13:02] Rank:None, Epoch[209/300], Step [132/132], lr:1.16e-04 PSNR: 30.6, MSSSIM: 0.9405
+	720p: current: 30.60	 best: 30.60	 msssim_best: 0.9405	
+[2024/03/06 23:13:05] Rank:None, Epoch[210/300], Step [1/132], lr:1.16e-04 PSNR: 27.09, MSSSIM: 0.8823
+[2024/03/06 23:13:11] Rank:None, Epoch[210/300], Step [51/132], lr:1.15e-04 PSNR: 29.63, MSSSIM: 0.9272
+[2024/03/06 23:13:16] Rank:None, Epoch[210/300], Step [101/132], lr:1.14e-04 PSNR: 30.37, MSSSIM: 0.9368
+[2024/03/06 23:13:19] Rank:None, Epoch[210/300], Step [132/132], lr:1.13e-04 PSNR: 30.62, MSSSIM: 0.9408
+	720p: current: 30.62	 best: 30.62	 msssim_best: 0.9408	
+[2024/03/06 23:13:22] Rank:None, Epoch[211/300], Step [1/132], lr:1.13e-04 PSNR: 36.2, MSSSIM: 0.9867
+[2024/03/06 23:13:27] Rank:None, Epoch[211/300], Step [51/132], lr:1.12e-04 PSNR: 30.8, MSSSIM: 0.9412
+[2024/03/06 23:13:32] Rank:None, Epoch[211/300], Step [101/132], lr:1.12e-04 PSNR: 30.54, MSSSIM: 0.9389
+[2024/03/06 23:13:36] Rank:None, Epoch[211/300], Step [132/132], lr:1.11e-04 PSNR: 30.66, MSSSIM: 0.941
+	720p: current: 30.66	 best: 30.66	 msssim_best: 0.9410	
+[2024/03/06 23:13:39] Rank:None, Epoch[212/300], Step [1/132], lr:1.11e-04 PSNR: 28.66, MSSSIM: 0.9239
+[2024/03/06 23:13:44] Rank:None, Epoch[212/300], Step [51/132], lr:1.10e-04 PSNR: 30.49, MSSSIM: 0.943
+[2024/03/06 23:13:49] Rank:None, Epoch[212/300], Step [101/132], lr:1.09e-04 PSNR: 30.65, MSSSIM: 0.9416
+[2024/03/06 23:13:52] Rank:None, Epoch[212/300], Step [132/132], lr:1.09e-04 PSNR: 30.66, MSSSIM: 0.9411
+	720p: current: 30.66	 best: 30.66	 msssim_best: 0.9411	
+[2024/03/06 23:13:55] Rank:None, Epoch[213/300], Step [1/132], lr:1.09e-04 PSNR: 26.22, MSSSIM: 0.8539
+[2024/03/06 23:14:00] Rank:None, Epoch[213/300], Step [51/132], lr:1.08e-04 PSNR: 30.51, MSSSIM: 0.94
+[2024/03/06 23:14:06] Rank:None, Epoch[213/300], Step [101/132], lr:1.07e-04 PSNR: 30.78, MSSSIM: 0.9421
+[2024/03/06 23:14:09] Rank:None, Epoch[213/300], Step [132/132], lr:1.06e-04 PSNR: 30.66, MSSSIM: 0.9411
+	720p: current: 30.66	 best: 30.66	 msssim_best: 0.9411	
+[2024/03/06 23:14:12] Rank:None, Epoch[214/300], Step [1/132], lr:1.06e-04 PSNR: 33.48, MSSSIM: 0.9805
+[2024/03/06 23:14:17] Rank:None, Epoch[214/300], Step [51/132], lr:1.06e-04 PSNR: 30.05, MSSSIM: 0.9324
+[2024/03/06 23:14:22] Rank:None, Epoch[214/300], Step [101/132], lr:1.05e-04 PSNR: 30.3, MSSSIM: 0.9358
+[2024/03/06 23:14:25] Rank:None, Epoch[214/300], Step [132/132], lr:1.04e-04 PSNR: 30.67, MSSSIM: 0.9413
+	720p: current: 30.67	 best: 30.67	 msssim_best: 0.9413	
+[2024/03/06 23:14:28] Rank:None, Epoch[215/300], Step [1/132], lr:1.04e-04 PSNR: 26.99, MSSSIM: 0.8768
+[2024/03/06 23:14:34] Rank:None, Epoch[215/300], Step [51/132], lr:1.03e-04 PSNR: 30.62, MSSSIM: 0.9406
+[2024/03/06 23:14:39] Rank:None, Epoch[215/300], Step [101/132], lr:1.02e-04 PSNR: 30.63, MSSSIM: 0.9387
+[2024/03/06 23:14:42] Rank:None, Epoch[215/300], Step [132/132], lr:1.02e-04 PSNR: 30.7, MSSSIM: 0.9415
+	720p: current: 30.70	 best: 30.70	 msssim_best: 0.9415	
+[2024/03/06 23:14:45] Rank:None, Epoch[216/300], Step [1/132], lr:1.02e-04 PSNR: 32.11, MSSSIM: 0.969
+[2024/03/06 23:14:50] Rank:None, Epoch[216/300], Step [51/132], lr:1.01e-04 PSNR: 30.92, MSSSIM: 0.9436
+[2024/03/06 23:14:55] Rank:None, Epoch[216/300], Step [101/132], lr:1.00e-04 PSNR: 30.59, MSSSIM: 0.9409
+[2024/03/06 23:14:59] Rank:None, Epoch[216/300], Step [132/132], lr:9.97e-05 PSNR: 30.68, MSSSIM: 0.9416
+	720p: current: 30.68	 best: 30.70	 msssim_best: 0.9416	
+[2024/03/06 23:15:01] Rank:None, Epoch[217/300], Step [1/132], lr:9.97e-05 PSNR: 27.43, MSSSIM: 0.8917
+[2024/03/06 23:15:07] Rank:None, Epoch[217/300], Step [51/132], lr:9.89e-05 PSNR: 31.06, MSSSIM: 0.949
+[2024/03/06 23:15:12] Rank:None, Epoch[217/300], Step [101/132], lr:9.81e-05 PSNR: 31.06, MSSSIM: 0.9457
+[2024/03/06 23:15:15] Rank:None, Epoch[217/300], Step [132/132], lr:9.76e-05 PSNR: 30.74, MSSSIM: 0.9419
+	720p: current: 30.74	 best: 30.74	 msssim_best: 0.9419	
+[2024/03/06 23:15:18] Rank:None, Epoch[218/300], Step [1/132], lr:9.75e-05 PSNR: 26.84, MSSSIM: 0.8757
+[2024/03/06 23:15:23] Rank:None, Epoch[218/300], Step [51/132], lr:9.67e-05 PSNR: 31.33, MSSSIM: 0.9495
+[2024/03/06 23:15:28] Rank:None, Epoch[218/300], Step [101/132], lr:9.59e-05 PSNR: 30.92, MSSSIM: 0.9458
+[2024/03/06 23:15:32] Rank:None, Epoch[218/300], Step [132/132], lr:9.54e-05 PSNR: 30.71, MSSSIM: 0.9419
+	720p: current: 30.71	 best: 30.74	 msssim_best: 0.9419	
+[2024/03/06 23:15:35] Rank:None, Epoch[219/300], Step [1/132], lr:9.54e-05 PSNR: 27.02, MSSSIM: 0.8845
+[2024/03/06 23:15:40] Rank:None, Epoch[219/300], Step [51/132], lr:9.45e-05 PSNR: 31.01, MSSSIM: 0.9446
+[2024/03/06 23:15:45] Rank:None, Epoch[219/300], Step [101/132], lr:9.37e-05 PSNR: 30.53, MSSSIM: 0.9389
+[2024/03/06 23:15:48] Rank:None, Epoch[219/300], Step [132/132], lr:9.32e-05 PSNR: 30.75, MSSSIM: 0.9421
+	720p: current: 30.75	 best: 30.75	 msssim_best: 0.9421	
+[2024/03/06 23:15:51] Rank:None, Epoch[220/300], Step [1/132], lr:9.32e-05 PSNR: 26.52, MSSSIM: 0.8667
+[2024/03/06 23:15:57] Rank:None, Epoch[220/300], Step [51/132], lr:9.24e-05 PSNR: 30.61, MSSSIM: 0.9398
+[2024/03/06 23:16:02] Rank:None, Epoch[220/300], Step [101/132], lr:9.16e-05 PSNR: 30.7, MSSSIM: 0.9405
+[2024/03/06 23:16:05] Rank:None, Epoch[220/300], Step [132/132], lr:9.11e-05 PSNR: 30.76, MSSSIM: 0.9422
+	720p: current: 30.76	 best: 30.76	 msssim_best: 0.9422	
+[2024/03/06 23:16:08] Rank:None, Epoch[221/300], Step [1/132], lr:9.11e-05 PSNR: 31.35, MSSSIM: 0.9706
+[2024/03/06 23:16:13] Rank:None, Epoch[221/300], Step [51/132], lr:9.03e-05 PSNR: 31.05, MSSSIM: 0.9459
+[2024/03/06 23:16:18] Rank:None, Epoch[221/300], Step [101/132], lr:8.95e-05 PSNR: 30.59, MSSSIM: 0.9406
+[2024/03/06 23:16:21] Rank:None, Epoch[221/300], Step [132/132], lr:8.90e-05 PSNR: 30.76, MSSSIM: 0.9423
+	720p: current: 30.76	 best: 30.76	 msssim_best: 0.9423	
+[2024/03/06 23:16:24] Rank:None, Epoch[222/300], Step [1/132], lr:8.90e-05 PSNR: 33.23, MSSSIM: 0.9762
+[2024/03/06 23:16:30] Rank:None, Epoch[222/300], Step [51/132], lr:8.82e-05 PSNR: 30.49, MSSSIM: 0.9351
+[2024/03/06 23:16:35] Rank:None, Epoch[222/300], Step [101/132], lr:8.74e-05 PSNR: 30.75, MSSSIM: 0.9411
+[2024/03/06 23:16:38] Rank:None, Epoch[222/300], Step [132/132], lr:8.69e-05 PSNR: 30.77, MSSSIM: 0.9425
+	720p: current: 30.77	 best: 30.77	 msssim_best: 0.9425	
+[2024/03/06 23:16:41] Rank:None, Epoch[223/300], Step [1/132], lr:8.69e-05 PSNR: 32.21, MSSSIM: 0.975
+[2024/03/06 23:16:46] Rank:None, Epoch[223/300], Step [51/132], lr:8.61e-05 PSNR: 30.35, MSSSIM: 0.9357
+[2024/03/06 23:16:51] Rank:None, Epoch[223/300], Step [101/132], lr:8.53e-05 PSNR: 30.7, MSSSIM: 0.9404
+[2024/03/06 23:16:54] Rank:None, Epoch[223/300], Step [132/132], lr:8.48e-05 PSNR: 30.79, MSSSIM: 0.9426
+	720p: current: 30.79	 best: 30.79	 msssim_best: 0.9426	
+[2024/03/06 23:16:57] Rank:None, Epoch[224/300], Step [1/132], lr:8.48e-05 PSNR: 27.87, MSSSIM: 0.8999
+[2024/03/06 23:17:02] Rank:None, Epoch[224/300], Step [51/132], lr:8.40e-05 PSNR: 31.08, MSSSIM: 0.9453
+[2024/03/06 23:17:07] Rank:None, Epoch[224/300], Step [101/132], lr:8.32e-05 PSNR: 30.92, MSSSIM: 0.9446
+[2024/03/06 23:17:10] Rank:None, Epoch[224/300], Step [132/132], lr:8.27e-05 PSNR: 30.79, MSSSIM: 0.9426
+	720p: current: 30.79	 best: 30.79	 msssim_best: 0.9426	
+[2024/03/06 23:17:13] Rank:None, Epoch[225/300], Step [1/132], lr:8.27e-05 PSNR: 26.26, MSSSIM: 0.8545
+[2024/03/06 23:17:18] Rank:None, Epoch[225/300], Step [51/132], lr:8.19e-05 PSNR: 31.22, MSSSIM: 0.9455
+[2024/03/06 23:17:23] Rank:None, Epoch[225/300], Step [101/132], lr:8.12e-05 PSNR: 30.75, MSSSIM: 0.9413
+[2024/03/06 23:17:27] Rank:None, Epoch[225/300], Step [132/132], lr:8.07e-05 PSNR: 30.81, MSSSIM: 0.9428
+	720p: current: 30.81	 best: 30.81	 msssim_best: 0.9428	
+[2024/03/06 23:17:29] Rank:None, Epoch[226/300], Step [1/132], lr:8.07e-05 PSNR: 32.52, MSSSIM: 0.9717
+[2024/03/06 23:17:35] Rank:None, Epoch[226/300], Step [51/132], lr:7.99e-05 PSNR: 30.63, MSSSIM: 0.9393
+[2024/03/06 23:17:40] Rank:None, Epoch[226/300], Step [101/132], lr:7.91e-05 PSNR: 30.85, MSSSIM: 0.9443
+[2024/03/06 23:17:43] Rank:None, Epoch[226/300], Step [132/132], lr:7.87e-05 PSNR: 30.81, MSSSIM: 0.9429
+	720p: current: 30.81	 best: 30.81	 msssim_best: 0.9429	
+[2024/03/06 23:17:46] Rank:None, Epoch[227/300], Step [1/132], lr:7.87e-05 PSNR: 36.23, MSSSIM: 0.9872
+[2024/03/06 23:17:51] Rank:None, Epoch[227/300], Step [51/132], lr:7.79e-05 PSNR: 31.06, MSSSIM: 0.9439
+[2024/03/06 23:17:56] Rank:None, Epoch[227/300], Step [101/132], lr:7.71e-05 PSNR: 31.08, MSSSIM: 0.9452
+[2024/03/06 23:17:59] Rank:None, Epoch[227/300], Step [132/132], lr:7.67e-05 PSNR: 30.83, MSSSIM: 0.943
+	720p: current: 30.83	 best: 30.83	 msssim_best: 0.9430	
+[2024/03/06 23:18:02] Rank:None, Epoch[228/300], Step [1/132], lr:7.67e-05 PSNR: 30.3, MSSSIM: 0.9491
+[2024/03/06 23:18:07] Rank:None, Epoch[228/300], Step [51/132], lr:7.59e-05 PSNR: 29.86, MSSSIM: 0.929
+[2024/03/06 23:18:12] Rank:None, Epoch[228/300], Step [101/132], lr:7.52e-05 PSNR: 30.36, MSSSIM: 0.9374
+[2024/03/06 23:18:15] Rank:None, Epoch[228/300], Step [132/132], lr:7.47e-05 PSNR: 30.84, MSSSIM: 0.9431
+	720p: current: 30.84	 best: 30.84	 msssim_best: 0.9431	
+[2024/03/06 23:18:19] Rank:None, Epoch[229/300], Step [1/132], lr:7.47e-05 PSNR: 33.08, MSSSIM: 0.9779
+[2024/03/06 23:18:24] Rank:None, Epoch[229/300], Step [51/132], lr:7.39e-05 PSNR: 30.99, MSSSIM: 0.9461
+[2024/03/06 23:18:29] Rank:None, Epoch[229/300], Step [101/132], lr:7.32e-05 PSNR: 30.68, MSSSIM: 0.9409
+[2024/03/06 23:18:32] Rank:None, Epoch[229/300], Step [132/132], lr:7.28e-05 PSNR: 30.85, MSSSIM: 0.9432
+	720p: current: 30.85	 best: 30.85	 msssim_best: 0.9432	
+[2024/03/06 23:18:35] Rank:None, Epoch[230/300], Step [1/132], lr:7.27e-05 PSNR: 35.19, MSSSIM: 0.9843
+[2024/03/06 23:18:40] Rank:None, Epoch[230/300], Step [51/132], lr:7.20e-05 PSNR: 31.09, MSSSIM: 0.9466
+[2024/03/06 23:18:45] Rank:None, Epoch[230/300], Step [101/132], lr:7.13e-05 PSNR: 30.72, MSSSIM: 0.9426
+[2024/03/06 23:18:48] Rank:None, Epoch[230/300], Step [132/132], lr:7.08e-05 PSNR: 30.86, MSSSIM: 0.9433
+	720p: current: 30.86	 best: 30.86	 msssim_best: 0.9433	
+[2024/03/06 23:18:51] Rank:None, Epoch[231/300], Step [1/132], lr:7.08e-05 PSNR: 31.79, MSSSIM: 0.9707
+[2024/03/06 23:18:56] Rank:None, Epoch[231/300], Step [51/132], lr:7.01e-05 PSNR: 30.8, MSSSIM: 0.9438
+[2024/03/06 23:19:01] Rank:None, Epoch[231/300], Step [101/132], lr:6.94e-05 PSNR: 30.99, MSSSIM: 0.9464
+[2024/03/06 23:19:04] Rank:None, Epoch[231/300], Step [132/132], lr:6.89e-05 PSNR: 30.87, MSSSIM: 0.9434
+	720p: current: 30.87	 best: 30.87	 msssim_best: 0.9434	
+[2024/03/06 23:19:07] Rank:None, Epoch[232/300], Step [1/132], lr:6.89e-05 PSNR: 26.96, MSSSIM: 0.8791
+[2024/03/06 23:19:13] Rank:None, Epoch[232/300], Step [51/132], lr:6.82e-05 PSNR: 30.38, MSSSIM: 0.9379
+[2024/03/06 23:19:18] Rank:None, Epoch[232/300], Step [101/132], lr:6.75e-05 PSNR: 30.94, MSSSIM: 0.9452
+[2024/03/06 23:19:21] Rank:None, Epoch[232/300], Step [132/132], lr:6.70e-05 PSNR: 30.88, MSSSIM: 0.9435
+	720p: current: 30.88	 best: 30.88	 msssim_best: 0.9435	
+[2024/03/06 23:19:24] Rank:None, Epoch[233/300], Step [1/132], lr:6.70e-05 PSNR: 34.91, MSSSIM: 0.9835
+[2024/03/06 23:19:29] Rank:None, Epoch[233/300], Step [51/132], lr:6.63e-05 PSNR: 30.68, MSSSIM: 0.9461
+[2024/03/06 23:19:34] Rank:None, Epoch[233/300], Step [101/132], lr:6.56e-05 PSNR: 30.86, MSSSIM: 0.944
+[2024/03/06 23:19:37] Rank:None, Epoch[233/300], Step [132/132], lr:6.52e-05 PSNR: 30.89, MSSSIM: 0.9437
+	720p: current: 30.89	 best: 30.89	 msssim_best: 0.9437	
+[2024/03/06 23:19:40] Rank:None, Epoch[234/300], Step [1/132], lr:6.51e-05 PSNR: 27.29, MSSSIM: 0.8881
+[2024/03/06 23:19:46] Rank:None, Epoch[234/300], Step [51/132], lr:6.44e-05 PSNR: 31.35, MSSSIM: 0.9481
+[2024/03/06 23:19:51] Rank:None, Epoch[234/300], Step [101/132], lr:6.37e-05 PSNR: 30.87, MSSSIM: 0.9435
+[2024/03/06 23:19:54] Rank:None, Epoch[234/300], Step [132/132], lr:6.33e-05 PSNR: 30.9, MSSSIM: 0.9437
+	720p: current: 30.90	 best: 30.90	 msssim_best: 0.9437	
+[2024/03/06 23:19:57] Rank:None, Epoch[235/300], Step [1/132], lr:6.33e-05 PSNR: 31.42, MSSSIM: 0.9636
+[2024/03/06 23:20:02] Rank:None, Epoch[235/300], Step [51/132], lr:6.26e-05 PSNR: 30.97, MSSSIM: 0.9459
+[2024/03/06 23:20:07] Rank:None, Epoch[235/300], Step [101/132], lr:6.19e-05 PSNR: 30.85, MSSSIM: 0.9441
+[2024/03/06 23:20:10] Rank:None, Epoch[235/300], Step [132/132], lr:6.15e-05 PSNR: 30.9, MSSSIM: 0.9438
+	720p: current: 30.90	 best: 30.90	 msssim_best: 0.9438	
+[2024/03/06 23:20:13] Rank:None, Epoch[236/300], Step [1/132], lr:6.15e-05 PSNR: 27.68, MSSSIM: 0.9005
+[2024/03/06 23:20:18] Rank:None, Epoch[236/300], Step [51/132], lr:6.08e-05 PSNR: 31.07, MSSSIM: 0.9429
+[2024/03/06 23:20:23] Rank:None, Epoch[236/300], Step [101/132], lr:6.01e-05 PSNR: 30.81, MSSSIM: 0.9413
+[2024/03/06 23:20:26] Rank:None, Epoch[236/300], Step [132/132], lr:5.97e-05 PSNR: 30.91, MSSSIM: 0.9439
+	720p: current: 30.91	 best: 30.91	 msssim_best: 0.9439	
+[2024/03/06 23:20:29] Rank:None, Epoch[237/300], Step [1/132], lr:5.97e-05 PSNR: 35.44, MSSSIM: 0.9842
+[2024/03/06 23:20:34] Rank:None, Epoch[237/300], Step [51/132], lr:5.90e-05 PSNR: 31.34, MSSSIM: 0.9523
+[2024/03/06 23:20:39] Rank:None, Epoch[237/300], Step [101/132], lr:5.83e-05 PSNR: 30.78, MSSSIM: 0.9433
+[2024/03/06 23:20:43] Rank:None, Epoch[237/300], Step [132/132], lr:5.79e-05 PSNR: 30.92, MSSSIM: 0.944
+	720p: current: 30.92	 best: 30.92	 msssim_best: 0.9440	
+[2024/03/06 23:20:46] Rank:None, Epoch[238/300], Step [1/132], lr:5.79e-05 PSNR: 26.53, MSSSIM: 0.8754
+[2024/03/06 23:20:51] Rank:None, Epoch[238/300], Step [51/132], lr:5.72e-05 PSNR: 30.89, MSSSIM: 0.9466
+[2024/03/06 23:20:56] Rank:None, Epoch[238/300], Step [101/132], lr:5.66e-05 PSNR: 30.51, MSSSIM: 0.9394
+[2024/03/06 23:20:59] Rank:None, Epoch[238/300], Step [132/132], lr:5.62e-05 PSNR: 30.92, MSSSIM: 0.9441
+	720p: current: 30.92	 best: 30.92	 msssim_best: 0.9441	
+[2024/03/06 23:21:02] Rank:None, Epoch[239/300], Step [1/132], lr:5.61e-05 PSNR: 30.07, MSSSIM: 0.9543
+[2024/03/06 23:21:07] Rank:None, Epoch[239/300], Step [51/132], lr:5.55e-05 PSNR: 30.56, MSSSIM: 0.9381
+[2024/03/06 23:21:12] Rank:None, Epoch[239/300], Step [101/132], lr:5.48e-05 PSNR: 30.86, MSSSIM: 0.9428
+[2024/03/06 23:21:15] Rank:None, Epoch[239/300], Step [132/132], lr:5.44e-05 PSNR: 30.94, MSSSIM: 0.9442
+	720p: current: 30.94	 best: 30.94	 msssim_best: 0.9442	
+[2024/03/06 23:21:18] Rank:None, Epoch[240/300], Step [1/132], lr:5.44e-05 PSNR: 27.38, MSSSIM: 0.8907
+[2024/03/06 23:21:23] Rank:None, Epoch[240/300], Step [51/132], lr:5.38e-05 PSNR: 30.23, MSSSIM: 0.9331
+[2024/03/06 23:21:28] Rank:None, Epoch[240/300], Step [101/132], lr:5.31e-05 PSNR: 30.54, MSSSIM: 0.9387
+[2024/03/06 23:21:32] Rank:None, Epoch[240/300], Step [132/132], lr:5.27e-05 PSNR: 30.94, MSSSIM: 0.9443
+	720p: current: 30.94	 best: 30.94	 msssim_best: 0.9443	
+[2024/03/06 23:21:34] Rank:None, Epoch[241/300], Step [1/132], lr:5.27e-05 PSNR: 31.49, MSSSIM: 0.9643
+[2024/03/06 23:21:40] Rank:None, Epoch[241/300], Step [51/132], lr:5.21e-05 PSNR: 31.24, MSSSIM: 0.9473
+[2024/03/06 23:21:45] Rank:None, Epoch[241/300], Step [101/132], lr:5.14e-05 PSNR: 30.95, MSSSIM: 0.944
+[2024/03/06 23:21:48] Rank:None, Epoch[241/300], Step [132/132], lr:5.10e-05 PSNR: 30.95, MSSSIM: 0.9443
+	720p: current: 30.95	 best: 30.95	 msssim_best: 0.9443	
+[2024/03/06 23:21:51] Rank:None, Epoch[242/300], Step [1/132], lr:5.10e-05 PSNR: 27.12, MSSSIM: 0.8902
+[2024/03/06 23:21:56] Rank:None, Epoch[242/300], Step [51/132], lr:5.04e-05 PSNR: 30.8, MSSSIM: 0.9431
+[2024/03/06 23:22:01] Rank:None, Epoch[242/300], Step [101/132], lr:4.98e-05 PSNR: 30.68, MSSSIM: 0.9412
+[2024/03/06 23:22:04] Rank:None, Epoch[242/300], Step [132/132], lr:4.94e-05 PSNR: 30.95, MSSSIM: 0.9444
+	720p: current: 30.95	 best: 30.95	 msssim_best: 0.9444	
+[2024/03/06 23:22:07] Rank:None, Epoch[243/300], Step [1/132], lr:4.94e-05 PSNR: 30.88, MSSSIM: 0.9571
+[2024/03/06 23:22:12] Rank:None, Epoch[243/300], Step [51/132], lr:4.88e-05 PSNR: 31.29, MSSSIM: 0.9478
+[2024/03/06 23:22:18] Rank:None, Epoch[243/300], Step [101/132], lr:4.81e-05 PSNR: 31.06, MSSSIM: 0.9446
+[2024/03/06 23:22:21] Rank:None, Epoch[243/300], Step [132/132], lr:4.78e-05 PSNR: 30.97, MSSSIM: 0.9445
+	720p: current: 30.97	 best: 30.97	 msssim_best: 0.9445	
+[2024/03/06 23:22:24] Rank:None, Epoch[244/300], Step [1/132], lr:4.77e-05 PSNR: 35.62, MSSSIM: 0.9847
+[2024/03/06 23:22:29] Rank:None, Epoch[244/300], Step [51/132], lr:4.71e-05 PSNR: 30.49, MSSSIM: 0.9375
+[2024/03/06 23:22:34] Rank:None, Epoch[244/300], Step [101/132], lr:4.65e-05 PSNR: 30.96, MSSSIM: 0.9444
+[2024/03/06 23:22:37] Rank:None, Epoch[244/300], Step [132/132], lr:4.62e-05 PSNR: 30.97, MSSSIM: 0.9445
+	720p: current: 30.97	 best: 30.97	 msssim_best: 0.9445	
+[2024/03/06 23:22:40] Rank:None, Epoch[245/300], Step [1/132], lr:4.61e-05 PSNR: 28.85, MSSSIM: 0.9279
+[2024/03/06 23:22:45] Rank:None, Epoch[245/300], Step [51/132], lr:4.55e-05 PSNR: 30.85, MSSSIM: 0.9423
+[2024/03/06 23:22:50] Rank:None, Epoch[245/300], Step [101/132], lr:4.49e-05 PSNR: 30.79, MSSSIM: 0.942
+[2024/03/06 23:22:53] Rank:None, Epoch[245/300], Step [132/132], lr:4.46e-05 PSNR: 30.98, MSSSIM: 0.9446
+	720p: current: 30.98	 best: 30.98	 msssim_best: 0.9446	
+[2024/03/06 23:22:56] Rank:None, Epoch[246/300], Step [1/132], lr:4.46e-05 PSNR: 30.8, MSSSIM: 0.9587
+[2024/03/06 23:23:01] Rank:None, Epoch[246/300], Step [51/132], lr:4.40e-05 PSNR: 31.25, MSSSIM: 0.9464
+[2024/03/06 23:23:06] Rank:None, Epoch[246/300], Step [101/132], lr:4.34e-05 PSNR: 31.2, MSSSIM: 0.9474
+[2024/03/06 23:23:09] Rank:None, Epoch[246/300], Step [132/132], lr:4.30e-05 PSNR: 30.99, MSSSIM: 0.9447
+	720p: current: 30.99	 best: 30.99	 msssim_best: 0.9447	
+[2024/03/06 23:23:12] Rank:None, Epoch[247/300], Step [1/132], lr:4.30e-05 PSNR: 33.91, MSSSIM: 0.9791
+[2024/03/06 23:23:17] Rank:None, Epoch[247/300], Step [51/132], lr:4.24e-05 PSNR: 31.47, MSSSIM: 0.9503
+[2024/03/06 23:23:23] Rank:None, Epoch[247/300], Step [101/132], lr:4.18e-05 PSNR: 31.21, MSSSIM: 0.947
+[2024/03/06 23:23:26] Rank:None, Epoch[247/300], Step [132/132], lr:4.15e-05 PSNR: 30.99, MSSSIM: 0.9448
+	720p: current: 30.99	 best: 30.99	 msssim_best: 0.9448	
+[2024/03/06 23:23:29] Rank:None, Epoch[248/300], Step [1/132], lr:4.15e-05 PSNR: 26.34, MSSSIM: 0.8586
+[2024/03/06 23:23:34] Rank:None, Epoch[248/300], Step [51/132], lr:4.09e-05 PSNR: 30.9, MSSSIM: 0.942
+[2024/03/06 23:23:39] Rank:None, Epoch[248/300], Step [101/132], lr:4.03e-05 PSNR: 30.84, MSSSIM: 0.9438
+[2024/03/06 23:23:42] Rank:None, Epoch[248/300], Step [132/132], lr:4.00e-05 PSNR: 30.99, MSSSIM: 0.9448
+	720p: current: 30.99	 best: 30.99	 msssim_best: 0.9448	
+[2024/03/06 23:23:45] Rank:None, Epoch[249/300], Step [1/132], lr:4.00e-05 PSNR: 27.04, MSSSIM: 0.8799
+[2024/03/06 23:23:50] Rank:None, Epoch[249/300], Step [51/132], lr:3.94e-05 PSNR: 31.7, MSSSIM: 0.9513
+[2024/03/06 23:23:55] Rank:None, Epoch[249/300], Step [101/132], lr:3.88e-05 PSNR: 31.24, MSSSIM: 0.9471
+[2024/03/06 23:23:58] Rank:None, Epoch[249/300], Step [132/132], lr:3.85e-05 PSNR: 31.0, MSSSIM: 0.9449
+	720p: current: 31.00	 best: 31.00	 msssim_best: 0.9449	
+[2024/03/06 23:24:01] Rank:None, Epoch[250/300], Step [1/132], lr:3.85e-05 PSNR: 26.49, MSSSIM: 0.8612
+[2024/03/06 23:24:06] Rank:None, Epoch[250/300], Step [51/132], lr:3.79e-05 PSNR: 30.94, MSSSIM: 0.9433
+[2024/03/06 23:24:11] Rank:None, Epoch[250/300], Step [101/132], lr:3.74e-05 PSNR: 30.86, MSSSIM: 0.9428
+[2024/03/06 23:24:14] Rank:None, Epoch[250/300], Step [132/132], lr:3.70e-05 PSNR: 31.01, MSSSIM: 0.945
+	720p: current: 31.01	 best: 31.01	 msssim_best: 0.9450	
+Rank:None, Step [1/132], PSNR: 30.48, MSSSIM: 0.9507 FPS: 8.23
+Rank:None, Step [51/132], PSNR: 28.32, MSSSIM: 0.9076 FPS: 29.47
+Rank:None, Step [101/132], PSNR: 30.61, MSSSIM: 0.936 FPS: 32.04
+Eval best_PSNR at epoch250:	720p: current: 31.04	best: 31.04 	best_msssim: 0.9453	 Time/epoch: 8.24
+[2024/03/06 23:24:26] Rank:None, Epoch[251/300], Step [1/132], lr:3.70e-05 PSNR: 27.01, MSSSIM: 0.8765
+[2024/03/06 23:24:31] Rank:None, Epoch[251/300], Step [51/132], lr:3.65e-05 PSNR: 30.9, MSSSIM: 0.9464
+[2024/03/06 23:24:36] Rank:None, Epoch[251/300], Step [101/132], lr:3.59e-05 PSNR: 30.92, MSSSIM: 0.9447
+[2024/03/06 23:24:39] Rank:None, Epoch[251/300], Step [132/132], lr:3.56e-05 PSNR: 31.01, MSSSIM: 0.945
+	720p: current: 31.01	 best: 31.01	 msssim_best: 0.9450	
+[2024/03/06 23:24:42] Rank:None, Epoch[252/300], Step [1/132], lr:3.56e-05 PSNR: 31.94, MSSSIM: 0.9713
+[2024/03/06 23:24:48] Rank:None, Epoch[252/300], Step [51/132], lr:3.51e-05 PSNR: 30.96, MSSSIM: 0.9467
+[2024/03/06 23:24:54] Rank:None, Epoch[252/300], Step [101/132], lr:3.45e-05 PSNR: 30.94, MSSSIM: 0.9444
+[2024/03/06 23:24:57] Rank:None, Epoch[252/300], Step [132/132], lr:3.42e-05 PSNR: 31.02, MSSSIM: 0.9451
+	720p: current: 31.02	 best: 31.02	 msssim_best: 0.9451	
+[2024/03/06 23:25:01] Rank:None, Epoch[253/300], Step [1/132], lr:3.42e-05 PSNR: 33.69, MSSSIM: 0.9816
+[2024/03/06 23:25:06] Rank:None, Epoch[253/300], Step [51/132], lr:3.37e-05 PSNR: 30.88, MSSSIM: 0.9431
+[2024/03/06 23:25:11] Rank:None, Epoch[253/300], Step [101/132], lr:3.31e-05 PSNR: 30.9, MSSSIM: 0.9436
+[2024/03/06 23:25:14] Rank:None, Epoch[253/300], Step [132/132], lr:3.28e-05 PSNR: 31.02, MSSSIM: 0.9452
+	720p: current: 31.02	 best: 31.02	 msssim_best: 0.9452	
+[2024/03/06 23:25:17] Rank:None, Epoch[254/300], Step [1/132], lr:3.28e-05 PSNR: 32.09, MSSSIM: 0.9688
+[2024/03/06 23:25:22] Rank:None, Epoch[254/300], Step [51/132], lr:3.23e-05 PSNR: 31.08, MSSSIM: 0.9477
+[2024/03/06 23:25:27] Rank:None, Epoch[254/300], Step [101/132], lr:3.18e-05 PSNR: 30.95, MSSSIM: 0.9447
+[2024/03/06 23:25:30] Rank:None, Epoch[254/300], Step [132/132], lr:3.15e-05 PSNR: 31.03, MSSSIM: 0.9452
+	720p: current: 31.03	 best: 31.03	 msssim_best: 0.9452	
+[2024/03/06 23:25:33] Rank:None, Epoch[255/300], Step [1/132], lr:3.15e-05 PSNR: 33.51, MSSSIM: 0.9774
+[2024/03/06 23:25:39] Rank:None, Epoch[255/300], Step [51/132], lr:3.10e-05 PSNR: 31.62, MSSSIM: 0.953
+[2024/03/06 23:25:44] Rank:None, Epoch[255/300], Step [101/132], lr:3.05e-05 PSNR: 31.18, MSSSIM: 0.9471
+[2024/03/06 23:25:47] Rank:None, Epoch[255/300], Step [132/132], lr:3.01e-05 PSNR: 31.04, MSSSIM: 0.9453
+	720p: current: 31.04	 best: 31.04	 msssim_best: 0.9453	
+[2024/03/06 23:25:50] Rank:None, Epoch[256/300], Step [1/132], lr:3.01e-05 PSNR: 32.86, MSSSIM: 0.9783
+[2024/03/06 23:25:55] Rank:None, Epoch[256/300], Step [51/132], lr:2.96e-05 PSNR: 31.58, MSSSIM: 0.953
+[2024/03/06 23:26:01] Rank:None, Epoch[256/300], Step [101/132], lr:2.91e-05 PSNR: 31.24, MSSSIM: 0.9492
+[2024/03/06 23:26:04] Rank:None, Epoch[256/300], Step [132/132], lr:2.88e-05 PSNR: 31.04, MSSSIM: 0.9453
+	720p: current: 31.04	 best: 31.04	 msssim_best: 0.9453	
+[2024/03/06 23:26:07] Rank:None, Epoch[257/300], Step [1/132], lr:2.88e-05 PSNR: 32.17, MSSSIM: 0.9735
+[2024/03/06 23:26:12] Rank:None, Epoch[257/300], Step [51/132], lr:2.83e-05 PSNR: 30.63, MSSSIM: 0.9416
+[2024/03/06 23:26:17] Rank:None, Epoch[257/300], Step [101/132], lr:2.79e-05 PSNR: 31.09, MSSSIM: 0.947
+[2024/03/06 23:26:20] Rank:None, Epoch[257/300], Step [132/132], lr:2.76e-05 PSNR: 31.04, MSSSIM: 0.9454
+	720p: current: 31.04	 best: 31.04	 msssim_best: 0.9454	
+[2024/03/06 23:26:23] Rank:None, Epoch[258/300], Step [1/132], lr:2.76e-05 PSNR: 27.73, MSSSIM: 0.9045
+[2024/03/06 23:26:28] Rank:None, Epoch[258/300], Step [51/132], lr:2.71e-05 PSNR: 31.03, MSSSIM: 0.9437
+[2024/03/06 23:26:34] Rank:None, Epoch[258/300], Step [101/132], lr:2.66e-05 PSNR: 31.01, MSSSIM: 0.9439
+[2024/03/06 23:26:37] Rank:None, Epoch[258/300], Step [132/132], lr:2.63e-05 PSNR: 31.05, MSSSIM: 0.9454
+	720p: current: 31.05	 best: 31.05	 msssim_best: 0.9454	
+[2024/03/06 23:26:40] Rank:None, Epoch[259/300], Step [1/132], lr:2.63e-05 PSNR: 35.82, MSSSIM: 0.986
+[2024/03/06 23:26:45] Rank:None, Epoch[259/300], Step [51/132], lr:2.59e-05 PSNR: 30.76, MSSSIM: 0.9427
+[2024/03/06 23:26:50] Rank:None, Epoch[259/300], Step [101/132], lr:2.54e-05 PSNR: 30.9, MSSSIM: 0.9434
+[2024/03/06 23:26:53] Rank:None, Epoch[259/300], Step [132/132], lr:2.51e-05 PSNR: 31.05, MSSSIM: 0.9455
+	720p: current: 31.05	 best: 31.05	 msssim_best: 0.9455	
+[2024/03/06 23:26:56] Rank:None, Epoch[260/300], Step [1/132], lr:2.51e-05 PSNR: 27.16, MSSSIM: 0.8892
+[2024/03/06 23:27:01] Rank:None, Epoch[260/300], Step [51/132], lr:2.46e-05 PSNR: 30.68, MSSSIM: 0.9408
+[2024/03/06 23:27:07] Rank:None, Epoch[260/300], Step [101/132], lr:2.42e-05 PSNR: 31.18, MSSSIM: 0.9469
+[2024/03/06 23:27:10] Rank:None, Epoch[260/300], Step [132/132], lr:2.39e-05 PSNR: 31.06, MSSSIM: 0.9455
+	720p: current: 31.06	 best: 31.06	 msssim_best: 0.9455	
+[2024/03/06 23:27:13] Rank:None, Epoch[261/300], Step [1/132], lr:2.39e-05 PSNR: 27.96, MSSSIM: 0.9039
+[2024/03/06 23:27:18] Rank:None, Epoch[261/300], Step [51/132], lr:2.35e-05 PSNR: 31.06, MSSSIM: 0.9458
+[2024/03/06 23:27:23] Rank:None, Epoch[261/300], Step [101/132], lr:2.30e-05 PSNR: 31.14, MSSSIM: 0.9465
+[2024/03/06 23:27:26] Rank:None, Epoch[261/300], Step [132/132], lr:2.28e-05 PSNR: 31.06, MSSSIM: 0.9456
+	720p: current: 31.06	 best: 31.06	 msssim_best: 0.9456	
+[2024/03/06 23:27:29] Rank:None, Epoch[262/300], Step [1/132], lr:2.27e-05 PSNR: 33.24, MSSSIM: 0.976
+[2024/03/06 23:27:35] Rank:None, Epoch[262/300], Step [51/132], lr:2.23e-05 PSNR: 31.24, MSSSIM: 0.9464
+[2024/03/06 23:27:40] Rank:None, Epoch[262/300], Step [101/132], lr:2.19e-05 PSNR: 31.3, MSSSIM: 0.9476
+[2024/03/06 23:27:43] Rank:None, Epoch[262/300], Step [132/132], lr:2.16e-05 PSNR: 31.07, MSSSIM: 0.9456
+	720p: current: 31.07	 best: 31.07	 msssim_best: 0.9456	
+[2024/03/06 23:27:46] Rank:None, Epoch[263/300], Step [1/132], lr:2.16e-05 PSNR: 31.24, MSSSIM: 0.9621
+[2024/03/06 23:27:51] Rank:None, Epoch[263/300], Step [51/132], lr:2.12e-05 PSNR: 30.38, MSSSIM: 0.936
+[2024/03/06 23:27:56] Rank:None, Epoch[263/300], Step [101/132], lr:2.08e-05 PSNR: 31.0, MSSSIM: 0.9445
+[2024/03/06 23:27:59] Rank:None, Epoch[263/300], Step [132/132], lr:2.05e-05 PSNR: 31.07, MSSSIM: 0.9456
+	720p: current: 31.07	 best: 31.07	 msssim_best: 0.9456	
+[2024/03/06 23:28:02] Rank:None, Epoch[264/300], Step [1/132], lr:2.05e-05 PSNR: 26.46, MSSSIM: 0.8598
+[2024/03/06 23:28:08] Rank:None, Epoch[264/300], Step [51/132], lr:2.01e-05 PSNR: 30.47, MSSSIM: 0.9368
+[2024/03/06 23:28:13] Rank:None, Epoch[264/300], Step [101/132], lr:1.97e-05 PSNR: 30.96, MSSSIM: 0.9445
+[2024/03/06 23:28:17] Rank:None, Epoch[264/300], Step [132/132], lr:1.94e-05 PSNR: 31.07, MSSSIM: 0.9457
+	720p: current: 31.07	 best: 31.07	 msssim_best: 0.9457	
+[2024/03/06 23:28:20] Rank:None, Epoch[265/300], Step [1/132], lr:1.94e-05 PSNR: 27.22, MSSSIM: 0.8925
+[2024/03/06 23:28:25] Rank:None, Epoch[265/300], Step [51/132], lr:1.90e-05 PSNR: 31.12, MSSSIM: 0.9473
+[2024/03/06 23:28:30] Rank:None, Epoch[265/300], Step [101/132], lr:1.86e-05 PSNR: 31.3, MSSSIM: 0.9475
+[2024/03/06 23:28:33] Rank:None, Epoch[265/300], Step [132/132], lr:1.84e-05 PSNR: 31.08, MSSSIM: 0.9457
+	720p: current: 31.08	 best: 31.08	 msssim_best: 0.9457	
+[2024/03/06 23:28:36] Rank:None, Epoch[266/300], Step [1/132], lr:1.84e-05 PSNR: 36.51, MSSSIM: 0.9875
+[2024/03/06 23:28:42] Rank:None, Epoch[266/300], Step [51/132], lr:1.80e-05 PSNR: 31.2, MSSSIM: 0.9456
+[2024/03/06 23:28:47] Rank:None, Epoch[266/300], Step [101/132], lr:1.76e-05 PSNR: 31.18, MSSSIM: 0.9465
+[2024/03/06 23:28:50] Rank:None, Epoch[266/300], Step [132/132], lr:1.74e-05 PSNR: 31.08, MSSSIM: 0.9458
+	720p: current: 31.08	 best: 31.08	 msssim_best: 0.9458	
+[2024/03/06 23:28:53] Rank:None, Epoch[267/300], Step [1/132], lr:1.74e-05 PSNR: 33.57, MSSSIM: 0.9812
+[2024/03/06 23:28:58] Rank:None, Epoch[267/300], Step [51/132], lr:1.70e-05 PSNR: 31.1, MSSSIM: 0.9441
+[2024/03/06 23:29:04] Rank:None, Epoch[267/300], Step [101/132], lr:1.66e-05 PSNR: 31.13, MSSSIM: 0.9458
+[2024/03/06 23:29:07] Rank:None, Epoch[267/300], Step [132/132], lr:1.64e-05 PSNR: 31.08, MSSSIM: 0.9458
+	720p: current: 31.08	 best: 31.08	 msssim_best: 0.9458	
+[2024/03/06 23:29:11] Rank:None, Epoch[268/300], Step [1/132], lr:1.64e-05 PSNR: 27.22, MSSSIM: 0.887
+[2024/03/06 23:29:16] Rank:None, Epoch[268/300], Step [51/132], lr:1.60e-05 PSNR: 30.34, MSSSIM: 0.9368
+[2024/03/06 23:29:21] Rank:None, Epoch[268/300], Step [101/132], lr:1.56e-05 PSNR: 30.79, MSSSIM: 0.9414
+[2024/03/06 23:29:25] Rank:None, Epoch[268/300], Step [132/132], lr:1.54e-05 PSNR: 31.08, MSSSIM: 0.9458
+	720p: current: 31.08	 best: 31.08	 msssim_best: 0.9458	
+[2024/03/06 23:29:28] Rank:None, Epoch[269/300], Step [1/132], lr:1.54e-05 PSNR: 33.26, MSSSIM: 0.976
+[2024/03/06 23:29:34] Rank:None, Epoch[269/300], Step [51/132], lr:1.50e-05 PSNR: 31.32, MSSSIM: 0.9508
+[2024/03/06 23:29:39] Rank:None, Epoch[269/300], Step [101/132], lr:1.47e-05 PSNR: 31.04, MSSSIM: 0.9462
+[2024/03/06 23:29:42] Rank:None, Epoch[269/300], Step [132/132], lr:1.45e-05 PSNR: 31.09, MSSSIM: 0.9459
+	720p: current: 31.09	 best: 31.09	 msssim_best: 0.9459	
+[2024/03/06 23:29:45] Rank:None, Epoch[270/300], Step [1/132], lr:1.45e-05 PSNR: 33.57, MSSSIM: 0.9811
+[2024/03/06 23:29:51] Rank:None, Epoch[270/300], Step [51/132], lr:1.41e-05 PSNR: 31.27, MSSSIM: 0.9481
+[2024/03/06 23:29:56] Rank:None, Epoch[270/300], Step [101/132], lr:1.38e-05 PSNR: 31.19, MSSSIM: 0.9468
+[2024/03/06 23:29:59] Rank:None, Epoch[270/300], Step [132/132], lr:1.36e-05 PSNR: 31.09, MSSSIM: 0.9459
+	720p: current: 31.09	 best: 31.09	 msssim_best: 0.9459	
+[2024/03/06 23:30:02] Rank:None, Epoch[271/300], Step [1/132], lr:1.35e-05 PSNR: 31.05, MSSSIM: 0.9556
+[2024/03/06 23:30:08] Rank:None, Epoch[271/300], Step [51/132], lr:1.32e-05 PSNR: 30.62, MSSSIM: 0.9396
+[2024/03/06 23:30:13] Rank:None, Epoch[271/300], Step [101/132], lr:1.29e-05 PSNR: 30.85, MSSSIM: 0.9436
+[2024/03/06 23:30:16] Rank:None, Epoch[271/300], Step [132/132], lr:1.27e-05 PSNR: 31.09, MSSSIM: 0.9459
+	720p: current: 31.09	 best: 31.09	 msssim_best: 0.9459	
+[2024/03/06 23:30:19] Rank:None, Epoch[272/300], Step [1/132], lr:1.27e-05 PSNR: 30.99, MSSSIM: 0.9622
+[2024/03/06 23:30:25] Rank:None, Epoch[272/300], Step [51/132], lr:1.23e-05 PSNR: 31.39, MSSSIM: 0.9479
+[2024/03/06 23:30:30] Rank:None, Epoch[272/300], Step [101/132], lr:1.20e-05 PSNR: 31.18, MSSSIM: 0.947
+[2024/03/06 23:30:33] Rank:None, Epoch[272/300], Step [132/132], lr:1.18e-05 PSNR: 31.1, MSSSIM: 0.9459
+	720p: current: 31.10	 best: 31.10	 msssim_best: 0.9459	
+[2024/03/06 23:30:37] Rank:None, Epoch[273/300], Step [1/132], lr:1.18e-05 PSNR: 35.82, MSSSIM: 0.9851
+[2024/03/06 23:30:42] Rank:None, Epoch[273/300], Step [51/132], lr:1.15e-05 PSNR: 30.81, MSSSIM: 0.9422
+[2024/03/06 23:30:47] Rank:None, Epoch[273/300], Step [101/132], lr:1.12e-05 PSNR: 30.94, MSSSIM: 0.9441
+[2024/03/06 23:30:51] Rank:None, Epoch[273/300], Step [132/132], lr:1.10e-05 PSNR: 31.1, MSSSIM: 0.946
+	720p: current: 31.10	 best: 31.10	 msssim_best: 0.9460	
+[2024/03/06 23:30:54] Rank:None, Epoch[274/300], Step [1/132], lr:1.10e-05 PSNR: 27.21, MSSSIM: 0.8825
+[2024/03/06 23:30:59] Rank:None, Epoch[274/300], Step [51/132], lr:1.07e-05 PSNR: 30.68, MSSSIM: 0.9437
+[2024/03/06 23:31:04] Rank:None, Epoch[274/300], Step [101/132], lr:1.04e-05 PSNR: 30.82, MSSSIM: 0.9428
+[2024/03/06 23:31:08] Rank:None, Epoch[274/300], Step [132/132], lr:1.02e-05 PSNR: 31.1, MSSSIM: 0.946
+	720p: current: 31.10	 best: 31.10	 msssim_best: 0.9460	
+[2024/03/06 23:31:11] Rank:None, Epoch[275/300], Step [1/132], lr:1.02e-05 PSNR: 35.84, MSSSIM: 0.9852
+[2024/03/06 23:31:16] Rank:None, Epoch[275/300], Step [51/132], lr:9.90e-06 PSNR: 31.15, MSSSIM: 0.9455
+[2024/03/06 23:31:22] Rank:None, Epoch[275/300], Step [101/132], lr:9.62e-06 PSNR: 31.1, MSSSIM: 0.9453
+[2024/03/06 23:31:25] Rank:None, Epoch[275/300], Step [132/132], lr:9.44e-06 PSNR: 31.1, MSSSIM: 0.946
+	720p: current: 31.10	 best: 31.10	 msssim_best: 0.9460	
+[2024/03/06 23:31:28] Rank:None, Epoch[276/300], Step [1/132], lr:9.43e-06 PSNR: 30.14, MSSSIM: 0.9497
+[2024/03/06 23:31:34] Rank:None, Epoch[276/300], Step [51/132], lr:9.15e-06 PSNR: 31.88, MSSSIM: 0.9545
+[2024/03/06 23:31:40] Rank:None, Epoch[276/300], Step [101/132], lr:8.87e-06 PSNR: 31.52, MSSSIM: 0.9517
+[2024/03/06 23:31:43] Rank:None, Epoch[276/300], Step [132/132], lr:8.70e-06 PSNR: 31.11, MSSSIM: 0.946
+	720p: current: 31.11	 best: 31.11	 msssim_best: 0.9460	
+[2024/03/06 23:31:46] Rank:None, Epoch[277/300], Step [1/132], lr:8.70e-06 PSNR: 27.12, MSSSIM: 0.8839
+[2024/03/06 23:31:51] Rank:None, Epoch[277/300], Step [51/132], lr:8.43e-06 PSNR: 31.48, MSSSIM: 0.9487
+[2024/03/06 23:31:56] Rank:None, Epoch[277/300], Step [101/132], lr:8.16e-06 PSNR: 31.17, MSSSIM: 0.9457
+[2024/03/06 23:32:00] Rank:None, Epoch[277/300], Step [132/132], lr:8.00e-06 PSNR: 31.11, MSSSIM: 0.9461
+	720p: current: 31.11	 best: 31.11	 msssim_best: 0.9461	
+[2024/03/06 23:32:03] Rank:None, Epoch[278/300], Step [1/132], lr:7.99e-06 PSNR: 28.61, MSSSIM: 0.9224
+[2024/03/06 23:32:08] Rank:None, Epoch[278/300], Step [51/132], lr:7.73e-06 PSNR: 31.39, MSSSIM: 0.9501
+[2024/03/06 23:32:13] Rank:None, Epoch[278/300], Step [101/132], lr:7.48e-06 PSNR: 31.18, MSSSIM: 0.9477
+[2024/03/06 23:32:16] Rank:None, Epoch[278/300], Step [132/132], lr:7.32e-06 PSNR: 31.11, MSSSIM: 0.9461
+	720p: current: 31.11	 best: 31.11	 msssim_best: 0.9461	
+[2024/03/06 23:32:19] Rank:None, Epoch[279/300], Step [1/132], lr:7.32e-06 PSNR: 36.15, MSSSIM: 0.9865
+[2024/03/06 23:32:25] Rank:None, Epoch[279/300], Step [51/132], lr:7.07e-06 PSNR: 30.71, MSSSIM: 0.9396
+[2024/03/06 23:32:30] Rank:None, Epoch[279/300], Step [101/132], lr:6.82e-06 PSNR: 30.95, MSSSIM: 0.9448
+[2024/03/06 23:32:33] Rank:None, Epoch[279/300], Step [132/132], lr:6.67e-06 PSNR: 31.11, MSSSIM: 0.9461
+	720p: current: 31.11	 best: 31.11	 msssim_best: 0.9461	
+[2024/03/06 23:32:36] Rank:None, Epoch[280/300], Step [1/132], lr:6.67e-06 PSNR: 28.22, MSSSIM: 0.9073
+[2024/03/06 23:32:41] Rank:None, Epoch[280/300], Step [51/132], lr:6.43e-06 PSNR: 31.28, MSSSIM: 0.9496
+[2024/03/06 23:32:47] Rank:None, Epoch[280/300], Step [101/132], lr:6.20e-06 PSNR: 31.07, MSSSIM: 0.9462
+[2024/03/06 23:32:50] Rank:None, Epoch[280/300], Step [132/132], lr:6.06e-06 PSNR: 31.11, MSSSIM: 0.9461
+	720p: current: 31.11	 best: 31.11	 msssim_best: 0.9461	
+[2024/03/06 23:32:53] Rank:None, Epoch[281/300], Step [1/132], lr:6.05e-06 PSNR: 32.01, MSSSIM: 0.9718
+[2024/03/06 23:32:58] Rank:None, Epoch[281/300], Step [51/132], lr:5.82e-06 PSNR: 31.74, MSSSIM: 0.9528
+[2024/03/06 23:33:03] Rank:None, Epoch[281/300], Step [101/132], lr:5.60e-06 PSNR: 31.25, MSSSIM: 0.9479
+[2024/03/06 23:33:07] Rank:None, Epoch[281/300], Step [132/132], lr:5.47e-06 PSNR: 31.11, MSSSIM: 0.9461
+	720p: current: 31.11	 best: 31.11	 msssim_best: 0.9461	
+[2024/03/06 23:33:09] Rank:None, Epoch[282/300], Step [1/132], lr:5.46e-06 PSNR: 32.78, MSSSIM: 0.9731
+[2024/03/06 23:33:15] Rank:None, Epoch[282/300], Step [51/132], lr:5.25e-06 PSNR: 31.06, MSSSIM: 0.9477
+[2024/03/06 23:33:20] Rank:None, Epoch[282/300], Step [101/132], lr:5.04e-06 PSNR: 31.21, MSSSIM: 0.9472
+[2024/03/06 23:33:23] Rank:None, Epoch[282/300], Step [132/132], lr:4.91e-06 PSNR: 31.12, MSSSIM: 0.9461
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9461	
+[2024/03/06 23:33:26] Rank:None, Epoch[283/300], Step [1/132], lr:4.91e-06 PSNR: 31.08, MSSSIM: 0.9558
+[2024/03/06 23:33:32] Rank:None, Epoch[283/300], Step [51/132], lr:4.70e-06 PSNR: 31.2, MSSSIM: 0.9482
+[2024/03/06 23:33:37] Rank:None, Epoch[283/300], Step [101/132], lr:4.50e-06 PSNR: 31.26, MSSSIM: 0.9486
+[2024/03/06 23:33:40] Rank:None, Epoch[283/300], Step [132/132], lr:4.38e-06 PSNR: 31.12, MSSSIM: 0.9461
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9461	
+[2024/03/06 23:33:43] Rank:None, Epoch[284/300], Step [1/132], lr:4.38e-06 PSNR: 30.11, MSSSIM: 0.95
+[2024/03/06 23:33:48] Rank:None, Epoch[284/300], Step [51/132], lr:4.18e-06 PSNR: 30.94, MSSSIM: 0.9451
+[2024/03/06 23:33:54] Rank:None, Epoch[284/300], Step [101/132], lr:4.00e-06 PSNR: 31.19, MSSSIM: 0.9462
+[2024/03/06 23:33:57] Rank:None, Epoch[284/300], Step [132/132], lr:3.88e-06 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+[2024/03/06 23:34:00] Rank:None, Epoch[285/300], Step [1/132], lr:3.88e-06 PSNR: 33.53, MSSSIM: 0.9775
+[2024/03/06 23:34:06] Rank:None, Epoch[285/300], Step [51/132], lr:3.70e-06 PSNR: 31.86, MSSSIM: 0.9575
+[2024/03/06 23:34:11] Rank:None, Epoch[285/300], Step [101/132], lr:3.52e-06 PSNR: 31.17, MSSSIM: 0.9479
+[2024/03/06 23:34:15] Rank:None, Epoch[285/300], Step [132/132], lr:3.41e-06 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+[2024/03/06 23:34:18] Rank:None, Epoch[286/300], Step [1/132], lr:3.41e-06 PSNR: 29.35, MSSSIM: 0.966
+[2024/03/06 23:34:24] Rank:None, Epoch[286/300], Step [51/132], lr:3.24e-06 PSNR: 31.53, MSSSIM: 0.9515
+[2024/03/06 23:34:29] Rank:None, Epoch[286/300], Step [101/132], lr:3.07e-06 PSNR: 31.22, MSSSIM: 0.9482
+[2024/03/06 23:34:32] Rank:None, Epoch[286/300], Step [132/132], lr:2.97e-06 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+[2024/03/06 23:34:36] Rank:None, Epoch[287/300], Step [1/132], lr:2.97e-06 PSNR: 30.05, MSSSIM: 0.9539
+[2024/03/06 23:34:41] Rank:None, Epoch[287/300], Step [51/132], lr:2.81e-06 PSNR: 30.78, MSSSIM: 0.9421
+[2024/03/06 23:34:46] Rank:None, Epoch[287/300], Step [101/132], lr:2.66e-06 PSNR: 30.95, MSSSIM: 0.9436
+[2024/03/06 23:34:50] Rank:None, Epoch[287/300], Step [132/132], lr:2.57e-06 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+[2024/03/06 23:34:53] Rank:None, Epoch[288/300], Step [1/132], lr:2.56e-06 PSNR: 27.83, MSSSIM: 0.8993
+[2024/03/06 23:34:58] Rank:None, Epoch[288/300], Step [51/132], lr:2.42e-06 PSNR: 31.27, MSSSIM: 0.9473
+[2024/03/06 23:35:03] Rank:None, Epoch[288/300], Step [101/132], lr:2.27e-06 PSNR: 31.16, MSSSIM: 0.9467
+[2024/03/06 23:35:07] Rank:None, Epoch[288/300], Step [132/132], lr:2.19e-06 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+[2024/03/06 23:35:10] Rank:None, Epoch[289/300], Step [1/132], lr:2.18e-06 PSNR: 32.15, MSSSIM: 0.9713
+[2024/03/06 23:35:15] Rank:None, Epoch[289/300], Step [51/132], lr:2.05e-06 PSNR: 31.19, MSSSIM: 0.9451
+[2024/03/06 23:35:21] Rank:None, Epoch[289/300], Step [101/132], lr:1.92e-06 PSNR: 31.19, MSSSIM: 0.9461
+[2024/03/06 23:35:24] Rank:None, Epoch[289/300], Step [132/132], lr:1.84e-06 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+[2024/03/06 23:35:27] Rank:None, Epoch[290/300], Step [1/132], lr:1.84e-06 PSNR: 34.07, MSSSIM: 0.9797
+[2024/03/06 23:35:34] Rank:None, Epoch[290/300], Step [51/132], lr:1.71e-06 PSNR: 30.9, MSSSIM: 0.9443
+[2024/03/06 23:35:40] Rank:None, Epoch[290/300], Step [101/132], lr:1.59e-06 PSNR: 30.9, MSSSIM: 0.9425
+[2024/03/06 23:35:43] Rank:None, Epoch[290/300], Step [132/132], lr:1.52e-06 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+[2024/03/06 23:35:46] Rank:None, Epoch[291/300], Step [1/132], lr:1.52e-06 PSNR: 27.43, MSSSIM: 0.8978
+[2024/03/06 23:35:52] Rank:None, Epoch[291/300], Step [51/132], lr:1.40e-06 PSNR: 31.13, MSSSIM: 0.9469
+[2024/03/06 23:35:57] Rank:None, Epoch[291/300], Step [101/132], lr:1.30e-06 PSNR: 31.1, MSSSIM: 0.9467
+[2024/03/06 23:36:00] Rank:None, Epoch[291/300], Step [132/132], lr:1.23e-06 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+[2024/03/06 23:36:03] Rank:None, Epoch[292/300], Step [1/132], lr:1.23e-06 PSNR: 33.39, MSSSIM: 0.9805
+[2024/03/06 23:36:09] Rank:None, Epoch[292/300], Step [51/132], lr:1.13e-06 PSNR: 30.94, MSSSIM: 0.9416
+[2024/03/06 23:36:14] Rank:None, Epoch[292/300], Step [101/132], lr:1.03e-06 PSNR: 31.26, MSSSIM: 0.9481
+[2024/03/06 23:36:17] Rank:None, Epoch[292/300], Step [132/132], lr:9.73e-07 PSNR: 31.12, MSSSIM: 0.9462
+	720p: current: 31.12	 best: 31.12	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 9.89
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 30.25
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 32.07
+Eval best_PSNR at epoch292:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 8.36
+[2024/03/06 23:36:28] Rank:None, Epoch[293/300], Step [1/132], lr:9.71e-07 PSNR: 27.51, MSSSIM: 0.8903
+[2024/03/06 23:36:34] Rank:None, Epoch[293/300], Step [51/132], lr:8.82e-07 PSNR: 31.19, MSSSIM: 0.9463
+[2024/03/06 23:36:39] Rank:None, Epoch[293/300], Step [101/132], lr:7.96e-07 PSNR: 31.01, MSSSIM: 0.9441
+[2024/03/06 23:36:42] Rank:None, Epoch[293/300], Step [132/132], lr:7.45e-07 PSNR: 31.13, MSSSIM: 0.9462
+	720p: current: 31.13	 best: 31.13	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 31.18
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 32.16
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 33.08
+Eval best_PSNR at epoch293:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 8.37
+[2024/03/06 23:36:53] Rank:None, Epoch[294/300], Step [1/132], lr:7.44e-07 PSNR: 29.81, MSSSIM: 0.9673
+[2024/03/06 23:36:59] Rank:None, Epoch[294/300], Step [51/132], lr:6.66e-07 PSNR: 31.33, MSSSIM: 0.9485
+[2024/03/06 23:37:04] Rank:None, Epoch[294/300], Step [101/132], lr:5.92e-07 PSNR: 31.34, MSSSIM: 0.9477
+[2024/03/06 23:37:08] Rank:None, Epoch[294/300], Step [132/132], lr:5.48e-07 PSNR: 31.13, MSSSIM: 0.9462
+	720p: current: 31.13	 best: 31.13	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 10.79
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 29.62
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 31.23
+Eval best_PSNR at epoch294:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 8.46
+[2024/03/06 23:37:19] Rank:None, Epoch[295/300], Step [1/132], lr:5.47e-07 PSNR: 36.43, MSSSIM: 0.9872
+[2024/03/06 23:37:24] Rank:None, Epoch[295/300], Step [51/132], lr:4.80e-07 PSNR: 31.2, MSSSIM: 0.9501
+[2024/03/06 23:37:30] Rank:None, Epoch[295/300], Step [101/132], lr:4.17e-07 PSNR: 31.2, MSSSIM: 0.948
+[2024/03/06 23:37:33] Rank:None, Epoch[295/300], Step [132/132], lr:3.81e-07 PSNR: 31.13, MSSSIM: 0.9462
+	720p: current: 31.13	 best: 31.13	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 3.63
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 27.48
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 30.52
+Eval best_PSNR at epoch295:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 8.35
+[2024/03/06 23:37:44] Rank:None, Epoch[296/300], Step [1/132], lr:3.80e-07 PSNR: 35.97, MSSSIM: 0.9865
+[2024/03/06 23:37:50] Rank:None, Epoch[296/300], Step [51/132], lr:3.24e-07 PSNR: 31.01, MSSSIM: 0.9459
+[2024/03/06 23:37:55] Rank:None, Epoch[296/300], Step [101/132], lr:2.73e-07 PSNR: 31.28, MSSSIM: 0.9489
+[2024/03/06 23:37:58] Rank:None, Epoch[296/300], Step [132/132], lr:2.44e-07 PSNR: 31.13, MSSSIM: 0.9462
+	720p: current: 31.13	 best: 31.13	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 3.49
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 24.56
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 25.84
+Eval best_PSNR at epoch296:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 9.35
+[2024/03/06 23:38:11] Rank:None, Epoch[297/300], Step [1/132], lr:2.43e-07 PSNR: 28.24, MSSSIM: 0.9076
+[2024/03/06 23:38:17] Rank:None, Epoch[297/300], Step [51/132], lr:1.99e-07 PSNR: 31.61, MSSSIM: 0.9535
+[2024/03/06 23:38:22] Rank:None, Epoch[297/300], Step [101/132], lr:1.60e-07 PSNR: 30.99, MSSSIM: 0.945
+[2024/03/06 23:38:25] Rank:None, Epoch[297/300], Step [132/132], lr:1.37e-07 PSNR: 31.13, MSSSIM: 0.9462
+	720p: current: 31.13	 best: 31.13	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 9.07
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 29.66
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 31.87
+Eval best_PSNR at epoch297:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 8.26
+[2024/03/06 23:38:36] Rank:None, Epoch[298/300], Step [1/132], lr:1.37e-07 PSNR: 27.2, MSSSIM: 0.8904
+[2024/03/06 23:38:42] Rank:None, Epoch[298/300], Step [51/132], lr:1.04e-07 PSNR: 30.66, MSSSIM: 0.9418
+[2024/03/06 23:38:47] Rank:None, Epoch[298/300], Step [101/132], lr:7.64e-08 PSNR: 31.1, MSSSIM: 0.9472
+[2024/03/06 23:38:50] Rank:None, Epoch[298/300], Step [132/132], lr:6.12e-08 PSNR: 31.13, MSSSIM: 0.9462
+	720p: current: 31.13	 best: 31.13	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 9.18
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 29.8
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 31.77
+Eval best_PSNR at epoch298:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 8.18
+[2024/03/06 23:39:01] Rank:None, Epoch[299/300], Step [1/132], lr:6.08e-08 PSNR: 27.22, MSSSIM: 0.8828
+[2024/03/06 23:39:06] Rank:None, Epoch[299/300], Step [51/132], lr:3.99e-08 PSNR: 31.44, MSSSIM: 0.952
+[2024/03/06 23:39:12] Rank:None, Epoch[299/300], Step [101/132], lr:2.34e-08 PSNR: 31.17, MSSSIM: 0.9483
+[2024/03/06 23:39:15] Rank:None, Epoch[299/300], Step [132/132], lr:1.54e-08 PSNR: 31.13, MSSSIM: 0.9462
+	720p: current: 31.13	 best: 31.13	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 8.78
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 29.67
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 31.77
+Eval best_PSNR at epoch299:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 8.18
+[2024/03/06 23:39:26] Rank:None, Epoch[300/300], Step [1/132], lr:1.52e-08 PSNR: 33.28, MSSSIM: 0.9761
+[2024/03/06 23:39:31] Rank:None, Epoch[300/300], Step [51/132], lr:5.86e-09 PSNR: 31.04, MSSSIM: 0.9468
+[2024/03/06 23:39:36] Rank:None, Epoch[300/300], Step [101/132], lr:8.93e-10 PSNR: 30.93, MSSSIM: 0.9434
+[2024/03/06 23:39:39] Rank:None, Epoch[300/300], Step [132/132], lr:8.72e-13 PSNR: 31.13, MSSSIM: 0.9462
+	720p: current: 31.13	 best: 31.13	 msssim_best: 0.9462	
+Rank:None, Step [1/132], PSNR: 30.55, MSSSIM: 0.9516 FPS: 8.98
+Rank:None, Step [51/132], PSNR: 28.4, MSSSIM: 0.9093 FPS: 31.26
+Rank:None, Step [101/132], PSNR: 30.7, MSSSIM: 0.9372 FPS: 32.85
+Eval best_PSNR at epoch300:	720p: current: 31.13	best: 31.13 	best_msssim: 0.9462	 Time/epoch: 8.10
