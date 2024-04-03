@@ -1,3 +1,5 @@
+
+
 ###Train: 
 train train_nervcp.py -e
 300
@@ -98,3 +100,6 @@ kcPE
 --eval_only
 --weight
 checkpoint/NeR_1.25_80/model_val_best.pth
+## 🤗 **Acknowledgements**
+This code is built on # NeRV: Neural Representations for Videos  (NeurIPS 2021)
+### [Project Page](https://haochen-rye.github.io/NeRV). We thank the authors for sharing their codes of NeRV.
